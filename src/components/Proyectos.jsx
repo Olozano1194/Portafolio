@@ -21,19 +21,17 @@ function Proyectos() {
                         <div className="w-96 xl:w-[400px] text-center text-lg p-2">
                             <h3 className="font-bold text-blue-600 text-2xl">{proyecto.title}</h3>
                             <p className="mt-1 mb-2 md:mt-4 md:mb-3">{proyecto.subtitle}</p>
-                            <p>{proyecto.description}</p>
-                            <a href=""></a>
+                            <p>{proyecto.description}</p>                            
                         </div>
                             
                         <div className="flex justify-center flex-col items-center gap-5 text-white text-lg md:ml-10 xl:ml-0">
                             <Link to={proyecto.repo} className="bg-blue-700 rounded-xl p-2 xl:w-[10rem] xl:text-center">Repositorio</Link>
                             {
                                 proyecto.tipo === 'Demo' ? (
-                                    <Link to={proyecto.Demo} className="bg-slate-500 rounded-xl p-2 xl:w-[5rem] xl:text-center">Demo</Link>
+                                    <Link to={`/Demo/${proyecto.id}`} className="bg-slate-500 rounded-xl p-2 xl:w-[5rem] xl:text-center" target="_blank">Demo</Link>
                                 ): (
                                     <Link to={`/Videos/${proyecto.id}`} 
-                                        target="_blank" 
-                                        className="bg-blue-400 rounded-xl p-2 xl:w-[5rem] xl:text-center">
+                                        className="bg-blue-400 rounded-xl p-2 xl:w-[5rem] xl:text-center" target="_blank">
                                             Video
                                     </Link>
                                 )

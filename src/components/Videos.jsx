@@ -3,7 +3,7 @@ import { useParams, Navigate } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import { proyectos } from '../data/proyectos';
 
-function Videos() {
+const Videos = () => {
     const { videosId } = useParams();
     const proyecto = proyectos.find((proyecto) => proyecto.id === parseInt(videosId));
 

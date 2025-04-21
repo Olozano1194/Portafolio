@@ -8,6 +8,18 @@ export const proyectos = [
         'tipo': 'Demo',
         'repo': 'https://github.com/Olozano1194/GimnasioReactDjango',
         'Demo': 'https://gimnasio-react-django.vercel.app',
+        'credenciales': { 'user': 'example1@example.com', 'pass': '123456' },
+        'imgDemo': {
+            'demoDescription': 'Este proyecto es una aplicación de gestión para un gimnasio, tiene dos roles: Admin y Usuario. El Admin tiene acceso completo a todas las funciones, incluyendo la creación de usuarios, gestión de miembros, y asignación de membresías. El Usuario solo puede agregar miembros y asignarles membresías, además de gestionar su propio perfil. Ambos roles pueden gestionar los datos de los miembros del gimnasio, pero con diferentes niveles de acceso según su rol.',
+            'img': ['/assets/demo-Login.jpg',
+                    '/assets/demo-Dashboard.jpg',
+                    '/assets/demo-Registrar.jpg',
+                    '/assets/demo-Listar.jpg',
+                    '/assets/demo-Usuario.jpg',
+            ],
+            'title': ['Login','Dashboard','Registrar','Listar','Usuario'],
+            'description': ['Login de usuario','Dashboard de usuario','Registro de miembros del gym','Listar miembros del gym', 'Perfil del usuario'],
+        }       
     },
     {
         id: 2,
@@ -18,17 +30,30 @@ export const proyectos = [
         'tipo': 'Demo',
         'repo': 'https://github.com/Olozano1194/InstitucionesV1',
         'Demo': 'https://instituciones-v1.vercel.app',
+        'credenciales': { 'user': 'PedroNel@gmail.com', 'pass': '123456' },
+        'imgDemo': {
+            'demoDescription': 'Este proyecto es una aplicación de gestión para instituciones educativas, hasta el momento solo se puede registrar instituciones y crear usuarios, pero en el futuro se espera agregar más funcionalidades.', 
+            'img': [
+                '/assets/demo-loginIntitucion.jpg',
+                '/assets/demo-HomeInstitucion.jpg',
+                '/assets/demo-RegistrarInstitucion.jpg',
+                '/assets/demo-ListarInstitucion.jpg',
+                '/assets/demo-CrearUsuario.jpg',               
+            ],
+            'title': ['Login','Home','Registrar','Listar','Usuario'],
+            'description': ['Login de usuario','Home del usuario','Registro de instituciones','Listar instituciones', 'Registrar usuario'],            
+        },            
     },
-    {
-        id: 3,
-        'title': 'Proyecto Api-Instituciones',
-        'subtitle': 'Proyecto MinTic',
-        'description': 'Api para el proyecto Instituciones, desarrollado con NodeJs, Express, MongoDB, Cors, Swagger',
-        'img': 'ApiInstituciones',
-        'tipo': 'Demo',
-        'repo': 'https://github.com/Olozano1194/API-Instituciones',
-        'Demo': 'https://api-instituciones-3dvhnt7tv-oscars-projects-0f3a365c.vercel.app',
-    },
+    // {
+    //     id: 3,
+    //     'title': 'Proyecto Api-Instituciones',
+    //     'subtitle': 'Proyecto MinTic',
+    //     'description': 'Api para el proyecto Instituciones, desarrollado con NodeJs, Express, MongoDB, Cors, Swagger',
+    //     'img': 'ApiInstituciones',
+    //     'tipo': 'Demo',
+    //     'repo': 'https://github.com/Olozano1194/API-Instituciones',
+    //     'Demo': 'https://api-instituciones-3dvhnt7tv-oscars-projects-0f3a365c.vercel.app',
+    // },
     {
         id: 4,
         'title': "Lista de Tareas",
@@ -49,6 +74,8 @@ export const proyectos = [
         'tipo': "Demo",
         'repo': "https://github.com/Olozano1194/task-app",
         'Demo': 'https://olozano1194.github.io/task-app/',
+        'credenciales': null,
+        'imgDemo': null
     },
     {
         id: 6,
@@ -59,6 +86,8 @@ export const proyectos = [
         'tipo': "Demo",
         'repo': "https://github.com/Olozano1194/Gimnasio",
         'Demo': 'https://gimnasio-vm42.onrender.com',
+        'credenciales': null,
+        'imgDemo': null
     },
     {
         id: 7,
@@ -89,6 +118,8 @@ export const proyectos = [
         'tipo': "Demo",
         'repo': "https://github.com/Olozano1194/challenger_4_Ecomerce_Alura",
         'Demo': 'https://olozano1194.github.io/challenger_4_Ecomerce_Alura',
+        'credenciales': null,
+        'imgDemo': null
     },
     {
         id: 10,
@@ -99,6 +130,8 @@ export const proyectos = [
         'tipo': "Demo",
         'repo': "https://github.com/Olozano1194/Challenger2-Juego-Ahorcado",
         'Demo': 'https://olozano1194.github.io/Challenger2-Juego-Ahorcado/',
+        'credenciales': null,
+        'imgDemo': null
     },
     {
         id: 11,
@@ -109,6 +142,8 @@ export const proyectos = [
         'tipo': "Demo",
         'repo': "https://github.com/Olozano1194/Challenger1-encriptador",
         'Demo': 'https://olozano1194.github.io/Challenger1-encriptador/',
+        'credenciales': null,
+        'imgDemo': null
     },
     {
         id: 12,

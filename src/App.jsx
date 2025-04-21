@@ -9,6 +9,7 @@ import FormacionAcademica from './components/FormacionAcademica'
 import Proyectos from './components/Proyectos';
 import Contacto from './components/Contacto';
 import Videos from './components/Videos';
+import Demo from './components/Demo';
 import './App.css'
 
 function App() {
@@ -31,6 +32,13 @@ function App() {
             </main>
           } 
         />
+
+        <Route path="/Demo/:demoId" element={
+            <main className='bg-gray-200 p-5'>
+              <Demo />
+            </main>
+          } 
+        />  
 
         <Route path="/Videos/:videosId" element={
             <main className='bg-gray-200 p-5'>
