@@ -7,17 +7,12 @@ function SobreMi() {
                 <img src={imgPerfil} alt="img-perfil" className='rounded-full w-60' />
             </div>
 
-            <div className='text-slate-950 text-[1.05rem] md:text-[1.2rem] text-center'>
+            <div className='flex flex-col justify-center items-center text-slate-950 text-[1.05rem] md:text-[1.2rem]'>
                 <h2 className='text-4xl font-bold mt-5 mb-4'>Sobre mi</h2>
 
-                <p className='leading-9'>¡Hola¡ Soy <span className='font-bold'>Oscar</span>, un apasionado ingeniero en sistemas colombiano de 30 años 
-                que, desde el 2022, se ha dedicado al fascinante mundo de la programación, especialmente 
-                en el Front-End.<br></br>
-                Durante el último año, he invertido mi tiempo en diversas plataformas de aprendizaje para 
-                profundizar mis conocimientos.<br></br> Participé en el programa de Oracle con Alura Latam, donde adquirí habilidades en tecnologías como Java, JavaScript, CSS3 y MySQL.<br></br>Adicionalmente he logrado expandir mis conocimientos en programación gracias a las herramientas que ofrece el ministerio de las TIC con su programa "MISIONTIC".<br></br>En paralelo, he estado estudiando en Platzi, donde he tenido acceso 
-                a valiosos cursos que me han permitido explorar más a fondo 
-                frameworks como BootStrap y Django.<br></br> Actualmente, estoy ampliando mis conocimientos de manera autodidacta, centrándome en tecnologías como React, Tailwind, Express, Django RestFramework, MongoDB, Vercel y Git.<br></br>
-                Estoy emocionado por seguir creciendo profesionalmente y aplicar mis habilidades en proyectos desafiantes.<br></br>
+                <p className='leading-9'>¡Hola¡ Soy <span className='font-bold'>Oscar</span>, ingeniero en sistemas colombiano apasionado por el desarrollo Front-End con habilidades Full Stack. Desde mi graduación en el 2022, me he enfocado en construir una base sólida en programación a través de formación intensiva y proyectos prácticos.<br></br>
+                Mi recorrido incluye:<br></br>✅ Certificación en el programa Oracle ONE (Alura Latam): donde se aprendió de Java, JavaScript, CSS3 y MySQL.<br></br>✅ Programa Misión TIC: fortalecimiento en lógica de programación y mejores prácticas.<br></br>✅ Cursos en Platzi: exploración de frameworks como Bootstrap y Django.<br></br> Actualmente, me estoy especializando en tecnologías modernas como React, Tailwind, Next, Django RestFramework, MongoDB, Vercel y Git.<br></br>
+                Busco oportunidades para contribuir con soluciones creativas, escalables y centradas en el usuario.<br></br>
                 ¡Gracias por visitar mi perfil y conocer más sobre mí!.
                 </p>
             </div>
