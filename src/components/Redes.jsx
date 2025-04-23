@@ -20,7 +20,7 @@ function Redes() {
                 <div className='flex items-center justify-center gap-10 p-4 text-4xl'>
                     <Link to={'https://www.linkedin.com/in/OlozanoBocanegra'} target='_blank' className='hover:text-[#0e76a8] redes xl:text-5xl'><FaLinkedin /></Link>
                     <Link to={'https://github.com/Olozano1194'} target='_blank' className='hover:text-[#171515] redes xl:text-5xl'><FaGithub /></Link>
-                    <Link to={'curriculum/CurriculumOscarLozano.pdf'} target='_blank' className='hover:text-green-600 redes xl:text-5xl'><FaFile /></Link>
+                    <Link to={'curriculum/CurriculumOscarLozanoV2.pdf'} target='_blank' className='hover:text-green-600 redes xl:text-5xl'><FaFile /></Link>
                 </div>
                   
         </section>
