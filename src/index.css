@@ -22,10 +22,8 @@ a:hover {
 
 .logo {
     @media (max-width: 874px) {
-        display: none;        
-
-    }
- 
+        display: none;
+    } 
 }
 
 .linkNav {
@@ -135,23 +133,44 @@ a:hover {
 
 /*-------Formación -----------------*/
 
-img:hover {
+/* img:hover {
     transform: scale(1.2);
+} */
+
+.formaAcademica {
+    view-timeline: --scroll-proyectos;
+    view-timeline-axis: block;
 }
 
-.imgFormacion {
-    @media (min-width: 600px) {
-        width: 60%;
-    }
-   @media (min-width: 700px) {
-        width: 50%;
-   }  
+.cardAcademic {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    content-visibility: auto;
+    contain-intrinsic-size: 0 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.cardAcademic:hover {
+    transform: translate(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.imgFormacion img {
+    object-position: center;
+     /* Efectos visuales  */
+     mix-blend-mode: multiply;
+     filter: grayscale(50%);
+     transition: all 0.5s ease;    
+}
+
+.cardAcademic:hover .imgFormacion img {
+    filter: grayscale(0%);
+    mix-blend-mode: normal;
 }
 
 /*---------------Proyectos------------*/
 a:hover {
     transform: scale(1.2);
 }
-
 /*-----------------------------Contactos-----------*/
-

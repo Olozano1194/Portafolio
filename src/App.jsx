@@ -10,7 +10,6 @@ import Proyectos from './components/Proyectos';
 import Contacto from './components/Contacto';
 import Videos from './components/Videos';
 import Demo from './components/Demo';
-import './App.css'
 
 function App() {
   

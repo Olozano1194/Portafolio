@@ -49,7 +49,6 @@ function Contacto() {
                     <input 
                         className="w-80 border-l-rose-50 rounded-lg p-2 outline-none md:ml-3 xl:ml-0 xl:w-96" 
                         type="email" 
-                        name="email"
                         {...register('email', {
                                 required: {
                                     value: true,
@@ -70,8 +69,6 @@ function Contacto() {
                     <input 
                         className="w-80 p-2 border-l-rose-50 rounded-lg outline-none md:mt-5 md:ml-3 xl:ml-0 xl:w-96" 
                         type="text" 
-                        name="asunto" 
-                        
                         {...register('asunto', 
                             { required:
                                 { value: true,
@@ -94,7 +91,6 @@ function Contacto() {
                 <label htmlFor="mensaje" className="md:w-full resize-none" >
                     <textarea 
                         className="w-full h-36 p-2 border-l-rose-50 rounded-lg resize-none outline-none md:mt-5" 
-                        name="mensaje" 
                         id="mensaje"
                         {...register('mensaje',
                             { required:
@@ -117,7 +113,7 @@ function Contacto() {
 
                 <div className="w-full mt-5  text-center ">
                     <input 
-                        className="cursor-pointer bg-blue-200 p-3 rounded-xl" 
+                        className="cursor-pointer bg-blue-200 p-3 rounded-xl hover:bg-blue-400 hover:text-slate-100 hover:scale-[1.1]" 
                         type="submit" 
                         value='Enviar Mensaje' />
                 </div>                
