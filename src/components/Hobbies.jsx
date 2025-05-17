@@ -4,7 +4,7 @@ import getIcon from "../assets/icons/iconsHobbies";
 
 function Hobbies() {
     return (
-        <section id="hobbies" className="w-full overflow-hidden flex flex-col justify-center items-center p-5">
+        <section id="hobbies" className="containerHobbies w-full overflow-hidden flex flex-col justify-center items-center p-5">
             <h2  className="text-4xl font-bold ">Hobbies</h2>
             <ul className="w-full flex flex-wrap justify-between text-center gap-5 mt-5 text-3xl cursor-pointer">
                 {hobbies.map((item) => (

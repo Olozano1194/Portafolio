@@ -4,10 +4,10 @@ import { datos } from "../data/formacionAcademica";
 function FormacionAcademica() {
     return (
         <section className="formaAcademica w-full flex flex-col justify-center items-center p-5 border-b-2 border-stone-900">
-            <h1 id="formacionAcademica" className="font-bold text-center text-4xl p-5">Formación Académica</h1>
-            <ul  className="w-full flex flex-col justify-center items-center flex-wrap text-center gap-5 mt-5 text-3xl cursor-pointer md:flex-row md:justify-between" >
+            <h2 id="formacionAcademica" className="font-bold text-center text-4xl p-5">Formación Académica</h2>
+            <ul  className="w-full flex flex-col justify-center items-center flex-wrap text-center gap-5 mt-5 text-3xl cursor-pointer sm:flex-row md:justify-between" >
                 { datos.map((item) => (
-                    <li key={item.id} className='cardAcademic w-full flex items-center flex-col justify-center md:w-[31%] lg:w-[30%] xl:w-[18%]'>
+                    <li key={item.id} className='cardAcademic w-full flex items-center flex-col justify-center sm:w-[45%] md:w-[31%] lg:w-[30%] xl:w-[18%]'>
                         <div className="imgFormacion w-full flex items-center justify-center bg-gray-200 overflow-hidden">
                             <img
                                 className="w-[100%] bg-cover max-h-full object-contain md:w-full"

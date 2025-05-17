@@ -4,7 +4,7 @@ import getIcon from "../assets/icons/IconsSkills";
 
 function Skills() {
     return (
-        <section className="w-full overflow-hidden flex flex-col justify-center items-center p-5 border-b-2 border-stone-900">
+        <section className="containerSkills w-full overflow-hidden flex flex-col justify-center items-center p-5 border-b-2 border-stone-900">
             <h2 id="skill" className="text-4xl font-bold ">Skills</h2>
             <ul className="w-full flex flex-wrap justify-between text-center gap-5 mt-5 text-3xl cursor-pointer">
                 {skill.map((item) => (
