@@ -233,6 +233,8 @@ a:hover {
     animation-timeline: --scroll-hobbies;
     animation-range: entry 10% cover 20%;
 }
+/*-----------------------------Contacto--------------*/
+
 /*-----------------------------Animaciones-----------*/
 @keyframes aparecer {
     from { opacity: 0;}

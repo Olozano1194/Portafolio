@@ -17,9 +17,9 @@ function Contacto() {
             
             <form
                 onSubmit={onSubmit}
-                className="w-full flex flex-col justify-center items-center text-center gap-5 mt-5 text-xl cursor-pointer md:flex-wrap md:justify-between md:flex-row md:gap-0 md:mt-1 lg:mt-5 xl:px-7">
+                className="formContact w-full flex flex-col justify-center items-center text-center gap-5 mt-5 text-xl cursor-pointer md:flex-wrap md:justify-between md:flex-row md:gap-0 md:mt-1 lg:mt-5 xl:px-7 xl:w-[1200px]">
 
-                <label className="flex flex-col items-center" htmlFor="nombre">
+                <label className="formContact flex flex-col items-center" htmlFor="nombre">
                     <input 
                         className="w-80 border-l-rose-50 rounded-lg p-2 outline-none xl:w-96" 
                         type="text" 
@@ -45,7 +45,7 @@ function Contacto() {
                         </span>}
                 </label>                
 
-                <label className="flex flex-col items-center" htmlFor="email">
+                <label className="formContact flex flex-col items-center" htmlFor="email">
                     <input 
                         className="w-80 border-l-rose-50 rounded-lg p-2 outline-none md:ml-3 xl:ml-0 xl:w-96" 
                         type="email" 
@@ -65,7 +65,7 @@ function Contacto() {
                         {errors.email && <span className="text-rose-800 text-lg">{errors.email.message}</span>}
                 </label>
 
-                <label className="md:w-full flex flex-col items-center" htmlFor="asunto">
+                <label className="formContact md:w-full flex flex-col items-center" htmlFor="asunto">
                     <input 
                         className="w-80 p-2 border-l-rose-50 rounded-lg outline-none md:mt-5 md:ml-3 xl:ml-0 xl:w-96" 
                         type="text" 
@@ -88,7 +88,7 @@ function Contacto() {
                         {errors.asunto && <span className="text-rose-800 text-lg">{errors.asunto.message}</span>}
                 </label>
 
-                <label htmlFor="mensaje" className="md:w-full resize-none" >
+                <label className="formContact md:w-full resize-none" htmlFor="mensaje">
                     <textarea 
                         className="w-full h-36 p-2 border-l-rose-50 rounded-lg resize-none outline-none md:mt-5" 
                         id="mensaje"
@@ -113,14 +113,14 @@ function Contacto() {
 
                 <div className="w-full mt-5  text-center ">
                     <input 
-                        className="cursor-pointer bg-blue-200 p-3 rounded-xl hover:bg-blue-400 hover:text-slate-100 hover:scale-[1.1]" 
+                        className="cursor-pointer bg-blue-200 font-semibold p-3 rounded-xl hover:bg-blue-400 hover:text-slate-100 hover:scale-[1.1]" 
                         type="submit" 
                         value='Enviar Mensaje' />
                 </div>                
 
             </form>
 
-            <div className="mt-7 md:mb-5 text-[1.22rem] text-stone-50 lg:text-xl xl:text-2xl">
+            <div className="mt-7 md:mb-5 text-[1.15rem] text-stone-50 lg:text-xl xl:text-2xl">
                 <p>©2025 desarrollado por Oscar Lozano</p>
             </div>
         </section>

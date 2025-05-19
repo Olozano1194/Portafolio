@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithub, FaFile  } from 'react-icons/fa';
 
 function Redes() {
     return (
-        <section id='redes' className="redesDiv text-justify text-[1.05rem] text-slate-950 border-b-2 border-stone-900 p-7 md:text-[1.4rem]">
+        <section id='redes' className="redesDiv text-justify text-[1rem] text-slate-950 border-b-2 border-stone-900 p-7 md:text-[1.4rem]">
             <p>Hola, soy <span className='text-black font-bold'>Oscar Eduardo Lozano    Bocanegra</span>
             </p>
 
