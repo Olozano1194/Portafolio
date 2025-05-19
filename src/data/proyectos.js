@@ -11,11 +11,11 @@ export const proyectos = [
         'credenciales': { 'user': 'example1@example.com', 'pass': '123456' },
         'imgDemo': {
             'demoDescription': 'Este proyecto es una aplicación de gestión para un gimnasio, tiene dos roles: Admin y Usuario. El Admin tiene acceso completo a todas las funciones, incluyendo la creación de usuarios, gestión de miembros, y asignación de membresías. El Usuario solo puede agregar miembros y asignarles membresías, además de gestionar su propio perfil. Ambos roles pueden gestionar los datos de los miembros del gimnasio, pero con diferentes niveles de acceso según su rol.',
-            'img': ['/assets/demo-Login.jpg',
-                    '/assets/demo-Dashboard.jpg',
-                    '/assets/demo-Registrar.jpg',
-                    '/assets/demo-Listar.jpg',
-                    '/assets/demo-Usuario.jpg',
+            'img': ['/assets/demo/gimnasioReactDjango/demo-Login.jpg',
+                    '/assets/demo/gimnasioReactDjango/demo-Dashboard.jpg',
+                    '/assets/demo/gimnasioReactDjango/demo-Registrar.jpg',
+                    '/assets/demo/gimnasioReactDjango/demo-Listar.jpg',
+                    '/assets/demo/gimnasioReactDjango/demo-Usuario.jpg',
             ],
             'title': ['Login','Dashboard','Registrar','Listar','Usuario'],
             'description': ['Login de usuario','Dashboard de usuario','Registro de miembros del gym','Listar miembros del gym', 'Perfil del usuario'],
@@ -34,11 +34,11 @@ export const proyectos = [
         'imgDemo': {
             'demoDescription': 'Este proyecto es una aplicación de gestión para instituciones educativas, hasta el momento solo se puede registrar instituciones y crear usuarios, pero en el futuro se espera agregar más funcionalidades.', 
             'img': [
-                '/assets/demo-loginIntitucion.jpg',
-                '/assets/demo-HomeInstitucion.jpg',
-                '/assets/demo-RegistrarInstitucion.jpg',
-                '/assets/demo-ListarInstitucion.jpg',
-                '/assets/demo-CrearUsuario.jpg',               
+                '/assets/demo/instituciones/demo-loginIntitucion.jpg',
+                '/assets/demo/instituciones/demo-HomeInstitucion.jpg',
+                '/assets/demo/instituciones/demo-RegistrarInstitucion.jpg',
+                '/assets/demo/instituciones/demo-ListarInstitucion.jpg',
+                '/assets/demo/instituciones/demo-CrearUsuario.jpg',               
             ],
             'title': ['Login','Home','Registrar','Listar','Usuario'],
             'description': ['Login de usuario','Home del usuario','Registro de instituciones','Listar instituciones', 'Registrar usuario'],            
@@ -75,7 +75,12 @@ export const proyectos = [
         'repo': "https://github.com/Olozano1194/task-app",
         'Demo': 'https://olozano1194.github.io/task-app/',
         'credenciales': null,
-        'imgDemo': null
+        'imgDemo': {
+            'demoDescription': 'Esta es una aplicación de listas de tareas que permite agregar y eliminar tareas de forma sencilla. Es una herramienta básica pero funcional, ideal para organizar pendientes. El proyecto está alojado en GitHub Pages para fácil acceso y visualización.', 
+            'img': null,
+            'title': null,
+            'description': null,            
+        },
     },
     {
         id: 6,
@@ -87,7 +92,12 @@ export const proyectos = [
         'repo': "https://github.com/Olozano1194/Gimnasio",
         'Demo': 'https://gimnasio-vm42.onrender.com',
         'credenciales': null,
-        'imgDemo': null
+        'imgDemo': {
+            'demoDescription': 'Este proyecto es una aplicación de gestión para gimnasios, con dos roles definidos: Administrador y Usuario. El Administrador tiene acceso total a todas las funciones, incluyendo la creación y gestión de usuarios y miembros. El Usuario, por su parte, puede agregar nuevos miembros y gestionar su propio perfil. Ambos roles pueden interactuar con la base de datos de miembros, pero con distintos niveles de acceso según sus permisos.', 
+            'img': null,
+            'title': null,
+            'description': null,            
+        },
     },
     {
         id: 7,
@@ -118,8 +128,16 @@ export const proyectos = [
         'tipo': "Demo",
         'repo': "https://github.com/Olozano1194/challenger_4_Ecomerce_Alura",
         'Demo': 'https://olozano1194.github.io/challenger_4_Ecomerce_Alura',
-        'credenciales': null,
-        'imgDemo': null
+        'credenciales': { 'user': '', 'pass': '' },
+        'imgDemo': {
+            'demoDescription': 'Este proyecto es una tienda virtual diseñada con un enfoque visual. Cuenta con secciones de artículos organizados y un botón de inicio de sesión funcional desde el diseño. Actualmente, la tienda es solo una maqueta interactiva: muestra imágenes y la interfaz de login, pero aún no almacena datos ni gestiona registros. Estos elementos están pensados para desarrollarse en futuras fases del proyecto.', 
+            'img': [
+                '/assets/demo/tiendaVirtual/demo-index.png',
+                '/assets/demo/tiendaVirtual/demo-login.png',                               
+            ],
+            'title': ['Dashboard','Login'],
+            'description': ['Dashboard de la tienda virtual','Login del tienda virtual'],            
+        },
     },
     {
         id: 10,
@@ -131,7 +149,12 @@ export const proyectos = [
         'repo': "https://github.com/Olozano1194/Challenger2-Juego-Ahorcado",
         'Demo': 'https://olozano1194.github.io/Challenger2-Juego-Ahorcado/',
         'credenciales': null,
-        'imgDemo': null
+        'imgDemo': {
+            'demoDescription': 'Este proyecto forma parte de los desafíos propuestos en la Escuela de Alura Latam para poner en práctica lo aprendido. Consiste en un juego del ahorcado que incluye cuatro palabras predefinidas, las cuales se seleccionan aleatoriamente al iniciar el juego. Además, permite al usuario agregar nuevas palabras personalizadas para hacerlo más dinámico.', 
+            'img': null,
+            'title': null,
+            'description': null,            
+        },
     },
     {
         id: 11,
@@ -143,7 +166,12 @@ export const proyectos = [
         'repo': "https://github.com/Olozano1194/Challenger1-encriptador",
         'Demo': 'https://olozano1194.github.io/Challenger1-encriptador/',
         'credenciales': null,
-        'imgDemo': null
+        'imgDemo': {
+            'demoDescription': 'Este proyecto forma parte de los desafíos propuestos en la Escuela de Alura Latam para poner en práctica lo aprendido. Se trata de un encriptador de texto simple: el usuario escribe una palabra o frase y, al hacer clic en "Encriptar", el texto se transforma según una lógica definida. También incluye la opción de desencriptar para recuperar el mensaje original.', 
+            'img': null,
+            'title': null,
+            'description': null,            
+        },
     },
     {
         id: 12,
