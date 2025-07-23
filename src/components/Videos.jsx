@@ -20,13 +20,15 @@ const Videos = () => {
 
     return (
         <section className='w-full overflow-hidden flex flex-col justify-center items-center p-5 border-t-2 border-stone-900'>
-            <h1 className='text-4xl font-bold'>{proyecto.title}</h1>
+            <div className='w-full flex justify-center pb-7'>
+                <h1 className='text-4xl font-bold'>{proyecto.title}</h1>
+            </div>          
 
             <ReactPlayer
                 url={`/videos/videos-${proyecto.img}.mp4`}
                 controls={true}
                 width="800px"
-                height="600px"
+                height="400px"
                  
             />
                  
