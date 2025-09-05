@@ -1,6 +1,30 @@
 export const proyectos = [
     {
         id: 1,
+        'title': 'Proyecto Instituciones (Actualización)',
+        'subtitle': 'Proyecto MinTic - Versión Mejorada',
+        'description': 'Aplicación de gestión para instituciones educativas, mejorada. Tecnologías utilizadas React, TypeScript, Tailwind, Axios',
+        'img': 'InstitucionesV2',
+        'tipo': 'Demo',
+        'repo': 'https://github.com/Olozano1194/entidadesReact',
+        'Demo': '#',
+        'credenciales': { 'user': 'PedroNel@gmail.com', 'pass': '123456' },
+        'imgDemo': {
+            'demoDescription': "Este proyecto es la versión actualizada de una aplicación de gestión para instituciones educativas que originalmente desarrollé durante el Bootcamp FullStack de MinTic. En esta nueva versión, he reestructurado la aplicación utilizando React, TypeScript, Tailwind, y he agregado una serie de nuevas funcionalidades. La aplicación ahora permite crear usuarios por rol (como administrador, docente y estudiante) con un sistema de autenticación adaptado a cada rol. Además, he implementado un proceso de inicialización automática que, al arrancar el servidor por primera vez, crea los roles predeterminados ('admin', 'docente', 'estudiante') y los datos básicos necesarios para su funcionamiento.            También he integrado una API externa que proporciona información actualizada sobre los departamentos y municipios de Colombia. Esto permite que, al iniciar el proyecto desde cero, estos datos se carguen automáticamente en la base de datos y se puedan utilizar en los formularios correspondientes. Los administradores tienen la capacidad de registrar instituciones, visualizar en una tabla la lista de docentes, estudiantes e instituciones, cada usuario dependiendo del rol puede actualizar los datos de docentes o estudiantes. La aplicación está diseñada para escalar con nuevas funcionalidades en el futuro.", 
+            'img': [
+                '/assets/demo/institucionesV2/demo-loginIntitucion.jpg',
+                '/assets/demo/institucionesV2/demo-HomeInstitucion.jpg',
+                '/assets/demo/institucionesV2/demo-Profile.jpg',
+                '/assets/demo/institucionesV2/demo-RegistrarInstitucion.jpg',
+                '/assets/demo/institucionesV2/demo-ListarInstitucion.jpg',
+                '/assets/demo/institucionesV2/demo-CrearUsuario.jpg',               
+            ],
+            'title': ['Login','Home', 'Perfil', 'Registrar','Listar','Usuario'],
+            'description': ['Login de usuario','Home del usuario', 'Perfil del Usuario según el rol', 'Registro de instituciones','Listar instituciones', 'Registrar usuario'],            
+        },            
+    },
+    {
+        id: 2,
         'title': 'Proyecto Gimnasio',
         'subtitle': 'Proyecto Personal',
         'description': 'Proyecto desarrollado con React, Tailwind y Django Rest Framework',
@@ -22,17 +46,17 @@ export const proyectos = [
         }       
     },    
     {
-        id: 2,
+        id: 3,
         'title': 'Proyecto Instituciones',
         'subtitle': 'Proyecto MinTic',
-        'description': 'Proyecto final del curso FullStack de MinTic, desarrollado con Html5, Tailwind, Axios',
+        'description': 'Proyecto final del curso FullStack de MinTic. Tecnologías utilizadas,Html5, Tailwind, Axios',
         'img': 'Instituciones',
         'tipo': 'Demo',
         'repo': 'https://github.com/Olozano1194/InstitucionesV1',
         'Demo': 'https://instituciones-v1.vercel.app',
         'credenciales': { 'user': 'PedroNel@gmail.com', 'pass': '123456' },
         'imgDemo': {
-            'demoDescription': 'Este proyecto es una aplicación de gestión para instituciones educativas, hasta el momento solo se puede registrar instituciones y crear usuarios, pero en el futuro se espera agregar más funcionalidades.', 
+            'demoDescription': 'Este es un proyecto desarrollado durante el curso FullStack de MinTic. Se trata de una aplicación de gestión para instituciones educativas, que en su versión inicial permite registrar instituciones y crear usuarios. En el futuro, se planea agregar más funcionalidades para ampliar su alcance.', 
             'img': [
                 '/assets/demo/instituciones/demo-loginIntitucion.jpg',
                 '/assets/demo/instituciones/demo-HomeInstitucion.jpg',
@@ -55,7 +79,7 @@ export const proyectos = [
     //     'Demo': 'https://api-instituciones-3dvhnt7tv-oscars-projects-0f3a365c.vercel.app',
     // },
     {
-        id: 3,
+        id: 4,
         'title': "Lista de Tareas",
         'subtitle': "Proyecto Personal",
         'description': "Proyecto desarrollado con React, Tailwind, Django Rest y MySql",
@@ -72,7 +96,7 @@ export const proyectos = [
         // },
     },
     {
-        id: 4,
+        id: 5,
         'title': "Lista de Tareas",
         'subtitle': "Proyecto Personal",
         'description': "Proyecto desarrollado con Html5, Css3, Mysql y Django",
@@ -83,7 +107,7 @@ export const proyectos = [
                 
     },    
     {
-        id: 5,
+        id: 6,
         'title': "Sistema para Gimnasio",
         'subtitle': "Proyecto Personal",
         'description': "Proyecto desarrollado con Html5, Css3, JavaScript y Django",
@@ -100,7 +124,7 @@ export const proyectos = [
         },
     },
     {
-        id: 6,
+        id: 7,
         'title': "Login Django",
         'subtitle': "Proyecto Personal",
         'description': "Proyecto desarrollado con Html5, Css3, JavaScript y Django",
@@ -110,7 +134,7 @@ export const proyectos = [
         //'video': 'LoginDjango',
     },
     {
-        id: 7,
+        id: 8,
         'title': "Hotel Alura",
         'subtitle': "Challenger Oracle-Alura",
         'description': "Proyecto desarrollado con Java, JDBC y Mysql",
@@ -120,7 +144,7 @@ export const proyectos = [
         //'video': 'AluraHotel',
     },
     {
-        id: 8,
+        id: 9,
         'title': "Tienda Virtual",
         'subtitle': "Challenger Oracle-Alura",
         'description': "Proyecto desarrollado con Html5, Css3, JavaScript",
