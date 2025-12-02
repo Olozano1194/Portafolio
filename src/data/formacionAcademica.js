@@ -8,13 +8,13 @@ export const datos = [
     {
         "id": 2,
         "imagen": "Itfip",
-        "titulacion": "Tecnólogo Informática",
+        "titulacion": "Tecnólogo en Gestión Informática",
         "date": '2020-ITFIP'
     },
     {
         "id": 3,
         "imagen": "Itfip",
-        "titulacion": "Técnico Soluciones Web",
+        "titulacion": "Técnico en Soluciones Web",
         "date": '2018-ITFIP'
     },
     {
