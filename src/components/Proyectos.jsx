@@ -9,21 +9,23 @@ function Proyectos() {
             
             {
                 proyectos.map((proyecto) => (
-                    <article key={proyecto.id} className="cardProyect w-full flex items-center justify-center flex-col mb-7 md:justify-between md:flex-row">
-                        <div className="imgProyect">
+                    <article key={proyecto.id} className="cardProyect w-full grid grid-cols-1 mb-7 md:grid-cols-12 md:items-center md:gap-6">
+                        {/* container img */}
+                        <div className="imgProyect order-1 flex justify-center md:order-1 md:col-span-4">
                             <img
-                            className="w-80 h-60 cursor-pointer md:mr-10 xl:mr-0 xl:w-96" 
+                            className="w-80 h-60 cursor-pointer xl:w-96" 
                             src={`/assets/proyecto-${proyecto.img}.png`} 
                             alt={`imagen ${proyecto.img}`} />
-                        </div>                        
-                        
-                        <div className="w-80 text-center text-lg p-4 xl:w-[400px]">
-                            <h3 className="font-bold text-blue-600 text-2xl">{proyecto.title}</h3>
-                            <p className="mt-1 mb-2 md:mt-4 md:mb-3">{proyecto.subtitle}</p>
-                            <p>{proyecto.description}</p>                            
                         </div>
-                            
-                        <div className="flex justify-center flex-col items-center gap-5 pb-4 text-white text-lg md:ml-10 xl:ml-0">
+                        {/* text principal mobile */}
+                        <h3 className="w-full font-bold mb-4 text-center text-blue-600 text-2xl md:hidden">{proyecto.title}</h3>                       
+                        {/* container text */}
+                        <div className="text-lg text-center p-4 order-2 md:order-2 md:col-span-6 md:flex md:flex-col md:justify-center md:text-left xl:w-auto">                                                    
+                            <h3 className="font-bold mt-1 mb-2 text-blue-600 text-xl hidden md:block md:mt-4 md:mb-3 lg:text-3xl lg:text-center">{proyecto.subtitle}</h3>
+                            <p className="lg:text-xl lg:text-center">{proyecto.description}</p>                            
+                        </div>
+                        {/* container btn */}
+                        <div className="flex justify-center flex-col items-center gap-5 pb-4 text-white text-lg  order-3 md:order-3 md:col-span-2 md:justify-center md:h-full">
                             <Link to={proyecto.repo} className="bg-blue-700 rounded-xl p-2 xl:w-[10rem] xl:text-center" target="_blank">Repositorio</Link>
                             {
                                 proyecto.tipo === 'Demo' ? (
@@ -40,7 +42,6 @@ function Proyectos() {
                 ))
             }
         </section>
-    );
-    
+    );    
 }
 export default Proyectos;

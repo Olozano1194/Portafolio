@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form"; //importación del useForm para valid
 function Contacto() {
     const { register, handleSubmit, formState: {errors}, reset } = useForm();
     
-    const onSubmit = handleSubmit((data) => {
+    const onSubmit = handleSubmit(() => {
         //console.log(data);
         alert('Mensaje enviado correctamente.....')
         reset();
@@ -121,7 +121,7 @@ function Contacto() {
             </form>
 
             <div className="mt-7 md:mb-5 text-[1.15rem] text-stone-50 lg:text-xl xl:text-2xl">
-                <p>©2025 desarrollado por Oscar Lozano</p>
+                <p>© {new Date().getFullYear()} desarrollado por Oscar Lozano</p>
             </div>
         </section>
     );
