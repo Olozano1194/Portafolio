@@ -59,12 +59,12 @@ export const softSkills = [
     },
     {
         "id": 3,
-        "icon": 'FcCollaboration',
+        "icon": 'FaHandshake',
         "description": "Colaboración"
     },
     {
         "id": 6,
-        "icon": 'FaCalendarTimes',
+        "icon": 'FaClock',
         "description": "Gestión del tiempo"
     }
 ]
