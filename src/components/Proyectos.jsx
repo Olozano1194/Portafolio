@@ -22,7 +22,7 @@ function Proyectos() {
                         {/* container text */}
                         <div className="text-lg text-center p-4 order-2 md:order-2 md:col-span-6 md:flex md:flex-col md:justify-center md:text-left xl:w-auto">                                                    
                             <h3 className="font-bold mt-1 mb-2 text-blue-600 text-xl hidden md:block md:mt-4 md:mb-3 lg:text-3xl lg:text-center">{proyecto.subtitle}</h3>
-                            <p className="lg:text-xl lg:text-center">{proyecto.description}</p>                            
+                            <p className="lg:text-xl lg:text-center md:text-base">{proyecto.description}</p>                            
                         </div>
                         {/* container btn */}
                         <div className="flex justify-center flex-col items-center gap-5 pb-4 text-white text-lg  order-3 md:order-3 md:col-span-2 md:justify-center md:h-full">

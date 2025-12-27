@@ -90,7 +90,7 @@ function Contacto() {
 
                 <label className="formContact md:w-full resize-none" htmlFor="mensaje">
                     <textarea 
-                        className="w-full h-36 p-2 border-l-rose-50 rounded-lg resize-none outline-none md:mt-5" 
+                        className="w-72 h-36 p-2 border-l-rose-50 rounded-lg resize-none outline-none md:mt-5" 
                         id="mensaje"
                         {...register('mensaje',
                             { required:
@@ -121,7 +121,7 @@ function Contacto() {
             </form>
 
             <div className="mt-7 md:mb-5 text-[1.15rem] text-stone-50 lg:text-xl xl:text-2xl">
-                <p>© {new Date().getFullYear()} desarrollado por Oscar Lozano</p>
+                <p>©{new Date().getFullYear()} desarrollado por Oscar Lozano</p>
             </div>
         </section>
     );
