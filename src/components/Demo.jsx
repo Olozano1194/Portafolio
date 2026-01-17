@@ -1,19 +1,14 @@
 import { useParams, Link } from 'react-router-dom';
 import { proyectos } from '../data/proyectos';
+import CarruselDemo from './carruselDemo/CarruselDemo';
 
 
 const Demo = () => {
     const { demoId } = useParams();
-    const proyecto = proyectos.find((proyecto) => proyecto.id === parseInt(demoId)); 
-    
-
-    // if (!proyecto || proyecto.tipo !== 'Video') {
-    //     return <Navigate to="/404" />;
-                
-    // }
+    const proyecto = proyectos.find((proyecto) => proyecto.id === parseInt(demoId));
 
     return (
-        <section className='w-full overflow-hidden flex flex-col justify-center items-center p-5'>
+        <section className='w-full overflow-hidden flex flex-col justify-center items-center'>
             <h1 className='text-4xl font-bold mb-6'>{proyecto.title}</h1>
             <p className='flex justify-center items-center text-lg'>{proyecto.imgDemo.demoDescription}</p>
             {
@@ -38,7 +33,7 @@ const Demo = () => {
                 proyecto.credenciales && (
                     <article className="w-full flex flex-col items-center justify-center lg:w-[1000px]">
                          <h4 className='mt-10 mb-10 text-2xl font-semibold '>Imagenes del proyecto</h4>
-                        {
+                        {/* {
                             proyecto.imgDemo.img.map((image, index) => (
                                 <div key={index} className="w-full flex flex-col items-center justify-center md:justify-between md:flex-row">
                                     <img
@@ -53,9 +48,15 @@ const Demo = () => {
                                 </div>
                                                                
                             ))                            
-                        }            
-                        
-                        
+                        }             */}
+                        {/* {proyecto.imgDemo && ( */}
+                            <CarruselDemo
+                                imagenes={proyecto.imgDemo.img}
+                                title={proyecto.imgDemo.title}
+                                descriptions={proyecto.imgDemo.description}
+                            /> 
+
+                        {/* )}                         */}
                     </article>
                 )                
             }            
