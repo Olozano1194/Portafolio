@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Redes from './components/Redes';
 import SobreMi from './components/SobreMi';
@@ -14,7 +14,7 @@ import Demo from './components/Demo';
 function App() {
   
   return (
-    <BrowserRouter>
+    <>
       <header className='w-full bg-slate-500 flex justify-between lg:gap-3 p-2 sticky top-0 z-20'>
         <Navbar />
       </header>
@@ -51,8 +51,7 @@ function App() {
       <footer className='bg-slate-500 p-5'>
         <Contacto />
       </footer>
-      
-    </BrowserRouter>
+    </> 
   )
 }
 
