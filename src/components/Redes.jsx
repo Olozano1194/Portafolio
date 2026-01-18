@@ -11,7 +11,7 @@ function Redes() {
                     Hola, soy <span className='text-black font-bold'>Oscar Eduardo Lozano    Bocanegra,</span>
                 </p>
                 <p>
-                    Ingeniero de sistemas<span className='font-bold'>(ITFIP)</span>, apasionado por el desarrollo web.
+                    <span className='font-bold'>Ingeniero de sistemas(ITFIP)</span>, apasionado por el desarrollo web.
                 </p> 
                 <p>
                     Mi enfoque principal es el ecosistema <span className='text-black font-bold'>Front-End</span>, donde desarrollo interfaces dinámicas, modernas y funcionales utilizando <span className='text-black font-bold'>JavaScript, React y Tailwind CSS</span>.
