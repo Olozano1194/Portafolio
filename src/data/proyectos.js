@@ -2,15 +2,24 @@ export const proyectos = [
     {
         id: 1,
         'title': 'Gestión Institucional (Actualización)',
-        'subtitle': 'Refactorización y Escalabilidad (Proyecto MinTic)',
-        'description': 'Evolución de una plataforma educativa centrada en la eficiencia del lado del cliente. Implementé TypeScript para garantizar la integridad de los datos y Axios para una comunicación robusta con la API. Optimicé la interfaz con Tailwind CSS, logrando una experiencia de usuario más fluida y profesional.',
+        'subtitle': 'Refactorización y optimización Full-Stack',
+        'description': "Plataforma educativa refactorizada con React y TypeScript, optimizando la experiencia de usuario y la escalabilidad."
+,
         'img': 'InstitucionesV2',
-        'tipo': 'Demo',
+        'tipo': 'Ver proyecto',
         'repo': 'https://github.com/Olozano1194/entidadesReact',
-        'Demo': '#',
+        'Ver_proyecto': '#',
         'credenciales': { 'user': 'PedroNel@gmail.com', 'pass': '123456' },
         'imgDemo': {
-            'demoDescription': "Este proyecto es la versión actualizada de una aplicación de gestión para instituciones educativas que originalmente desarrollé durante el Bootcamp FullStack de MinTic. En esta nueva versión, he reestructurado la aplicación utilizando React, TypeScript, Tailwind, y he agregado una serie de nuevas funcionalidades. La aplicación ahora permite crear usuarios por rol (como administrador, docente y estudiante) con un sistema de autenticación adaptado a cada rol. Además, he implementado un proceso de inicialización automática que, al arrancar el servidor por primera vez, crea los roles predeterminados ('admin', 'docente', 'estudiante') y los datos básicos necesarios para su funcionamiento.            También he integrado una API externa que proporciona información actualizada sobre los departamentos y municipios de Colombia. Esto permite que, al iniciar el proyecto desde cero, estos datos se carguen automáticamente en la base de datos y se puedan utilizar en los formularios correspondientes. Los administradores tienen la capacidad de registrar instituciones, visualizar en una tabla la lista de docentes, estudiantes e instituciones, cada usuario dependiendo del rol puede actualizar los datos de docentes o estudiantes. La aplicación está diseñada para escalar con nuevas funcionalidades en el futuro.", 
+            'demoDescription': [
+                    "Versión actualizada de una aplicación de gestión para instituciones educativas.",
+                    "Implementa React y TypeScript para integridad de datos y comunicación con Axios.",
+                    "Permite crear usuarios por rol (admin, docente, estudiante) con autenticación adaptada.",
+                    "Inicializa automáticamente roles y datos básicos en la base de datos.",
+                    "Integra API externa para departamentos y municipios de Colombia.",
+                    "Administradores pueden registrar instituciones y gestionar docentes/estudiantes.",
+                    "Diseñada para escalar con nuevas funcionalidades futuras."
+            ], 
             'img': [
                 '/assets/demo/institucionesV2/demo-loginIntitucion.jpg',
                 '/assets/demo/institucionesV2/demo-HomeInstitucion.jpg',
@@ -26,15 +35,21 @@ export const proyectos = [
     {
         id: 2,
         'title': 'GymFlow App',
-        'subtitle': 'Desarrollo Full-Stack (React & Django)',
-        'description': 'Aplicación integral para la administración de gimnasios. Desarrollé una API REST con Django Rest Framework para el manejo de usuarios y servicios, integrada con un frontend dinámico en React. El enfoque principal fue la persistencia de datos y el diseño responsivo.',
+        'subtitle': 'Full-Stack React + Django',
+        'description': 'App para gestión de gimnasios con React y Django. Incluye roles de Admin y Usuario, gestión de miembros y diseño responsivo.',
         'img': 'GymReactDjango',
-        'tipo': 'Demo',
+        'tipo': 'Ver proyecto',
         'repo': 'https://github.com/Olozano1194/GimnasioReactDjango',
-        'Demo': 'https://gimnasio-react-django.vercel.app',
+        'Ver proyecto': 'https://gimnasio-react-django.vercel.app',
         'credenciales': { 'user': 'example1@example.com', 'pass': '123456' },
         'imgDemo': {
-            'demoDescription': 'Este proyecto es una aplicación de gestión para un gimnasio, tiene dos roles: Admin y Usuario. El Admin tiene acceso completo a todas las funciones, incluyendo la creación de usuarios, gestión de miembros, y asignación de membresías. El Usuario solo puede agregar miembros y asignarles membresías, además de gestionar su propio perfil. Ambos roles pueden gestionar los datos de los miembros del gimnasio, pero con diferentes niveles de acceso según su rol.',
+            'demoDescription': [
+                "Aplicación integral para gestión de gimnasios, con roles de Admin y Usuario.",
+                "Admin: gestión completa de miembros, asignación de membresías y creación de usuarios.",
+                "Usuario: gestiona su perfil y miembros asignados.",
+                "Frontend dinámico en React y backend en Django Rest Framework.",
+                "Se enfoca en persistencia de datos y diseño responsivo."
+            ],
             'img': ['/assets/demo/gimnasioReactDjango/demo-Login.jpg',
                     '/assets/demo/gimnasioReactDjango/demo-Dashboard.jpg',
                     '/assets/demo/gimnasioReactDjango/demo-Registrar.jpg',
@@ -48,15 +63,20 @@ export const proyectos = [
     {
         id: 3,
         'title': 'EduBase',
-        'subtitle': 'Proyecto Final Full-Stack (MinTic)',
-        'description': 'Desarrollo inicial de una plataforma de gestión académica. Este proyecto marcó mi base en el desarrollo Full-Stack, integrando estructuras de datos complejas en el frontend con HTML5 y Tailwind, asegurando un consumo de datos eficiente mediante peticiones asíncronas.',
+        'subtitle': 'Proyecto final Full-Stack MinTic',
+        'description': 'Plataforma académica Full-Stack desarrollada con HTML5 y Tailwind. Permite gestionar datos de manera eficiente y es base para futuros desarrollos.',
         'img': 'Instituciones',
-        'tipo': 'Demo',
+        'tipo': 'Ver proyecto',
         'repo': 'https://github.com/Olozano1194/InstitucionesV1',
-        'Demo': 'https://instituciones-v1.vercel.app',
+        'Ver proyecto': 'https://instituciones-v1.vercel.app',
         'credenciales': { 'user': 'PedroNel@gmail.com', 'pass': '123456' },
         'imgDemo': {
-            'demoDescription': 'Este es un proyecto desarrollado durante el curso FullStack de MinTic. Se trata de una aplicación de gestión para instituciones educativas, que en su versión inicial permite registrar instituciones y crear usuarios. En el futuro, se planea agregar más funcionalidades para ampliar su alcance.', 
+            'demoDescription': [
+                "Plataforma académica desarrollada como proyecto final Full-Stack en MinTic.",
+                "Permite registrar instituciones y crear usuarios.",
+                "Frontend con HTML5 y Tailwind, backend para consumo eficiente de datos.",
+                "Proporciona base para agregar futuras funcionalidades y escalar el proyecto."
+            ], 
             'img': [
                 '/assets/demo/instituciones/demo-loginIntitucion.jpg',
                 '/assets/demo/instituciones/demo-HomeInstitucion.jpg',
@@ -81,8 +101,8 @@ export const proyectos = [
     {
         id: 4,
         'title': "TaskMaster",
-        'subtitle': "Full-Stack con Base de Datos Relacional",
-        'description': "Aplicación de productividad centrada en la organización de flujos de trabajo. Utilicé MySQL para el almacenamiento relacional de datos y Django para la lógica del servidor, permitiendo al usuario gestionar sus tareas en tiempo real con una interfaz minimalista construida en React.",
+        'subtitle': "Full-Stack con Django + MySQL",
+        'description': "App de productividad para gestionar tareas en tiempo real. Backend con Django y MySQL, frontend en React minimalista.",
         'img': "TaskReact",
         'tipo': "Video",
         'repo': "https://github.com/Olozano1194/todoListReactDjango",
@@ -136,8 +156,8 @@ export const proyectos = [
     {
         id: 8,
         'title': "Hotel Alura Management",
-        'subtitle': "Backend con Java 6 JDBC (Oracle ONE)",
-        'description': "Software de escritorio para la gestión de reservas y huéspedes. Este proyecto destaca mi capacidad para trabajar con lenguajes fuertemente tipados como Java, utilizando JDBC para la manipulación directa de bases de datos y garantizando la integridad de las transacciones.",
+        'subtitle': "Backend Java 6 con JDBC",
+        'description': "Software de escritorio para gestión de reservas y huéspedes. Backend en Java con JDBC para manejo eficiente de la base de datos.",
         'img': "HotelAlura",
         'tipo': "Video",
         'repo': "https://github.com/Olozano1194/alura-Hotel",

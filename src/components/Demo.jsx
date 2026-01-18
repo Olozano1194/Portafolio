@@ -1,13 +1,17 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { proyectos } from '../data/proyectos';
 import CarruselDemo from './carruselDemo/CarruselDemo';
+import { FaArrowLeft } from "react-icons/fa";
 
 
 const Demo = () => {
     const { demoId } = useParams();
     const proyecto = proyectos.find((proyecto) => proyecto.id === parseInt(demoId));
+    const navigate = useNavigate();
 
     return (
+        <>
+        <button onClick={() => navigate(-1)} className="w-7 flex items-center mb-4 p-2 text-xl font-bold text-gray-600 shadow-md shadow-slate-800 hover:text-gray-900 hover:scale-110"><FaArrowLeft /></button>
         <section className='w-full overflow-hidden flex flex-col justify-center items-center'>
             <h1 className='text-4xl font-bold mb-6'>{proyecto.title}</h1>
             <p className='flex justify-center items-center text-lg'>{proyecto.imgDemo.demoDescription}</p>
@@ -26,7 +30,7 @@ const Demo = () => {
                     target='_blanck'
                     className='bg-slate-500 font-bold rounded-xl px-4 py-2 text-2xl text-gray-100'
                 >
-                    Ver Demo
+                    Ir a la demo
                 </Link>
             </div>
             {
@@ -62,6 +66,7 @@ const Demo = () => {
             }            
             
         </section>
+        </>
     );
 };
 export default Demo;
