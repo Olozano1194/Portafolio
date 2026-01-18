@@ -36,6 +36,7 @@ function Hobbies() {
             title='Hobbies'
             items={hobbies}
             getIcon={getIcon}
+            isLast
         />
     );
 }
