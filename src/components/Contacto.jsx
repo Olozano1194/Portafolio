@@ -103,7 +103,7 @@ function Contacto() {
                     <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl text-gray-900 md:mt-5"><BiMessageAltDetail /> Mensaje</span>                  
                     <textarea
                         htmlFor="mensaje"
-                        className="p-2 border-l-rose-50 placeholder:text-gray-500 rounded-lg resize-none text-gray-600 outline-none md:mt-2 md:w-4/5 md:h-36"
+                        className="w-full p-2 border-l-rose-50 placeholder:text-gray-500 rounded-lg resize-none text-gray-600 outline-none md:mt-2 md:w-4/5 md:h-36"
                         id="mensaje"
                         {...register('mensaje',
                             { required:

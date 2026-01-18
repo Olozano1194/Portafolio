@@ -4,7 +4,7 @@ import getIcon from "../assets/icons/iconsHobbies";
 
 function Hobbies() {
     return (
-        <section id="hobbies" className="containerSkills w-full overflow-hidden flex flex-col items-center p-5 border-b-2 border-stone-900">
+        <section id="hobbies" className="containerSkills w-full overflow-hidden flex flex-col items-center p-5">
             <h2  className="text-4xl font-bold ">Hobbies</h2>
             <div className="w-full overflow-hidden mt-5">
                 <ul className="carousel-track flex flex-nowrap text-3xl cursor-pointer">

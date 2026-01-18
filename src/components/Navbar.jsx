@@ -20,7 +20,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-function Navbar() {  //1094
+function Navbar() {  
     return (
         <>
         <Disclosure as="nav" className="w-full flex justify-between">
@@ -51,7 +51,7 @@ function Navbar() {  //1094
                                         aria-current={item.current ? 'page' : undefined}
                                         className={classNames(
                                         item.current ? 'hover:bg-gray-700 text-gray-300' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                                'rounded-md md:px-1 py-2 text-sm  xl:text-lg font-medium linkNav',
+                                        'rounded-md md:px-1 py-2 md:text-lg  lg:text-xl font-medium linkNav',
                                         )}
                                     >
                                         {item.name}
@@ -73,7 +73,7 @@ function Navbar() {  //1094
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
                         item.current ? 'hover:bg-gray-700 text-gray-300' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                        'block rounded-md px-3 py-2 text-base font-medium',
+                        'block rounded-md px-3 py-0.5 text-sm font-medium',
                     )}
                     >
                     {item.name}
