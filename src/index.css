@@ -1,10 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
-
-
 
 a:hover {
     color: #ffffffb4;
@@ -277,5 +275,35 @@ a:hover {
         mix-blend-mode: normal;
     }    
 
+}
+
+/* Carrusel skills softskils hobbits */
+@keyframes scroll {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+.carousel-track.reverse {
+    animation-direction: reverse;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+.carousel-item {
+    flex-shrink: 0;
+    padding: 0 1.5rem;
+    white-space: nowrap;
 }
 

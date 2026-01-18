@@ -134,7 +134,7 @@ function Contacto() {
                 </label>
             </form>
 
-            <div className="mt-7 md:mb-5 text-[1.15rem] text-stone-50 lg:text-xl xl:text-2xl">
+            <div className="mt-7 text-[1.15rem] text-stone-50 lg:text-xl xl:text-2xl">
                 <span className="text-sm font-bold md:text-lg lg:text-xl">©{new Date().getFullYear()} desarrollado por Oscar Lozano</span>
             </div>
         </footer>
