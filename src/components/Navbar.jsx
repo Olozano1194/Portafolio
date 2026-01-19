@@ -20,12 +20,12 @@ function classNames(...classes) {
 function Navbar() {  
     return (
         <>
-            <Disclosure as="nav" className="w-full flex justify-between">
-                <div className="flex justify-between w-full px-2 sm:px-6 lg:px-8">
+            <Disclosure as="nav" className="w-full flex justify-between text-text-primary "> 
+                <div className="flex justify-between w-full px-2 sm:px-3 lg:px-8">
                     <div className="relative flex h-16 items-center justify-start w-full">
                         <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
-                                <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-slate-50 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 dark:text-dark-text-primary hover:bg-dark-text-muted hover:text-white focus:outline-none focus:ring-2 focus:ring-primary">
                                     <span className="absolute -inset-0.5" />
                                     <Bars3Icon aria-hidden="true" className="block size-6 group-data-[open]:hidden" />
                                     <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-[open]:block" />
@@ -47,7 +47,7 @@ function Navbar() {
                                             href={item.href}
                                             aria-current={item.current ? 'page' : undefined}
                                             className={classNames(
-                                            item.current ? 'hover:bg-gray-700 text-gray-300' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                            item.current ? 'hover:bg-text-primary text-bg-section dark:hover:bg-text-secondary' : 'text-bg-section hover:bg-text-primary hover:text-dark-text dark:hover:bg-text-secondary',
                                             'rounded-md md:px-1 py-2 md:text-lg  lg:text-xl font-medium linkNav',
                                             )}
                                         >
@@ -59,7 +59,6 @@ function Navbar() {
                         </div>
                     </div>
                 </div>
-
                 <DisclosurePanel className="sm:hidden">
                     <div className="space-y-1 px-2 pb-3 pt-2">
                     {navigation.map((item) => (
@@ -69,8 +68,8 @@ function Navbar() {
                         href={item.href}
                         aria-current={item.current ? 'page' : undefined}
                         className={classNames(
-                            item.current ? 'hover:bg-gray-700 text-gray-300' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                            'block rounded-md px-3 py-0.5 text-sm font-medium',
+                            item.current ? 'text-dark-text-primary dark:text-primary' : 'text-text-primary dark:text-dark-text-primary hover:text-primary',
+                            'block rounded-md px-3 py-2 text-lg font-medium transition-colors',
                         )}
                         >
                         {item.name}
@@ -78,6 +77,12 @@ function Navbar() {
                     ))}
                     </div>
                 </DisclosurePanel>
+                <button 
+                    onClick={() => {document.documentElement.classList.toggle('dark')}}
+                    className="text-text-muted hover:text-accent transition-colors"
+                >
+                    🌙
+                </button>
             </Disclosure>            
         </>
     );

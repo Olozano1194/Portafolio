@@ -15,12 +15,12 @@ function App() {
   
   return (
     <>
-      <header className='w-full bg-slate-500 flex justify-between lg:gap-3 p-2 sticky top-0 z-20'>
+      <header className='w-full bg-text-secondary flex justify-between lg:gap-3 p-2 sticky top-0 z-20 dark:bg-dark-bg'>
         <Navbar />
       </header>
       <Routes>
         <Route path="/" element={
-            <main className='bg-gray-200 p-5'>
+            <main className='bg-bg px-2 dark:bg-dark-bg'>
               <Redes />
               <SobreMi />
               <FormacionAcademica />
@@ -33,14 +33,14 @@ function App() {
         />
 
         <Route path="/Demo/:demoId" element={
-            <main className='bg-gray-200 p-5'>
+            <main className='bg-bg p-5 dark:bg-dark-bg'>
               <Demo />
             </main>
           } 
         />  
 
         <Route path="/Videos/:videosId" element={
-            <main className='bg-gray-200 p-5'>
+            <main className='bg-bg p-5 dark:bg-dark-bg'>
               <Videos />
             </main>
           } 
@@ -48,7 +48,7 @@ function App() {
         
       </Routes>
       
-      <footer className='bg-slate-500 p-5'>
+      <footer className='bg-text-secondary dark:bg-dark-bg p-5'>
         <Contacto />
       </footer>
     </> 

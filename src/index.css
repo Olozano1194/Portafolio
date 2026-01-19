@@ -7,6 +7,7 @@
 a:hover {
     color: #ffffffb4;
     cursor: pointer;
+    transform: scale(1.04);
     
 }
 
@@ -132,9 +133,9 @@ a:hover {
     transform: scale(1.2);
 }
 
-/*-------Formación -----------------*/
-.cardAcademic {
-    border-radius: 5px;
+/*-------Card -----------------*/
+.card {
+    border-radius: 0.75rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     content-visibility: auto;
     contain-intrinsic-size: 0 300px;
@@ -142,27 +143,52 @@ a:hover {
     transition: transform 0.3s ease;
 }
 
-.cardAcademic:hover {
+/* Light mode */
+.card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.08);
+}
+
+.card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.imgFormacion img {
-    object-position: center;
-     /* Efectos visuales  */
-     mix-blend-mode: multiply;
-     filter: grayscale(50%);
-     transition: all 0.5s ease;    
+/* Dark mode */
+.dark .card .imgFormacion {
+    box-shadow:
+    0 4px 8px rgba(158, 157, 157, 0.9),
+    inset 0 1px 0 rgba(114, 106, 106, 0.03);
+    mix-blend-mode: multiply;
+    filter: grayscale(40%);
 }
 
-.cardAcademic:hover .imgFormacion img {
+.card .imgFormacion img {
+    object-position: center;
+    /* Efectos visuales  */
+    mix-blend-mode: multiply;
+    filter: grayscale(50%);
+    transition: all 0.5s ease;    
+}
+
+.card:hover .imgFormacion img {
+  filter: grayscale(0%);
+  mix-blend-mode: normal;
+}
+
+.dark .card:hover .imgFormacion img {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  mix-blend-mode: multiply;
+  filter: grayscale(40%);
+}
+
+.card:hover .imgFormacion img {
     filter: grayscale(0%);
     mix-blend-mode: normal;
 }
 
-a:hover {
-    transform: scale(1.04);
-}
+
+
 /*-----------------------------Animaciones-----------*/
 @keyframes aparecer {
     from { opacity: 0;}
@@ -184,33 +210,32 @@ a:hover {
 
 /*-----------------------------Container Queries-----------*/
 @container proyect (max-width: 400px) {
-    .cardProyect {
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        content-visibility: auto;
-        contain-intrinsic-size: 0 300px;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-    }
-
-    .cardProyect:hover {
-        transform: translate(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    }
-
-    .imgProyect img {
-        object-position: center;
-        /* Efectos visuales  */
-        mix-blend-mode: multiply;
-        filter: grayscale(50%);
-        transition: all 0.5s ease;    
-    }
-
-    .cardProyect:hover .imgProyect img {
-        filter: grayscale(0%);
-        mix-blend-mode: normal;
-    }    
-
+    .cardProyect { 
+        border-radius: 5px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        content-visibility: auto; 
+        contain-intrinsic-size: 0 300px; 
+        overflow: hidden; 
+        transition: transform 0.3s ease; 
+    } 
+    
+    .cardProyect:hover { 
+        transform: translate(-5px); 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+    } 
+    
+    .cardProyect .imgProyect img { 
+        object-position: center; 
+        /* Efectos visuales */ 
+        mix-blend-mode: multiply; 
+        filter: grayscale(50%); 
+        transition: all 0.5s ease; 
+    } 
+    
+    .cardProyect:hover .imgProyect img { 
+        filter: grayscale(0%); 
+        mix-blend-mode: normal; 
+    } 
 }
 
 /* Carrusel skills softskils hobbits */
