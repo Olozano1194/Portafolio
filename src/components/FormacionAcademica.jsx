@@ -2,7 +2,7 @@ import { datos } from "../data/formacionAcademica";
 
 function FormacionAcademica() {
   return (
-    <section className="formaAcademica w-full flex flex-col justify-center items-center p-5 border-b-2 border-stone-900">
+    <section className="section-title w-full flex flex-col justify-center items-center p-5 border-b-2 border-stone-900">
       <h2
         id="formacionAcademica"
         className="font-bold text-center text-4xl p-5"

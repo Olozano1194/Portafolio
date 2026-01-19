@@ -33,19 +33,3 @@ function SobreMi() {
     );
 }
 export default SobreMi;
-
-/*
-Actúa como un experto en selección de personal especializado en ingeniería de sistemas con énfasis en desarrollo de software y con experiencia contratando para empresas remotas o Hibridas. Cabe resaltar que aun no tengo experiencia en el sector de desarrollo, entonces no vaya a colocar que soy experto o que tengo solida experiencia, porque aun me falta arto para eso, porque si se coloca eso, cuando me pregunten que tan experto soy y eso, no voy a poder contestar. 
-
-Voy a darte:
-
-1. Mi portafolio actual
-
-Necesito que:
-
-- Rescribas mi portafolio para que encaje perfectamente con uno que sea vistoso para potenciales reclutadores.
-- Destaques las habilidades y logros más relevantes para los trabajo, tanto front como full stack.
-- Mantengas un tono profesional pero cercano.
-
-adjunto mi link del portafolio.
-*/

@@ -35,7 +35,8 @@ function Skills() {
             id='skill' 
             title='Skill'
             items={skill}
-            getIcon={getIcon}            
+            getIcon={getIcon}
+            titleClass="section-title"            
         />
     );    
 }

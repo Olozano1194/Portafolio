@@ -37,6 +37,7 @@ function Hobbies() {
             items={hobbies}
             getIcon={getIcon}
             isLast
+            titleClass="section-title"
         />
     );
 }

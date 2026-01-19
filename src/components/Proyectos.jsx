@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Proyectos() {
     return (
-        <section className="containerProyect w-full overflow-hidden flex flex-col justify-center items-center p-5 border-b-2 border-stone-900 md:p-0">
+        <section className="section-title w-full overflow-hidden flex flex-col justify-center items-center p-5 border-b-2 border-stone-900 md:p-0">
             <h2 id="proyectos" className="font-bold text-center text-4xl p-5 pb-9">Proyectos</h2>
             
             {

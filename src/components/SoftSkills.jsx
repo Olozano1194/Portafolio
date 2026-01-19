@@ -39,6 +39,7 @@ function SoftSkills() {
             items={softSkills}
             getIcon={getIcon}
             reverse
+            titleClass="section-title"
         />
     );
     

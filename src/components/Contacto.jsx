@@ -15,7 +15,7 @@ function Contacto() {
     })
 
     return (
-        <footer className="w-full overflow-hidden flex flex-col justify-center items-center p-3">
+        <footer className="section-title w-full overflow-hidden flex flex-col justify-center items-center p-3">
             <h2 id="contacto" className="font-bold text-center text-4xl p-2 md:pb-4">Contacto</h2>
             <h3 className="text-xl p-3 md:p-1">¿Quieres contactarme?</h3>
             <p className="text-xl p-1">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
