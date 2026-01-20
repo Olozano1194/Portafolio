@@ -15,19 +15,19 @@ function Contacto() {
     })
 
     return (
-        <footer className="section-title w-full overflow-hidden flex flex-col justify-center items-center p-3">
+        <section className="section-title w-full overflow-hidden flex flex-col justify-center items-center p-3 dark:border-t-2 dark:border-stone-900">
             <h2 id="contacto" className="font-bold text-center text-4xl p-2 md:pb-4">Contacto</h2>
             <h3 className="text-xl p-3 md:p-1">¿Quieres contactarme?</h3>
             <p className="text-xl p-1">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
 
-            <form onSubmit={onSubmit} className="w-full max-w-5xl flex flex-col justify-center items-center text-center gap-5 mt-5 text-xl cursor-pointer md:flex-wrap md:justify-between md:flex-row md:gap-0 md:mt-1 lg:mt-5 xl:px-7 xl:w-[1200px]">
+            <form onSubmit={onSubmit} className="w-full max-w-5xl flex flex-col justify-center items-center text-center gap-5 mt-5 text-xl cursor-pointer md:flex-wrap md:justify-between md:flex-row md:gap-0 md:mt-5 lg:mt-5 xl:px-7">
                 {/* section name and email */}
                 <section className="w-full grid grid-cols-1 gap-5 md:grid-cols-2">
                     <label htmlFor="nombre" className="w-full">
-                        <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl text-gray-900"><BiRename />Nombre</span>
+                        <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl dark:text-dark-text-primary"><BiRename />Nombre</span>
                         <input 
                             type="text"
-                            className="w-full p-2 border-l-rose-50 placeholder:text-gray-500 rounded-lg resize-none text-gray-600 outline-none md:mt-2"
+                            className="w-full p-2 dark:placeholder:text-dark-muted rounded-lg resize-none text-text-secondary outline-none md:mt-2"
                             placeholder="Nombre"
                             id="nombre" 
                             {...register('nombre', {
@@ -49,11 +49,11 @@ function Contacto() {
                         </span>}
                     </label>
                     <label htmlFor="email" className="w-full">
-                        <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl text-gray-900"><MdOutlineEmail />Email</span>
+                        <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl dark:text-dark-text-primary"><MdOutlineEmail />Email</span>
                         <input 
                             type="email"
                             id="email"
-                            className="w-full p-2 border-l-rose-50 placeholder:text-gray-500 rounded-lg resize-none text-gray-600 outline-none md:mt-2"
+                            className="w-full p-2 dark:placeholder:text-dark-muted rounded-lg resize-none text-text-secondary outline-none md:mt-2"
                             {...register('email', {
                                     required: {
                                         value: true,
@@ -73,10 +73,10 @@ function Contacto() {
                 {/* Asunto */}
                 <section className="w-full flex justify-center md:mt-7">
                     <label htmlFor="asunto" className="w-full flex flex-col justify-center md:w-2/3 lg:w-1/2">
-                        <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl text-gray-900 "><FiTag />Asunto</span>
+                        <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl "><FiTag />Asunto</span>
                         <input 
                             type="text"
-                            className="w-full p-2 border-l-rose-50 placeholder:text-gray-500 rounded-lg resize-none text-gray-600 outline-none md:mt-2 mx-auto"
+                            className="w-full p-2 dark:placeholder:text-text-muted rounded-lg resize-none text-text-secondary outline-none md:mt-2 mx-auto  dark:placeholder:text-dark-muted"
                             placeholder="Asunto"
                             id="asunto" 
                             {...register('asunto', {
@@ -100,10 +100,10 @@ function Contacto() {
                 </section>
                 {/* Message */}
                 <label htmlFor="mensaje" className="w-full flex flex-col items-center mt-2">
-                    <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl text-gray-900 md:mt-5"><BiMessageAltDetail /> Mensaje</span>                  
+                    <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl md:mt-5"><BiMessageAltDetail /> Mensaje</span>                  
                     <textarea
                         htmlFor="mensaje"
-                        className="w-full p-2 border-l-rose-50 placeholder:text-gray-500 rounded-lg resize-none text-gray-600 outline-none md:mt-2 md:w-4/5 md:h-36"
+                        className="w-full p-2 border-l-rose-50 placeholder:text-gray-500 rounded-lg resize-none text-gray-600 outline-none md:mt-2 md:w-4/5 md:h-36 dark:placeholder:text-dark-muted"
                         id="mensaje"
                         {...register('mensaje',
                             { required:
@@ -128,16 +128,16 @@ function Contacto() {
                 <label htmlFor="" className="w-full mt-3 text-center ">
                     <input 
                         type="submit"
-                        className="cursor-pointer bg-blue-200 font-semibold p-3 rounded-xl hover:bg-blue-400 hover:text-slate-100 hover:scale-[1.1] md:mt-4"  
+                        className="cursor-pointer bg-primary font-semibold p-3 rounded-xl hover:bg-secondary hover:text-bg-card hover:scale-[1.1] md:mt-4"  
                         value="Enviar Mensaje" 
                     />
                 </label>
             </form>
 
-            <div className="mt-7 text-[1.15rem] text-stone-50 lg:text-xl xl:text-2xl">
+            <div className="mt-7 text-[1.15rem] text-bg-card lg:text-xl xl:text-2xl">
                 <span className="text-sm font-bold md:text-lg lg:text-xl">©{new Date().getFullYear()} desarrollado por Oscar Lozano</span>
             </div>
-        </footer>
+        </section>
     );    
 }
 export default Contacto;

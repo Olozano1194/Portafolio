@@ -1,6 +1,7 @@
 import logo from '../assets/logoOscar1.jpeg';
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { GoMoon } from "react-icons/go";
 
 
 const navigation = [
@@ -77,11 +78,12 @@ function Navbar() {
                     ))}
                     </div>
                 </DisclosurePanel>
+                {/* Dark/Light */}
                 <button 
                     onClick={() => {document.documentElement.classList.toggle('dark')}}
-                    className="text-text-muted hover:text-accent transition-colors"
+                    className="text-text-primary text-2xl hover:text-accent transition-colors dark:text-dark-text-primary"
                 >
-                    🌙
+                    <GoMoon />                    
                 </button>
             </Disclosure>            
         </>

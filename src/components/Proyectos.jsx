@@ -9,7 +9,7 @@ function Proyectos() {
             
             {
                 proyectos.map((proyecto) => (
-                    <article key={proyecto.id} className="card w-full flex flex-col mb-7 md:grid md:grid-cols-12 md:items-center md:gap-6">
+                    <article key={proyecto.id} className="cardProyect w-full flex flex-col mb-7 md:grid md:grid-cols-12 md:items-center md:gap-6">
                         {/* container img */}
                         <div className="imgProyect order-2 flex justify-center md:order-1 md:col-span-4">
                             <img
@@ -27,14 +27,14 @@ function Proyectos() {
                             <p className="mt-3 mb-6 px-2 text-justify text-base md:px-0 lg:text-lg">{proyecto.description}</p>                            
                         </div>
                         {/* container btn */}
-                        <div className="w-full flex justify-center flex-col items-center gap-5 pb-4 text-white text-lg order-4 md:order-3 md:col-span-2 md:justify-center md:h-full">
-                            <Link to={proyecto.repo} className="bg-blue-700 rounded-xl p-2 w-full max-w-[9rem] text-center whitespace-nowrap md:text-[1rem] lg:text-lg xl:max-w-[10rem]" target="_blank">Repositorio</Link>
+                        <div className="w-full flex justify-center flex-col items-center gap-5 pb-4 text-bg-card text-lg order-4 md:order-3 md:col-span-2 md:justify-center md:h-full">
+                            <Link to={proyecto.repo} className="bg-primary rounded-xl p-2 w-full max-w-[9rem] text-center whitespace-nowrap md:text-[1rem] lg:text-lg xl:max-w-[10rem]" target="_blank">Repositorio</Link>
                             {
                                 proyecto.tipo === 'Ver proyecto' ? (
-                                    <Link to={`/Demo/${proyecto.id}`} className="bg-slate-500 rounded-xl p-2 md:text-center  md:text-[0.93rem] lg:text-lg  xl:w-[8.6rem]">Ver Proyecto</Link>
+                                    <Link to={`/Demo/${proyecto.id}`} className="bg-text-muted rounded-xl p-2 md:text-center  md:text-[0.93rem] lg:text-lg  xl:w-[8.6rem]">Ver Proyecto</Link>
                                 ): (
                                     <Link to={`/Videos/${proyecto.id}`} 
-                                        className="bg-blue-400 rounded-xl p-2 xl:w-[5rem] xl:text-center">
+                                        className="bg-secondary rounded-xl p-2 xl:w-[5rem] xl:text-center">
                                             Video
                                     </Link>
                                 )

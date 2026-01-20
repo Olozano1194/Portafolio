@@ -27,7 +27,7 @@ function FormacionAcademica() {
             >
               {item.titulacion}
             </span>
-            <span className="spanImgTitle w-48 mb-3 text-[1.2rem] text-text-primary font-semibold md:w-52 md:text-[17px] dark:text-bg-card">
+            <span className="spanImgTitle w-48 mb-3 text-[1.2rem] text-text-primary font-semibold md:w-52 md:text-[17px] dark:text-text-primary">
               {item.date}
             </span>
           </li>
