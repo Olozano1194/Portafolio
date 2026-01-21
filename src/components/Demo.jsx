@@ -11,7 +11,10 @@ const Demo = () => {
 
     return (
         <>
-        <button onClick={() => navigate(-1)} className="w-7 flex items-center mb-4 p-2 text-xl font-bold text-text-muted shadow-md shadow-slate-800 hover:text-text-primary hover:scale-110 dark:text-dark-text-primary dark:hover:text-dark-text-primary dark:shadow-dark-text-secondary dark:bg-text-secondary"><FaArrowLeft /></button>
+        <button onClick={() => navigate(-1)} className="w-7 flex items-center mb-4 p-2 text-xl font-bold text-text-muted shadow-md shadow-slate-800 hover:text-text-primary hover:scale-110 dark:text-dark-text-primary dark:hover:text-dark-text-primary dark:shadow-dark-text-secondary dark:bg-text-secondary"
+        >
+            <FaArrowLeft />
+        </button>
         <section className='w-full overflow-hidden flex flex-col justify-center items-center'>
             <h1 className='text-4xl font-bold mb-6'>{proyecto.title}</h1>
             <p className='flex justify-center items-center text-lg'>{proyecto.imgDemo.demoDescription}</p>

@@ -41,7 +41,7 @@ export const proyectos = [
             "repo": "https://github.com/Olozano1194/GimnasioReactDjango",
             "Ver proyecto": "https://gimnasio-react-django.vercel.app",
             "credenciales": { "user": "example1@example.com", "pass": "123456"},
-            "imdDemo": {
+            "imgDemo": {
                 "demoDescription": [
                     "Aplicación integral para gestión de gimnasios, con roles de Admin y Usuario.",
                     "Admin: gestión completa de miembros, asignación de membresías y creación de usuarios.",
@@ -70,7 +70,7 @@ export const proyectos = [
             "repo": "https://github.com/Olozano1194/InstitucionesV1",
             "Ver proyecto": "https://instituciones-v1.vercel.app",
             "credenciales": { "user": "PedroNel@gmail.com", "pass": "123456"},
-            "imdDemo": {
+            "imgDemo": {
                 "demoDescription": [
                     "Plataforma académica desarrollada como proyecto final Full-Stack en MinTic.",
                     "Permite registrar instituciones y crear usuarios.",
