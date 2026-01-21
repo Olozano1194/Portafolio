@@ -4,9 +4,11 @@ import { MdOutlineEmail } from "react-icons/md";
 import { FiTag } from "react-icons/fi";
 // Notifications
 import toast from "react-hot-toast";
+import { useTranslation } from "react-i18next";
 
 function Contacto() {
     const { register, handleSubmit, formState: {errors}, reset } = useForm();
+    const { t } = useTranslation();
     
     const onSubmit = handleSubmit(() => {
         //console.log(data);
@@ -16,19 +18,19 @@ function Contacto() {
 
     return (
         <section className="section-title w-full overflow-hidden flex flex-col justify-center items-center p-3 dark:border-t-2 dark:border-stone-900">
-            <h2 id="contacto" className="font-bold text-center text-4xl p-2 md:pb-4">Contacto</h2>
-            <h3 className="text-xl p-3 md:p-1">¿Quieres contactarme?</h3>
-            <p className="text-xl p-1">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
+            <h2 id="contacto" className="font-bold text-center text-4xl p-2 md:pb-4">{t('contact.title')}</h2>
+            <h3 className="text-xl p-3 md:p-1">{t('contact.subtitle')}</h3>
+            <p className="text-xl p-1">{t('contact.description')}</p>
 
             <form onSubmit={onSubmit} className="w-full max-w-5xl flex flex-col justify-center items-center text-center gap-5 mt-5 text-xl cursor-pointer md:flex-wrap md:justify-between md:flex-row md:gap-0 md:mt-5 lg:mt-5 xl:px-7">
                 {/* section name and email */}
                 <section className="w-full grid grid-cols-1 gap-5 md:grid-cols-2">
                     <label htmlFor="nombre" className="w-full">
-                        <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl dark:text-dark-text-primary"><BiRename />Nombre</span>
+                        <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl dark:text-dark-text-primary"><BiRename />{t('contact.form.name')}</span>
                         <input 
                             type="text"
                             className="w-full p-2 dark:placeholder:text-dark-muted rounded-lg resize-none text-text-secondary outline-none md:mt-2"
-                            placeholder="Nombre"
+                            placeholder={t('contact.form.placeholder.name')}
                             id="nombre" 
                             {...register('nombre', {
                                 required: {
@@ -49,7 +51,7 @@ function Contacto() {
                         </span>}
                     </label>
                     <label htmlFor="email" className="w-full">
-                        <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl dark:text-dark-text-primary"><MdOutlineEmail />Email</span>
+                        <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl dark:text-dark-text-primary"><MdOutlineEmail />{t('contact.form.email')}</span>
                         <input 
                             type="email"
                             id="email"
@@ -65,7 +67,7 @@ function Contacto() {
                                     }
                                 })
                             }
-                            placeholder="Email"
+                            placeholder={t('contact.form.placeholder.email')}
                         />
                         {errors.email && <span className="text-rose-800 text-lg">{errors.email.message}</span>}
                     </label>
@@ -73,11 +75,11 @@ function Contacto() {
                 {/* Asunto */}
                 <section className="w-full flex justify-center md:mt-7">
                     <label htmlFor="asunto" className="w-full flex flex-col justify-center md:w-2/3 lg:w-1/2">
-                        <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl "><FiTag />Asunto</span>
+                        <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl "><FiTag />{t('contact.form.subject')}</span>
                         <input 
                             type="text"
                             className="w-full p-2 dark:placeholder:text-text-muted rounded-lg resize-none text-text-secondary outline-none md:mt-2 mx-auto  dark:placeholder:text-dark-muted"
-                            placeholder="Asunto"
+                            placeholder={t('contact.form.placeholder.subject')}
                             id="asunto" 
                             {...register('asunto', {
                                 required: {
@@ -100,7 +102,7 @@ function Contacto() {
                 </section>
                 {/* Message */}
                 <label htmlFor="mensaje" className="w-full flex flex-col items-center mt-2">
-                    <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl md:mt-5"><BiMessageAltDetail /> Mensaje</span>                  
+                    <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl md:mt-5"><BiMessageAltDetail />{t('contact.form.message')}</span>                  
                     <textarea
                         htmlFor="mensaje"
                         className="w-full p-2 border-l-rose-50 placeholder:text-gray-500 rounded-lg resize-none text-gray-600 outline-none md:mt-2 md:w-4/5 md:h-36 dark:placeholder:text-dark-muted"
@@ -120,7 +122,7 @@ function Contacto() {
                                 }
                             }
                         )}
-                        placeholder="Escribir Mensaje">
+                        placeholder={t('contact.form.placeholder.message')}>
                     </textarea>
                     {errors.mensaje && <span className="text-rose-800 text-lg">{errors.mensaje.message}</span>}
                 </label>
@@ -129,13 +131,13 @@ function Contacto() {
                     <input 
                         type="submit"
                         className="cursor-pointer bg-primary font-semibold p-3 rounded-xl hover:bg-secondary hover:text-bg-card hover:scale-[1.1] md:mt-4"  
-                        value="Enviar Mensaje" 
+                        value={t('contact.form.btn')} 
                     />
                 </label>
             </form>
 
             <div className="mt-7 text-[1.15rem] text-bg-card lg:text-xl xl:text-2xl">
-                <span className="text-sm font-bold md:text-lg lg:text-xl">©{new Date().getFullYear()} desarrollado por Oscar Lozano</span>
+                <span className="text-sm font-bold md:text-lg lg:text-xl">©{new Date().getFullYear()} {t('contact.form.footer')}</span>
             </div>
         </section>
     );    

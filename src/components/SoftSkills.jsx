@@ -35,7 +35,7 @@ function SoftSkills() {
         // </section>
         <CarouselSection
             id='softSkill'
-            title='SoftSkills'
+            translationKey='softSkills'
             items={softSkills}
             getIcon={getIcon}
             reverse

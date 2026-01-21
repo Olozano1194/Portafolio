@@ -33,7 +33,7 @@ function Hobbies() {
         // </section>
         <CarouselSection
         id='hobbies'
-            title='Hobbies'
+            translationKey='hobbies'
             items={hobbies}
             getIcon={getIcon}
             isLast

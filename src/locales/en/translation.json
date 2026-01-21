@@ -1,0 +1,244 @@
+{
+    "nav": {
+    "home": "Home",
+    "about": "About me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact"
+    },
+    "home": {
+        "greeting": {
+            "intro": "Hello, I'm",
+            "name": "Oscar Eduardo Lozano Bocanegra, "
+        },
+        "title": {
+            "eng": "Systems Engineer (ITFIP)",
+            "intro": ", passionate about web development."
+        },
+        "description": {
+            "intro": "My main focus is the ecosystem ", 
+            "intros": ", where I develop dynamic, modern, and functional interfaces using and ", 
+            "front": "Front-End",
+            "technologies": "JavaScript, React and Tailwind CSS" 
+            
+        },
+        "portfolio": {
+            "intro": "In this portfolio you can explore my projects on ",
+            "git": "GitHub",
+            "perfil": ", check out my professional profile on ",
+            "linkedin": "LinkedIn", 
+            "download": " or download my ",
+            "cv": "CV."
+        },
+        "learning": "I am constantly learning and ready to provide technical solutions in professional development environments.",
+        "cta": "I invite you to explore my projects!",
+        "downloadCV": "Download",
+        "cv": " CV"
+    },
+    "about": {
+        "title": "About me",
+        "greeting": {
+            "intro": "Hello! I'm, ",
+            "name": "Oscar, a systems engineer ",
+            "description": "with a problem-solving mindset and continuous learning approach."
+        },
+        "intro": {
+            "description": "Since my graduation in 2022, I have transformed my academic foundation into practical technical skills. My training didn't stop at university; I've been shaped through high-performance programs that have given me a ",
+            "dev": "Full Stack vision:"
+        },
+        "foundations": {
+            "icon": "✅",
+            "title": "Solid Foundations:",
+            "description": {
+                "intro": "Through ",
+                "alura": "Oracle Next Education (Alura), ",
+                "platzi": "Platzi ",
+                "and": "and ",
+                "tic": "Misión TIC ", 
+                "programming": "I consolidated my programming logic in ",
+                "java": "Java",
+                "ad": "and ",
+                "js": "JavaScript", 
+                "db": ", along with relational database management ",
+                "mysql": "(MySQL)."
+            }
+        },
+        "modernStack": {
+            "icon": "✅",
+            "title": "Modern Stack:",
+            "description": {
+                "intro": "I'm currently deepening my knowledge in high-demand technologies such as ",
+                "react": "React, ",
+                "type": "Typescript ", 
+                "django": "and Django Rest Framework ",
+                "goal": ", always seeking to write clean and scalable code."
+            }      
+        },
+        "goal": {
+            "intro": "My goal is to integrate into a team where I can apply ",
+            "my": "my",
+            "analysis": "analytical skills, ",
+            "adaptability": "adaptability ",
+            "description": "and technical foundations to create products that improve user experience. I firmly believe that engineering and web development go hand in hand to create efficient solutions."
+        }    
+    },
+    "education": {
+        "title": "Education",
+        "items": {
+            "1": {            
+                "degree": "Full Stack Web developer"               
+            },
+            "2": {            
+                "degree": "Global Technology"               
+            },
+            "3": {            
+                "degree": "System Engineer"               
+            },
+            "4": {            
+                "degree": "Alura, Developer Trainee"               
+            },
+            "5": {            
+                "degree": "MisionTic Developer Trainee"               
+            },
+            "6": {            
+                "degree": "IT Management Technologist"               
+            },
+            "7": {            
+                "degree": "Web Solutions Technician"               
+            }
+        }
+    },  
+    "projects": {
+        "title": "Projects",
+        "items": {
+            "1": {
+                "title": "Institutional Management (Update)",
+                "subtitle": "Full-Stack Refactoring and Optimization",
+                "description": "Educational platform refactored with React and TypeScript, optimizing user experience and scalability.",
+                "demoDescription": [
+                "Updated version of a management application for educational institutions.",
+                "Implements React and TypeScript for data integrity and Axios communication.",
+                "Allows creating users by role (admin, teacher, student) with adapted authentication.",
+                "Automatically initializes roles and basic data in the database.",
+                "Integrates external API for Colombian departments and municipalities.",
+                "Administrators can register institutions and manage teachers/students.",
+                "Designed to scale with future functionalities."
+                ],
+                "demoTitles": ["Login", "Home", "Profile", "Register", "List", "User"],
+                "demoDescriptions": [
+                "User login",
+                "User home",
+                "User profile by role",
+                "Register institutions",
+                "List institutions",
+                "Register user"
+                ]
+            },
+            "2": {
+                "title": "GymFlow App",
+                "subtitle": "Full-Stack React + Django",
+                "description": "Gym management app with React and Django. Includes Admin and User roles, member management, and responsive design.",
+                "demoDescription": [
+                "Comprehensive gym management application with Admin and User roles.",
+                "Admin: complete member management, membership assignment, and user creation.",
+                "User: manages their profile and assigned members.",
+                "Dynamic React frontend and Django Rest Framework backend.",
+                "Focuses on data persistence and responsive design."
+                ],
+                "demoTitles": ["Login", "Home", "Register", "List", "User"],
+                "demoDescriptions": [
+                "User login",
+                "User home",
+                "Register members",
+                "List members",
+                "User profile"
+                ]
+            },
+            "3": {
+                "title": "EduBase",
+                "subtitle": "Final Full-Stack Project (MinTic)",
+                "description": "Full-Stack academic platform developed with HTML5 and Tailwind. It allows efficient data management and serves as a foundation for future developments.",
+                "demoDescription": [
+                    "Academic platform developed as a final Full-Stack project in MinTic.",
+                    "Allows registering institutions and creating users.",
+                    "Frontend built with HTML5 and Tailwind, backend designed for efficient data consumption.",
+                    "Provides a foundation to add future functionalities and scale the project."
+                ],
+                "demoTitles": ["Login", "Home", "Register", "List", "User"],
+                "demoDescriptions": [
+                    "User login",
+                    "User home",
+                    "Institution registration",
+                    "List institutions",
+                    "User profile"
+                ]
+            },
+            "4": {
+                "title": "TaskMaster",
+                "subtitle": "Full-Stack with Django + MySQL",
+                "description": "Productivity app to manage tasks in real time. Backend built with Django and MySQL, and a minimalist React frontend."
+            },
+            "5": {
+                "title": "Hotel Alura Management",
+                "subtitle": "Java 6 Backend with JDBC",
+                "description": "Desktop software for managing reservations and guests. Java backend using JDBC for efficient database handling."
+            }
+        },
+        "repository": "Repository",
+        "viewProject": "View Project",
+        "video": "Video"
+    },
+    "skills": {
+    "title": "Skills",
+    "items": {
+        "1": { "description": "HTML5" },
+        "2": { "description": "Java" },
+        "3": { "description": "CSS3" },
+        "4": { "description": "Python" },
+        "5": { "description": "JavaScript" },
+        "6": { "description": "Django" },
+        "7": { "description": "React" },
+        "8": { "description": "Tailwind" },
+        "9": { "description": "MySQL" }      
+    }
+  },
+    "softSkills": {
+        "title": "Soft Skills",
+        "items": {
+            "1": { "description": "Teamwork" },
+            "2": { "description": "Empathy" },
+            "3": { "description": "Collaboration" },
+            "4": { "description": "time Management" }
+        }
+    },
+    "hobbies": {
+        "title": "Hobbies",
+        "items": {
+            "1": { "description": "Soccer" },
+            "2": { "description": "Gym" },
+            "3": { "description": "Listening to Music" },
+            "4": { "description": "Video Games" },
+            "5": { "description": "Cooking" }
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "subtitle": "¿Quieres contactarme?",
+        "description": "Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "subject": "Subject",
+            "message": "Message",
+            "btn": "send Message",
+            "footer": "Developed by Oscar Lozano",
+            "placeholder": {
+                "name": "Enter your Name",
+                "email": "Enter your Email",
+                "subject": "Enter the Subject",
+                "message": "Enter your Message"
+            }
+        }
+    }
+}

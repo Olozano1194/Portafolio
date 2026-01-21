@@ -33,7 +33,7 @@ function Skills() {
         // </section>
         <CarouselSection
             id='skill' 
-            title='Skill'
+            translationKey='skills'
             items={skill}
             getIcon={getIcon}
             titleClass="section-title"            
