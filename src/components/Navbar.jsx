@@ -2,27 +2,39 @@ import logo from '../assets/logoOscar1.jpeg';
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { GoMoon } from "react-icons/go";
+import { useTranslation } from 'react-i18next';
 
 
-const navigation = [
-    { name: 'Home', href: '#redes', current: true},
-    { name: 'Sobre Mi', href: '#sobreMi', current: false},
-    { name: 'Formación', href: '#formacionAcademica', current: false },
-    { name: 'Proyectos', href: '#proyectos', current: false },
-    { name: 'Skills', href: '#skill', current: false},
-    { name: 'Soft Skill', href: '#softSkill', current: false},
-    { name: 'Hobbies', href: '#hobbies', current: false},    
-    { name: 'Contacto', href: '#contacto', current: false}
-]
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-function Navbar() {  
+function Navbar() {
+    const { t, i18n } = useTranslation();
+    
+    const navigation = [
+        { name: t('nav.home'), href: '#redes', current: true},
+        { name: t('nav.about'), href: '#sobreMi', current: false},
+        { name: t('nav.education'), href: '#formacionAcademica', current: false },
+        { name: t('nav.projects'), href: '#proyectos', current: false },
+        { name: t('nav.skills'), href: '#skill', current: false},
+        { name: t('nav.softSkill'), href: '#softSkill', current: false},
+        { name: t('nav.hobbies'), href: '#hobbies', current: false},    
+        { name: t('nav.contact'), href: '#contacto', current: false}
+    ];
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
+    const toggleDarkMode = () => {
+        document.documentElement.classList.toggle('dark');
+    };
+
     return (
         <>
             <Disclosure as="nav" className="w-full flex justify-between text-text-primary "> 
-                <div className="flex justify-between w-full px-2 sm:px-3 lg:px-8">
+                <div className="w-full flex justify-between sm:pr-2 lg:px-8">
                     <div className="relative flex h-16 items-center justify-start w-full">
                         <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
@@ -40,6 +52,7 @@ function Navbar() {
                                     alt='logo' />
                                     
                             </div>
+                            {/* Desktop Navigation */}
                             <div className="hidden sm:flex ml-auto justify-end">
                                 <div className="flex space-x-3">
                                     {navigation.map((item) => (
@@ -48,18 +61,44 @@ function Navbar() {
                                             href={item.href}
                                             aria-current={item.current ? 'page' : undefined}
                                             className={classNames(
-                                            item.current ? 'hover:bg-text-primary text-bg-section dark:hover:bg-text-secondary' : 'text-bg-section hover:bg-text-primary hover:text-dark-text dark:hover:bg-text-secondary',
-                                            'rounded-md md:px-1 py-2 md:text-lg  lg:text-xl font-medium linkNav',
+                                            item.current ? 'hover:bg-text-primary text-bg-section dark:hover:bg-text-secondary' : 'text-bg-card hover:bg-dark-card hover:text-dark-text dark:hover:bg-text-secondary',
+                                            'rounded-md py-2 md:text-sm lg:text-xl font-medium linkNav',
                                             )}
                                         >
                                             {item.name}
                                         </a>
                                     ))}
                                 </div>
+                                {/* Language Switcher - Desktop */}
+                                <div className="flex gap-2 ml-4">
+                                    <button
+                                        onClick={() => changeLanguage('es')}
+                                        className={classNames(
+                                            'px-3 py-1 rounded-md text-sm font-medium transition-colors',
+                                            i18n.language === 'es' 
+                                                ? 'bg-primary text-bg-section' 
+                                                : 'bg-bg-card text-text-secondary hover:bg-dark-card dark:bg-bg-card dark:text-dark-text-muted dark:hover:bg-text-secondary'
+                                        )}
+                                    >
+                                        ES
+                                    </button>
+                                    <button
+                                        onClick={() => changeLanguage('en')}
+                                        className={classNames(
+                                            'px-3 py-1 rounded-md text-sm font-medium transition-colors',
+                                            i18n.language === 'en' 
+                                                ? 'bg-primary text-bg-section' 
+                                                : 'bg-bg-card text-text-secondary hover:bg-dark-card dark:bg-bg-card dark:text-dark-text-muted dark:hover:bg-text-secondary'
+                                        )}
+                                    >
+                                        EN
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                {/* Mobile menu panel */}
                 <DisclosurePanel className="sm:hidden">
                     <div className="space-y-1 px-2 pb-3 pt-2">
                     {navigation.map((item) => (
@@ -76,11 +115,36 @@ function Navbar() {
                         {item.name}
                         </DisclosureButton>
                     ))}
+                        {/* Language Switcher - Mobile */}
+                        <div className="flex gap-2 px-3 py-2">
+                            <button
+                                onClick={() => changeLanguage('es')}
+                                className={classNames(
+                                    'flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors',
+                                    i18n.language === 'es' 
+                                        ? 'bg-primary text-bg-card' 
+                                        : 'bg-bg text-text-secondary dark:bg-gray-700 dark:text-dark-text-secondary'
+                                )}
+                            >
+                                Español
+                            </button>
+                            <button
+                                onClick={() => changeLanguage('en')}
+                                className={classNames(
+                                    'flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors',
+                                    i18n.language === 'en' 
+                                        ? 'bg-primary text-bg-card' 
+                                        : 'bg-bg text-text-secondary dark:bg-gray-700 dark:text-dark-text-secondary'
+                                )}
+                            >
+                                English
+                            </button>
+                        </div>
                     </div>
                 </DisclosurePanel>
                 {/* Dark/Light */}
                 <button 
-                    onClick={() => {document.documentElement.classList.toggle('dark')}}
+                    onClick={toggleDarkMode}
                     className="text-text-primary text-2xl hover:text-accent transition-colors dark:text-dark-text-primary"
                 >
                     <GoMoon />                    

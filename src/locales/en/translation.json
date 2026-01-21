@@ -2,23 +2,25 @@
     "nav": {
     "home": "Home",
     "about": "About me",
-    "skills": "Skills",
-    "projects": "Projects",
     "education": "Education",
+    "projects": "Projects",
+    "skills": "Skills",
+    "softSkill": "Soft Skills",
+    "hobbies": "Hobbies", 
     "contact": "Contact"
     },
     "home": {
         "greeting": {
-            "intro": "Hello, I'm",
+            "intro": "Hello, I'm ",
             "name": "Oscar Eduardo Lozano Bocanegra, "
         },
         "title": {
-            "eng": "Systems Engineer (ITFIP)",
+            "eng": "Systems Engineer (ITFIP) ",
             "intro": ", passionate about web development."
         },
         "description": {
             "intro": "My main focus is the ecosystem ", 
-            "intros": ", where I develop dynamic, modern, and functional interfaces using and ", 
+            "intros": ", where I develop dynamic, modern and functional interfaces using and ", 
             "front": "Front-End",
             "technologies": "JavaScript, React and Tailwind CSS" 
             
@@ -224,8 +226,8 @@
     },
     "contact": {
         "title": "Contact",
-        "subtitle": "¿Quieres contactarme?",
-        "description": "Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.",
+        "subtitle": "¿Interested in contacting me?",
+        "description": "Please complete the following form and I will contact you as soon as possible.",
         "form": {
             "name": "Name",
             "email": "Email",
