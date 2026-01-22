@@ -62,7 +62,7 @@ function Navbar() {
                                             aria-current={item.current ? 'page' : undefined}
                                             className={classNames(
                                             item.current ? 'hover:bg-text-primary text-bg-section dark:hover:bg-text-secondary' : 'text-bg-card hover:bg-dark-card hover:text-dark-text dark:hover:bg-text-secondary',
-                                            'rounded-md py-2 md:text-sm lg:text-xl font-medium linkNav',
+                                            'rounded-md py-2 md:text-sm lg:text-xl lg:px-2 font-medium linkNav',
                                             )}
                                         >
                                             {item.name}
