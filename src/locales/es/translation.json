@@ -236,5 +236,142 @@
             "message": "Escribir tu Mensaje"
         }
     }
+  },
+  "demo": {
+    "items": {
+        "1": {
+            "title": "Gestión Institucional (Actualización)",
+            "descriptions": [
+                "Versión actualizada de una aplicación de gestión para instituciones educativas.",
+                "Implementa React y TypeScript para integridad de datos y comunicación con Axios hacia el backend con Express.",
+                "Permite crear usuarios por rol (admin, docente, estudiante) con autenticación adaptada.",
+                "Inicializa automáticamente roles y datos básicos en la base de datos.",
+                "Integra API externa para departamentos y municipios de Colombia.",
+                "Administradores pueden registrar instituciones y gestionar docentes/estudiantes.",
+                "Diseñada para escalar con nuevas funcionalidades futuras."
+            ],
+            "credentials": {
+            "intro": "Credenciales por si desea navegar en el Demo",
+            "userLabel": "Usuario: ",
+            "passwordLabel": "Contraseña: "
+            },
+            "btn": "Ir a la Demo",
+            "imgSection": {
+                "title": "Imágenes del Proyecto",
+                "items": {
+                    "0": {
+                    "title": "Login",
+                    "description": "Login de usuario"
+                    },
+                    "1": {
+                    "title": "Home",
+                    "description": "Home de usuario"
+                    },
+                    "2": {
+                    "title": "Perfil",
+                    "description": "Perfil de usuario según rol"
+                    },
+                    "3": {
+                    "title": "Registrar",
+                    "description": "Registro de Instituciones"
+                    },
+                    "4": {
+                    "title": "Listar",
+                    "description": "Listar instituciones"
+                    },
+                    "5": {
+                    "title": "Usuario",
+                    "description": "Registrar usuario"
+                    }
+                }
+            }
+        },
+        "2": {
+            "title": "GymFlow App",
+            "descriptions": [
+                "Aplicación integral para gestión de gimnasios, con roles de Admin y Usuario.",
+                "Admin: gestión completa de miembros, asignación de membresías y creación de usuarios.",
+                "Usuario: gestiona su perfil y miembros asignados.",
+                "Frontend dinámico en React y backend en Django Rest Framework.",
+                "Se enfoca en persistencia de datos y diseño responsivo."
+            ],
+            "credentials": {
+            "intro": "Credenciales por si desea navegar en el Demo",
+            "userLabel": "Usuario: ",
+            "passwordLabel": "Contraseña: "
+            },
+            "btn": "Ir a la Demo",
+            "imgSection": {
+                "title": "Imágenes del Proyecto",
+                "items": {
+                    "0": {
+                    "title": "Login",
+                    "description": "Login de usuario"
+                    },
+                    "1": {
+                    "title": "Home",
+                    "description": "Home del usuario"
+                    },
+                    "2": {
+                    "title": "Registrar",
+                    "description": "Registro de miembros"
+                    },
+                    "3": {
+                    "title": "Listar",
+                    "description": "Listar miembros"
+                    },
+                    "4": {
+                    "title": "Usuario",
+                    "description": "Perfil de usuario"
+                    }
+                }
+            }
+        },
+        "3": {
+            "title": "EduBase",
+            "descriptions": [
+                "Plataforma académica desarrollada como proyecto final Full-Stack en MinTic. ",
+                "Permite registrar instituciones y crear usuarios. ",
+                "Frontend con HTML5 y Tailwind, backend con Expres para consumo eficiente de datos. ",
+                "Proporciona base para agregar futuras funcionalidades y escalar el proyecto."
+            ],
+            "credentials": {
+            "intro": "Credenciales por si desea navegar en el Demo",
+            "userLabel": "Usuario: ",
+            "passwordLabel": "Contraseña: "
+            },
+            "btn": "Ir a la Demo",
+            "imgSection": {
+                "title": "Imágenes del Proyecto",
+                "items": {
+                    "0": {
+                    "title": "Login",
+                    "description": "Login de usuario"
+                    },
+                    "1": {
+                    "title": "Home",
+                    "description": "Home de usuario"
+                    },
+                    "2": {
+                    "title": "Perfil",
+                    "description": "Perfil de usuario según rol"
+                    },
+                    "3": {
+                    "title": "Registrar",
+                    "description": "Registro de Instituciones"
+                    },
+                    "4": {
+                    "title": "Listar",
+                    "description": "Listar instituciones"
+                    },
+                    "5": {
+                    "title": "Usuario",
+                    "description": "Registrar usuario"
+                    }
+                }
+            }
+        }
+    }
   }
 }
+ 

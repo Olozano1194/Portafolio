@@ -2,12 +2,31 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { proyectos } from '../data/proyectos';
 import CarruselDemo from './carruselDemo/CarruselDemo';
 import { FaArrowLeft } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
 
 const Demo = () => {
     const { demoId } = useParams();
     const proyecto = proyectos.find((proyecto) => proyecto.id === parseInt(demoId));
     const navigate = useNavigate();
+    const { t } = useTranslation();
+
+    if (!proyecto) {
+        return (
+            <div className="flex flex-col items-center justify-center min-h-screen">
+                <h2 className="text-2xl font-bold mb-4">Proyecto no encontrado</h2>
+                <button 
+                    onClick={() => navigate(-1)} 
+                    className="bg-primary text-white px-4 py-2 rounded-md"
+                >
+                    Volver
+                </button>
+            </div>
+        );
+    }
+
+    // Obtenemos las descripciones como un array
+    const descriptions = t(`demo.items.${demoId}.descriptions`, { returnObjects: true });
 
     return (
         <>
@@ -15,55 +34,62 @@ const Demo = () => {
         >
             <FaArrowLeft />
         </button>
+        {/* Section */}
         <section className='w-full overflow-hidden flex flex-col justify-center items-center'>
-            <h1 className='text-4xl font-bold mb-6'>{proyecto.title}</h1>
-            <p className='flex justify-center items-center text-lg'>{proyecto.imgDemo.demoDescription}</p>
+            {/* title */}
+            <h1 className='text-4xl font-bold mb-6'>
+                {t(`demo.items.${demoId}.title`)}
+            </h1>
+            {/* Descriptions */}
+            <ul className='text-justify max-w-4xl space-y-3 mb-6'>
+                {Array.isArray(descriptions) && descriptions.map((desc, index) => (
+                    <li key={index} className='flex items-start text-lg'>
+                        <span className='text-primary mr-2'>✓</span>
+                        <span>{desc}</span>
+                    </li>
+                ))}
+            </ul>
             {
                 proyecto.credenciales && (
                     <div className='flex flex-col items-center mt-6'>
-                        <h3 className='text-xl'>Credenciales por si desea navegar en el Demo:</h3>
-                        <p className='text-xl'>Usuario: <strong>{proyecto.credenciales.user}</strong></p>
-                        <p className='text-xl'>Contraseña: <strong>{proyecto.credenciales.pass}</strong></p>
+                        <h3 className='text-xl'>
+                            {t(`demo.items.${demoId}.credentials.intro`)}
+                        </h3>
+                        <p className='text-xl'>
+                            {t(`demo.items.${demoId}.credentials.userLabel`)}
+                            <strong>
+                                {proyecto.credenciales.user}
+                            </strong>
+                        </p>
+                        <p className='text-xl'>
+                            {t(`demo.items.${demoId}.credentials.passwordLabel`)}
+                            <strong>
+                                {proyecto.credenciales.pass}
+                            </strong>
+                        </p>
                     </div>                    
                 )
             }
+            {/* btn */}
             <div className='flex flex-col items-center mt-5'>
                 <Link
                     to={proyecto.Demo}
                     target='_blanck'
                     className='bg-text-secondary font-bold rounded-xl px-4 py-2 text-2xl text-bg-card dark:bg-accent dark:hover:text-dark-text-primary'
                 >
-                    Ir a la demo
+                    {t(`demo.items.${demoId}.btn`)}
                 </Link>
             </div>
             {
                 proyecto.credenciales && (
                     <article className="w-full flex flex-col items-center justify-center lg:w-[1000px]">
-                         <h4 className='mt-10 mb-10 text-2xl font-semibold '>Imagenes del proyecto</h4>
-                        {/* {
-                            proyecto.imgDemo.img.map((image, index) => (
-                                <div key={index} className="w-full flex flex-col items-center justify-center md:justify-between md:flex-row">
-                                    <img
-                                        key={index}
-                                        className="w-80 h-60 md:mr-10 xl:mr-0 xl:w-96 p-5 rounded-3xl cursor-pointer" 
-                                        src={image} 
-                                        alt={`imagen ${proyecto.imgDemo.title[index]}`} />
-                                    <div className="w-96 xl:w-[400px] text-center text-lg p-2">
-                                        <h3 className="font-bold text-blue-600 text-2xl">{proyecto.imgDemo.title[index]}</h3>
-                                        <p className="mt-1 mb-2 md:mt-4 md:mb-3">{proyecto.imgDemo.description[index]}</p>
-                                    </div> 
-                                </div>
-                                                               
-                            ))                            
-                        }             */}
-                        {/* {proyecto.imgDemo && ( */}
-                            <CarruselDemo
-                                imagenes={proyecto.imgDemo.img}
-                                title={proyecto.imgDemo.title}
-                                descriptions={proyecto.imgDemo.description}
-                            /> 
-
-                        {/* )}                         */}
+                         <h4 className='mt-10 mb-10 text-2xl font-semibold '>
+                            {t(`demo.items.${demoId}.imgSection.title`)}
+                        </h4>
+                        <CarruselDemo
+                            demoId={demoId}
+                            imagenes={proyecto.imgDemo.img}
+                        />      
                     </article>
                 )                
             }            

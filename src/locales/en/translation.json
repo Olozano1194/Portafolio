@@ -204,7 +204,7 @@
         "8": { "description": "Tailwind" },
         "9": { "description": "MySQL" }      
     }
-  },
+    },
     "softSkills": {
         "title": "Soft Skills",
         "items": {
@@ -241,6 +241,144 @@
                 "subject": "Enter the Subject",
                 "message": "Enter your Message"
             }
+        }
+    },    
+    "demo": {
+        "items": {
+            "1": {
+                "title": "Institutional Management (Update)",
+                "descriptions": [
+                "Updated version of a management application for educational institutions.",
+                "Implements React and TypeScript for data integrity and Axios communication to Express backend.",
+                "Allows creating users by role (admin, teacher, student) with adapted authentication.",
+                "Automatically initializes roles and basic data in the database.",
+                "Integrates external API for Colombian departments and municipalities.",
+                "Administrators can register institutions and manage teachers/students.",
+                "Designed to scale with future functionalities."
+                ],
+                "credentials": {
+                    "intro": "Credentials if you want to browse the Demo",
+                    "userLabel": "User: ",
+                    "passwordLabel": "Password: "
+                },
+                "btn": "Go to Demo",
+                "imgSection": {
+                    "title": "Project Images",
+                    "items": {
+                        "0": {
+                        "title": "Login",
+                        "description": "User login"
+                        },
+                        "1": {
+                        "title": "Home",
+                        "description": "User home"
+                        },
+                        "2": {
+                        "title": "Profile",
+                        "description": "User profile by role"
+                        },
+                        "3": {
+                        "title": "Register",
+                        "description": "Register institutions"
+                        },
+                        "4": {
+                        "title": "List",
+                        "description": "List institutions"
+                        },
+                        "5": {
+                        "title": "User",
+                        "description": "Register user"
+                        }
+                    }
+                }
+            },
+            "2": {
+                "title": "GymFlow App",
+                "descriptions": [
+                "Comprehensive gym management application with Admin and User roles.",
+                "Admin: complete member management, membership assignment, and user creation.",
+                "User: manages their profile and assigned members.",
+                "Dynamic React frontend and Django Rest Framework backend.",
+                "Focuses on data persistence and responsive design."
+                ],
+                "credentials": {
+                "intro": "Credentials if you want to browse the Demo",
+                "user": "User",
+                "email": "example1@example.com",
+                "password": "Password"
+                },
+                "btn": "Go to Demo",
+                "img": {
+                "titleImg": "Project Images",
+                "items": {
+                    "0": {
+                    "title": "Login",
+                    "description": "User login"
+                    },
+                    "1": {
+                    "title": "Home",
+                    "description": "User home"
+                    },
+                    "2": {
+                    "title": "Register",
+                    "description": "Register members"
+                    },
+                    "3": {
+                    "title": "List",
+                    "description": "List members"
+                    },
+                    "4": {
+                    "title": "User",
+                    "description": "User profile"
+                    }
+                }
+                }
+            },
+            "3": {
+                "title": "EduBase",
+                "descriptions": [
+                    "Academic platform developed as a Full-Stack final project at MinTic.",
+                    "Allows registering institutions and creating users.",
+                    "Frontend built with HTML5 and Tailwind, backend with Express for efficient data consumption.",
+                    "Provides a foundation to add future features and scale the project."
+                ],
+                "credentials": {
+                    "intro": "Credentials in case you want to explore the Demo",
+                    "userLabel": "User: ",
+                    "passwordLabel": "Password: "
+                },
+                "btn": "Go to Demo",
+                "imgSection": {
+                    "title": "Project Images",
+                    "items": {
+                        "0": {
+                            "title": "Login",
+                            "description": "User login"
+                        },
+                        "1": {
+                            "title": "Home",
+                            "description": "User home"
+                        },
+                        "2": {
+                            "title": "Profile",
+                            "description": "User profile based on role"
+                        },
+                        "3": {
+                            "title": "Register",
+                            "description": "Institution registration"
+                        },
+                        "4": {
+                            "title": "List",
+                            "description": "List institutions"
+                        },
+                        "5": {
+                            "title": "User",
+                            "description": "Register user"
+                        }
+                    }
+                }
+            }
+
         }
     }
 }

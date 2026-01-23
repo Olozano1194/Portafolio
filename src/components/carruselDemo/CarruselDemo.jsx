@@ -4,14 +4,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import Modal from 'react-modal';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 Modal.setAppElement('#root');
 
-const CarruselDemo = ({ imagenes, title, descriptions }) => {
+const CarruselDemo = ({ demoId, imagenes }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  const { t } = useTranslation();
 
-//   if(!imagenes || imagenes.length === 0) return null;
 
   return (
     <>
@@ -23,22 +24,30 @@ const CarruselDemo = ({ imagenes, title, descriptions }) => {
         slidesPerView={1}
         className="w-[370px] max-w-xl cursor-pointer md:w-[600px] lg:w-[800px]"
       >
-        {imagenes.map((img, i) => (
-          <SwiperSlide key={i}>
-            <img
-              src={img}
-              alt={title[i]}
-              className="w-full rounded-xl"
-              onClick={() => { setActiveIndex(i); setModalOpen(true); }}
-            />
-            <div className="text-center mt-2">
-              <h3 className="font-bold text-blue-600 text-xl">{title[i]}</h3>
-              <p className="text-base">{descriptions[i]}</p>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        {imagenes.map((img, i) => {
+          // Obtener traducciones para cada img
+          const imgData = t(`demo.items.${demoId}.imgSection.items.${i}`, { returnObjects: true });
 
+          return (
+            <SwiperSlide key={i}>
+              <img
+                src={img}
+                alt={imgData.title || `Imagen ${i + 1 }`}
+                className="w-full rounded-xl"
+                onClick={() => { setActiveIndex(i); setModalOpen(true); }}
+              />
+              <div className="text-center mt-2">
+                <h3 className="font-bold text-blue-600 text-xl">
+                  {imgData.title}
+                </h3>
+                <p className="text-base">
+                  {imgData.description}
+                </p>
+              </div>
+            </SwiperSlide>
+          );          
+        })}
+      </Swiper>
       {/* Modal para ver imágenes en grande */}
       <Modal
         isOpen={modalOpen}
@@ -53,23 +62,39 @@ const CarruselDemo = ({ imagenes, title, descriptions }) => {
           spaceBetween={20}
           slidesPerView={1}
         >
-          {imagenes.map((img, i) => (
-            <SwiperSlide key={i}>
-              <img
-                src={img}
-                alt={title[i]}
-                className="w-full max-h-[85vh] object-contain"
-              />
-              <div className="text-center mt-2 text-white">
-                <h3 className="font-bold text-2xl">{title[i]}</h3>
-                <p>{descriptions[i]}</p>
-              </div>
-            </SwiperSlide>
-          ))}
+          {imagenes.map((img, i) => {
+            // Obtener traducciones para cada img
+            const imgData = t(`demo.items.${demoId}.imgSection.items.${i}`, { returnObjects: true });
+
+            return (
+              <SwiperSlide key={i}>
+                <img
+                  src={img}
+                  alt={imgData.title || `Imagen ${ i + 1 }`}
+                  className="w-full max-h-[85vh] object-contain"
+                />
+                <div className="text-center mt-2 text-white">
+                  <h3 className="font-bold text-2xl">
+                    {imgData.title}
+                  </h3>
+                  <p className="text-lg">
+                    {imgData.description}
+                  </p>
+                </div>
+              </SwiperSlide>
+            );              
+            })}
+            {/* Botón para cerrar el modal */}
+            <button
+              onClick={() => setModalOpen(false)}
+              className="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 z-10"
+              aria-label="Cerrar modal"
+            >
+              ✕
+            </button>
         </Swiper>
       </Modal>
     </>
   );
 };
-
 export default CarruselDemo;
