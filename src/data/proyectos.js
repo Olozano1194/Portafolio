@@ -4,7 +4,7 @@ export const proyectos = [
         "img": "InstitucionesV2",
         "tipo": "Ver proyecto",
         "repo": "https://github.com/Olozano1194/entidadesReact",
-        "Ver_proyecto": "#",
+        "ver_proyecto": "#",
         "credenciales": { 
             "user": "PedroNel@gmail.com", 
             "pass": "123456" 
@@ -25,7 +25,7 @@ export const proyectos = [
         "img": "GymReactDjango",
         "tipo": "Ver proyecto",
         "repo": "https://github.com/Olozano1194/GimnasioReactDjango",
-        "Ver proyecto": "https://gimnasio-react-django.vercel.app",
+        "ver_proyecto": "https://gimnasio-react-django.vercel.app",
         "credenciales": { 
             "user": "example1@example.com", 
             "pass": "123456"
@@ -45,7 +45,7 @@ export const proyectos = [
         "img": "Instituciones",
         "tipo": "Ver proyecto",
         "repo": "https://github.com/Olozano1194/InstitucionesV1",
-        "Ver proyecto": "https://instituciones-v1.vercel.app",
+        "ver_proyecto": "/",
         "credenciales": { 
             "user": "PedroNel@gmail.com", 
             "pass": "123456"

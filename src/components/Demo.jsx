@@ -1,4 +1,4 @@
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { proyectos } from '../data/proyectos';
 import CarruselDemo from './carruselDemo/CarruselDemo';
 import { FaArrowLeft } from "react-icons/fa";
@@ -25,11 +25,18 @@ const Demo = () => {
         );
     }
 
+    const MostrarBtnDemo = () => (
+        proyecto.ver_proyecto && proyecto.ver_proyecto.trim() !== '' && proyecto.ver_proyecto !== '/' && proyecto.ver_proyecto !== '#' ? <a href={proyecto.ver_proyecto} className='bg-text-secondary font-bold rounded-xl px-4 py-2 text-2xl text-bg-card dark:bg-accent dark:hover:text-dark-text-primary dark:hover:bg-orange-300'>
+            {t(`demo.items.${demoId}.btn`)}
+        </a> : null
+    )    
+
     // Obtenemos las descripciones como un array
     const descriptions = t(`demo.items.${demoId}.descriptions`, { returnObjects: true });
 
     return (
         <>
+        {/* btn volver atras */}
         <button onClick={() => navigate(-1)} className="w-7 flex items-center mb-4 p-2 text-xl font-bold text-text-muted shadow-md shadow-slate-800 hover:text-text-primary hover:scale-110 dark:text-dark-text-primary dark:hover:text-dark-text-primary dark:shadow-dark-text-secondary dark:bg-text-secondary"
         >
             <FaArrowLeft />
@@ -72,13 +79,7 @@ const Demo = () => {
             }
             {/* btn */}
             <div className='flex flex-col items-center mt-5'>
-                <Link
-                    to={proyecto.Demo}
-                    target='_blanck'
-                    className='bg-text-secondary font-bold rounded-xl px-4 py-2 text-2xl text-bg-card dark:bg-accent dark:hover:text-dark-text-primary'
-                >
-                    {t(`demo.items.${demoId}.btn`)}
-                </Link>
+                <MostrarBtnDemo />
             </div>
             {
                 proyecto.credenciales && (
