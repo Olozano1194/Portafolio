@@ -26,7 +26,9 @@ const Demo = () => {
     }
 
     const MostrarBtnDemo = () => (
-        proyecto.ver_proyecto && proyecto.ver_proyecto.trim() !== '' && proyecto.ver_proyecto !== '/' && proyecto.ver_proyecto !== '#' ? <a href={proyecto.ver_proyecto} className='bg-text-secondary font-bold rounded-xl px-4 py-2 text-2xl text-bg-card dark:bg-accent dark:hover:text-dark-text-primary dark:hover:bg-orange-300'>
+        proyecto.ver_proyecto && proyecto.ver_proyecto.trim() !== '' && proyecto.ver_proyecto !== '/' && proyecto.ver_proyecto !== '#' ? <a href={proyecto.ver_proyecto} className='bg-text-secondary font-bold rounded-xl px-4 py-2 text-2xl text-bg-card dark:bg-accent dark:hover:text-dark-text-primary dark:hover:bg-orange-300'
+        target='_blank'
+        >
             {t(`demo.items.${demoId}.btn`)}
         </a> : null
     )    

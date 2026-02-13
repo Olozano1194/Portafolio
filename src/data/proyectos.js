@@ -47,7 +47,7 @@ export const proyectos = [
         "repo": "https://github.com/Olozano1194/InstitucionesV1",
         "ver_proyecto": "https://instituciones-v1.vercel.app",
         "credenciales": { 
-            "user": "PedroNel@gmail.com", 
+            "user": "example@example.com", 
             "pass": "123456"
         },
         "imgDemo": {

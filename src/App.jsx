@@ -31,23 +31,19 @@ function App() {
             </main>
           } 
         />
-
         <Route path="/Demo/:demoId" element={
             <main className='bg-bg p-5 dark:bg-dark-bg'>
               <Demo />
             </main>
           } 
-        />  
-
+        />
         <Route path="/Videos/:videosId" element={
             <main className='bg-bg p-5 dark:bg-dark-bg'>
               <Videos />
             </main>
           } 
-        />   
-        
-      </Routes>
-      
+        />        
+      </Routes>      
       <footer className='bg-text-secondary dark:bg-dark-bg p-5'>
         <Contacto />
       </footer>

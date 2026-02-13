@@ -267,6 +267,29 @@ a:hover {
     }
 }
 
+/* Animación de la imagen que se expande */
+@media(min-width: 500px) {    
+    .background-mask {
+        background: linear-gradient(45deg, #809689f3, #085050);
+        mask-image: url('/cerradura.svg');
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: 50px;
+        /* mask-border: rgba(241, 8, 8, 0.5); */
+
+        animation: lock-reveal 3s forwards ease-in-out;
+    }
+
+    @keyframes lock-reveal {
+        0% {
+            mask-size: 50px;
+        }
+        100% {
+            mask-size: 1000vh;
+        }
+    }
+}
+
 /* Carrusel skills softskils hobbits */
 @keyframes scroll {
     0% {
