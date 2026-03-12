@@ -6,15 +6,33 @@ import { FiTag } from "react-icons/fi";
 import toast from "react-hot-toast";
 import { useTranslation } from "react-i18next";
 
-function Contacto() {
-    const { register, handleSubmit, formState: {errors}, reset } = useForm();
+const Contacto = () => {
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const { t } = useTranslation();
-    
-    const onSubmit = handleSubmit(() => {
-        //console.log(data);
-        toast.success('Mensaje enviado.')
-        reset();
-    })
+
+    const onSubmit = handleSubmit(async (data) => {
+        if (data.website) return; // honeypot
+        try {
+            const response = await fetch("https://formsubmit.co/ajax/srempalador2021@gmail.com", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+            const result = await response.json();
+
+            if (!response.ok) throw new Error(result.message || "Error al enviar el mensaje");
+
+            toast.success("Mensaje enviado. Te responderemos en menos de 24 horas.");
+            reset();
+
+        } catch (error) {
+            const errorMessage = error instanceof Error ? error.message : "Error al enviar el mensaje";
+            toast.error(errorMessage);
+        }
+    });
 
     return (
         <section className="section-title w-full overflow-hidden flex flex-col justify-center items-center p-3 dark:border-t-2 dark:border-stone-900">
@@ -22,16 +40,28 @@ function Contacto() {
             <h3 className="text-xl p-3 md:p-1">{t('contact.subtitle')}</h3>
             <p className="text-xl p-1">{t('contact.description')}</p>
 
-            <form onSubmit={onSubmit} className="w-full max-w-5xl flex flex-col justify-center items-center text-center gap-5 mt-5 text-xl cursor-pointer md:flex-wrap md:justify-between md:flex-row md:gap-0 md:mt-5 lg:mt-5 xl:px-7">
+            <form
+                onSubmit={onSubmit}
+                className="w-full max-w-5xl flex flex-col justify-center items-center text-center gap-5 mt-5 text-xl cursor-pointer md:flex-wrap md:justify-between md:flex-row md:gap-0 md:mt-5 lg:mt-5 xl:px-7"
+            >
+                <input type="hidden" name="_captcha" value="true" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde la web" />
+                {/* honeypot anti bots */}
+                <input
+                    type="text"
+                    {...register("website")}
+                    className="hidden"
+                />
                 {/* section name and email */}
                 <section className="w-full grid grid-cols-1 gap-5 md:grid-cols-2">
                     <label htmlFor="nombre" className="w-full">
                         <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl dark:text-dark-text-primary"><BiRename />{t('contact.form.name')}</span>
-                        <input 
+                        <input
                             type="text"
                             className="w-full p-2 dark:placeholder:text-dark-muted rounded-lg resize-none text-text-secondary outline-none md:mt-2"
                             placeholder={t('contact.form.placeholder.name')}
-                            id="nombre" 
+                            id="nombre"
                             {...register('nombre', {
                                 required: {
                                     value: true,
@@ -52,20 +82,20 @@ function Contacto() {
                     </label>
                     <label htmlFor="email" className="w-full">
                         <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl dark:text-dark-text-primary"><MdOutlineEmail />{t('contact.form.email')}</span>
-                        <input 
+                        <input
                             type="email"
                             id="email"
                             className="w-full p-2 dark:placeholder:text-dark-muted rounded-lg resize-none text-text-secondary outline-none md:mt-2"
                             {...register('email', {
-                                    required: {
-                                        value: true,
-                                        message: 'El email es requerido'
-                                    },
-                                    pattern: {
-                                        value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                                        message: 'El email no es válido'
-                                    }
-                                })
+                                required: {
+                                    value: true,
+                                    message: 'El email es requerido'
+                                },
+                                pattern: {
+                                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                                    message: 'El email no es válido'
+                                }
+                            })
                             }
                             placeholder={t('contact.form.placeholder.email')}
                         />
@@ -76,11 +106,11 @@ function Contacto() {
                 <section className="w-full flex justify-center md:mt-7">
                     <label htmlFor="asunto" className="w-full flex flex-col justify-center md:w-2/3 lg:w-1/2">
                         <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl "><FiTag />{t('contact.form.subject')}</span>
-                        <input 
+                        <input
                             type="text"
                             className="w-full p-2 dark:placeholder:text-text-muted rounded-lg resize-none text-text-secondary outline-none md:mt-2 mx-auto  dark:placeholder:text-dark-muted"
                             placeholder={t('contact.form.placeholder.subject')}
-                            id="asunto" 
+                            id="asunto"
                             {...register('asunto', {
                                 required: {
                                     value: true,
@@ -98,19 +128,21 @@ function Contacto() {
                         />
                         {errors.asunto && <span className="text-rose-800 text-lg">{errors.asunto.message}
                         </span>}
-                </label>
+                    </label>
                 </section>
                 {/* Message */}
                 <label htmlFor="mensaje" className="w-full flex flex-col items-center mt-2">
-                    <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl md:mt-5"><BiMessageAltDetail />{t('contact.form.message')}</span>                  
+                    <span className="w-full flex justify-center items-center font-bold gap-1 mb-1 text-xl md:mt-5"><BiMessageAltDetail />{t('contact.form.message')}</span>
                     <textarea
                         htmlFor="mensaje"
                         className="w-full p-2 border-l-rose-50 placeholder:text-gray-500 rounded-lg resize-none text-gray-600 outline-none md:mt-2 md:w-4/5 md:h-36 dark:placeholder:text-dark-muted"
                         id="mensaje"
                         {...register('mensaje',
-                            { required:
-                                { value: true,
-                                  message: 'El mensaje es requerido',
+                            {
+                                required:
+                                {
+                                    value: true,
+                                    message: 'El mensaje es requerido',
                                 },
                                 minLength: {
                                     value: 10,
@@ -128,18 +160,17 @@ function Contacto() {
                 </label>
                 {/* btn */}
                 <label htmlFor="" className="w-full mt-3 text-center ">
-                    <input 
+                    <input
                         type="submit"
-                        className="cursor-pointer bg-primary font-semibold p-3 rounded-xl hover:bg-secondary hover:text-bg-card hover:scale-[1.1] md:mt-4"  
-                        value={t('contact.form.btn')} 
+                        className="cursor-pointer bg-primary font-semibold p-3 rounded-xl hover:bg-secondary hover:text-bg-card hover:scale-[1.1] md:mt-4"
+                        value={t('contact.form.btn')}
                     />
                 </label>
             </form>
-
             <div className="mt-7 text-[1.15rem] text-bg-card lg:text-xl xl:text-2xl">
                 <span className="text-sm font-bold md:text-lg lg:text-xl">©{new Date().getFullYear()} {t('contact.form.footer')}</span>
             </div>
         </section>
-    );    
-}
+    );
+};
 export default Contacto;
