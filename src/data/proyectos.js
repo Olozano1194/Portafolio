@@ -27,8 +27,8 @@ export const proyectos = [
         "repo": "https://github.com/Olozano1194/GimnasioReactDjango",
         "ver_proyecto": "https://gimnasio-react-django.vercel.app",
         "credenciales": { 
-            "user": "example1@example.com", 
-            "pass": "123456"
+            "user": "reclutador@gimnasio.com", 
+            "pass": "Gimnasio2026!"
         },
         "imgDemo": {
             "img": [
