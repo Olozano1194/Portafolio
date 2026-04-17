@@ -35,25 +35,37 @@ export const skill = [
     {
         "id": 9,
         "icon": "SiMysql",
+    },
+    {
+        "id": 10,
+        "icon": "FaGitAlt"
+    },
+    {
+        "id": 11,
+        "icon": "SiTypescript"
     }
 ]
 
 export const softSkills = [
     {
         "id": 1,
-        "icon": "FaUsers",        
+        "key": "communication",
+        "level": 65        
     },
     {
         "id": 2,
-        "icon": 'RiEmpathizeFill',        
+        "key": "teamwork",
+        "level": 95       
     },
     {
         "id": 3,
-        "icon": 'FaHandshake',        
+        "key": "collaboration",
+        "level": 85        
     },
     {
         "id": 4,
-        "icon": 'FaClock',        
+        "key": "empatity",
+        "level": 70        
     }
 ]
 

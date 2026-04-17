@@ -4,34 +4,23 @@
     "about": "Sobre mi",
     "education": "Formación",
     "projects": "Proyectos",
-    "skills": "Habilidades",
-    "softSkill": "Habilidades blandas",
+    "skills": "Habilidades",    
     "hobbies": "Pasatiempos",
     "contact": "Contacto"
   },
   "home": {
     "greeting": {
-        "intro": "Hola, soy ",
-        "name": "Oscar Eduardo Lozano Bocanegra, "
-    },
-    "title": {
-        "eng": "Ingeniero de sistemas(ITFIP)",
-        "intro": ", apasionado por el desarrollo web."
+        "intro": "Construyendo el ",
+        "name": "Futuro Digital."
     },
     "description": {
-        "intro": "Mi enfoque principal es el ecosistema ",
-        "front": "Front-End", 
-        "intros": ", donde desarrollo interfaces dinámicas, modernas y funcionales utilizando",
-        "technologies": "JavaScript, React y Tailwind CSS" 
-        
+        "intro": "Ingeniero de Sistemas dedicado al desarrollo de software, con enfoque en el ecosistema web. Mi objetivo es aplicar mis conocimientos técnicos en proyectos reales, creando código mantenible y soluciones que aporten valor real al usuario.",
+        "btnProjects": "Ver Proyectos", 
+        "btnContact": "Contacto" 
     },
-    "portfolio": {
-        "intro": "En este portafolio puedes explorar mis proyectos en ",
-        "git": "GitHub",
-        "perfil": ", conocer mi perfil profesional en ",
-        "linkedin": "LinkedIn ",
-        "download": "o descarga mi ",
-        "cv": "CV."
+    "card": {
+        "title": "Estado Actual",
+        "description": "Disponible para proyectos estratégicos de alto impacto en 2026"        
     },
     "learning": "Estoy en constante aprendizaje y preparado para aportar soluciones técnicas en entornos de desarrollo profesional.",
     "cta": "¡Te invito a explorar mis proyectos!",
@@ -40,13 +29,18 @@
   "about": {
     "title": "Sobre Mi",
     "greeting": {
-        "intro": "¡Hola! Soy ",
-        "name": "Oscar, ingeniero de sistemas",
-        "description": "con una mentalidad orientada a la resolución de problemas y el aprendizaje continuo."
+        "description": "Ingeniero de Sistemas enfocado en el desarrollo web moderno. Mi enfoque combina la lógica técnica con la creación de interfaces limpias y funcionales."
+    },
+    "cards": {
+        "1": {            
+            "degree": "Proyectos Desarrollados"               
+        },
+        "2": {            
+            "degree": "Dedicación al Detalle"               
+        }
     },
     "intro": {
-        "description": "Desde mi graduación en 2022, he transformado mi base académica en habilidades técnicas prácticas. Mi formación no se detuvo en la universidad; me he forjado a través de programas de alto rendimiento que me han dado una visión ",
-        "dev": "Full Stack:"
+        "description": "Mi trayectoria se centra en la construcción de aplicaciones web desde la academia y proyectos personales, implementando arquitecturas escalables y refinando la experiencia de usuario. Creo en el código como una herramienta para solucionar problemas reales."
     },
     "foundations": {
         "icon": "✅",
@@ -85,7 +79,7 @@
     }
   },
   "education": {
-    "title": "Formación Académica",
+    "title": "Formación & Trayectoria",
     "items": {
         "1": {            
             "degree": "Desarrollo Web Full Stack"               
@@ -111,7 +105,8 @@
     }
   },
   "projects": {
-    "title": "Proyectos",
+    "title": "Proyectos Seleccionados",
+    "description": "Una muestra curada de soluciones digitales que combinan estética y rendimiento.",
     "items": {
         "1": {
             "title": "Gestión Institucional (Actualización)",
@@ -185,8 +180,9 @@
     "video": "Video"
   },
   "skills": {
-    "title": "Habilidades",
-    "items": {
+    "title": "Habilidades Técnicas",
+    "subtitle": "Capacidades",
+    "items": {        
         "1": { "description": "HTML5" },
         "2": { "description": "Java" },
         "3": { "description": "CSS3" },
@@ -195,18 +191,20 @@
         "6": { "description": "Django" },
         "7": { "description": "React" },
         "8": { "description": "Tailwind" },
-        "9": { "description": "MySQL" }      
+        "9": { "description": "MySQL" },
+        "10": { "description": "Git" },
+        "11": { "description": "TypeScript" }
     }
   },
   "softSkills": {
     "title": "Habilidades Blandas",
+    "subtitle": "Metodología",
     "items": {
-      "1": { "description": "Trabajo en equipo" },
-      "2": { "description": "Empatía" },
-      "3": { "description": "Colaboración" },
-      "4": { "description": "Gestión del tiempo" }
+      "communication": "Comunicación Asertiva",
+      "teamwork": "Trabajo en Equipo",
+      "collaboration": "Colaboración",
+      "empatity": "Emaptía"
     }
-
   },
   "hobbies": {
     "title": "Pasatiempos",
