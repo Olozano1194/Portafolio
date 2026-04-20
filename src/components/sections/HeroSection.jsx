@@ -23,10 +23,14 @@ const HeroSection = () => {
                         {t('home.description.intro')}
                     </p>
                     <div className="flex gap-4">
-                        <button className="bg-linear-to-r duration-300 font-semibold from-primary px-8 py-4 rounded-xl to-primary-container text-on-primary transition-all hover:scale-105 active:scale-95">
+                        <button
+                            onClick={() => scrollToSection('proyectos')} 
+                            className="bg-linear-to-r cursor-pointer duration-300 font-semibold from-primary px-8 py-4 rounded-xl to-primary-container text-on-primary transition-all hover:scale-105 active:scale-95">
                             {t('home.description.btnProjects')}
                         </button>
-                        <button className="bg-surface-container border border-white/5 duration-300 font-semibold from-primary px-8 py-4 rounded-xl text-on-surface transition-all hover:bg-surface-alt">
+                        <button
+                            onClick={() => scrollToSection('contacto')}
+                            className="bg-surface-container border border-white/5 cursor-pointer duration-300 font-semibold from-primary px-8 py-4 rounded-xl text-on-surface transition-all hover:bg-surface-alt">
                             {t('home.description.btnContact')}
                         </button>
                     </div>

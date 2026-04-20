@@ -64,14 +64,14 @@ function ProyectosSection() {
                                         {/* Condicional */}
                                         {proyecto.tipo === "Ver proyecto" ? (
                                             <Link
-                                                to={`/Demo/${proyecto.id}`}
+                                                to={`/demo/${proyecto.id}`}
                                                 className="px-4 py-2 text-sm rounded-lg bg-secondary text-on-secondary"
                                             >
                                                 {t("projects.viewProject")}
                                             </Link>
                                         ) : (
                                             <Link
-                                                to={`/Videos/${proyecto.id}`}
+                                                to={`/videos/${proyecto.id}`}
                                                 className="px-4 py-2 text-sm rounded-lg bg-secondary text-on-secondary"
                                             >
                                                 {t("projects.video")}

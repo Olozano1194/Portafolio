@@ -5,12 +5,9 @@ import SobreMiSection from "../components/sections/SobreMiSection";
 import FormacionAcademicaSection from "../components/sections/FormacionAcademicaSection";
 import ProyectosSection from "../components/sections/ProyectosSection";
 import SkillsSection from "../components/sections/SkillsSection";
-// import ServicesSection from "../components/sections/ServicesSection";
-// import ProcessSection from "../components/sections/ProcessSection";
-// import WorkSection from "../components/sections/WorkSection";
-// import FAQSection from "../components/sections/FAQSection";
-// import ContactSection from "../components/sections/ContactSection";
-// import PlanSolutionSection from "../components/sections/PlanSolutionSection";
+import HobbiesSection from "../components/sections/HobbiesSection";
+import ContactoSection from "../components/sections/ContactoSection";
+
 
 const HomePage = () => {
     // Scroll a sección si hay hash en la URL
@@ -44,13 +41,9 @@ const HomePage = () => {
             <SobreMiSection /> 
             <FormacionAcademicaSection /> 
             <ProyectosSection /> 
-            <SkillsSection /> 
-            {/*<ServicesSection />
-            <WorkSection />
-            <ProcessSection />
-            <PlanSolutionSection />            
-            <FAQSection />
-            <ContactSection />             */}
+            <SkillsSection />
+            <HobbiesSection />
+            <ContactoSection />            
         </>        
     );
 };
