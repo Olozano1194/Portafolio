@@ -189,7 +189,76 @@
         },
         "repository": "Repository",
         "viewProject": "View Project",
-        "video": "Video"
+        "video": "Video",
+        "projectDetails": {
+            "2": {
+                "challenge": "Develop robust desktop software for comprehensive reservation and guest management, optimizing data handling through JDBC and ensuring a smooth user experience in a desktop environment."
+            },
+            "3": {
+                "challenge": "Create a productivity application that allows real-time task management, focusing on data persistence, an efficient REST API, and a minimalist user interface that maximizes user focus."
+            }
+        }
+    },    
+    "videoProject": {
+        "backBtn": "Back to Projects",
+        "browserNotSupported": "Your browser does not support the video element.",
+        "theChallenge": "The Challenge",
+        "uptimeReliability": "Server Uptime",
+        "techStack": "Tech Stack",
+        "viewCaseStudy": "View Case Study",
+        "category": "Category",
+        "year": "Year"
+    },
+    "demoProject": {
+        "backBtn": "Back",
+        "projectNotFound": "Project not found",
+        "goBack": "Go Back",
+        "caseStudy": "case study",
+        "projectDetailsTitle": "Project Details",
+        "features": "Key Features",
+        "credentials": "Demo Credentials",
+        "user": "User",
+        "password": "Password",
+        "viewProject": "View Project",
+        "share": "Share",
+        "mainInterface": "Main Interface",
+        "performanceFocus": "Performance Focus",
+        "architecturalStack": "Architectural Stack",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Database",
+        "infrastructure": "Infrastructure",
+        "projectDetails": {
+            "1": {
+                "description": "Comprehensive gym management application with differentiated roles. Admin manages members, memberships, and users, while users manage their profiles and assigned members. Dynamic React frontend with Django REST Framework backend.",
+                "features": [
+                    "Authentication system with roles (Admin/User) implemented in Django.",
+                    "Complete member management and membership assignment.",
+                    "Dynamic control panel with real-time statistics.",
+                    "Responsive design adapted to all devices."
+                ],
+                "performance": "The application optimizes membership management by reducing registration time by 50% through real-time validations and local caching."
+            },
+            "4": {
+                "description": "Architecture and comprehensive redesign of the educational management platform, optimizing critical workflows and modernizing the interface for a fluid and efficient user experience.",
+                "features": [
+                    "Implementation of scalable architecture based on modular components with React and TypeScript.",
+                    "Refactoring of the service layer using Axios for robust and typed request management.",
+                    "Development of a dynamic dashboard for real-time institutional metrics visualization."
+                ],
+                "performance": "The update achieved a 40% reduction in load time through strategic code-splitting and lazy loading implementation."
+            },
+            "5": {
+                "description": "Academic platform developed as a Full-Stack project in MinTic. It allows registering educational institutions and creating users with different roles, establishing the basis for a scalable solution.",
+                "features": [
+                    "Educational institution registration system.",
+                    "User management by roles (administrator, teacher, student).",
+                    "Frontend with HTML5 and Tailwind CSS for modern design.",
+                    "RESTful API for efficient communication between frontend and backend."
+                ],
+                "performance": "The platform provides optimal response times thanks to the clear separation between frontend and backend, allowing each layer to scale independently."
+            }
+        }
     },
     "skills": {
     "title": "Skills",
@@ -225,15 +294,13 @@
         }
     },
     "contact": {
-        "title": "Contact",
-        "subtitle": "¿Interested in contacting me?",
+        "title": "Do you have a project in mind",
         "description": "Please complete the following form and I will contact you as soon as possible.",
         "form": {
             "name": "Name",
             "email": "Email",
-            "subject": "Subject",
             "message": "Message",
-            "btn": "send Message",
+            "btn": "Send Proposal",
             "footer": "Developed by Oscar Lozano",
             "placeholder": {
                 "name": "Enter your Name",
@@ -242,6 +309,10 @@
                 "message": "Enter your Message"
             }
         }
+    },    
+    "footer": {
+        "description": "Systems Engineer. Built with precision and technical detail."
+
     },    
     "demo": {
         "items": {
