@@ -12,11 +12,9 @@ export const proyectos = [
         },
         "imgDemo": {
             "img": [
-                "/assets/demo/gimnasioReactDjango/demo-Login.jpg",
-                "/assets/demo/gimnasioReactDjango/demo-Dashboard.jpg",
-                "/assets/demo/gimnasioReactDjango/demo-Registrar.jpg",
-                "/assets/demo/gimnasioReactDjango/demo-Listar.jpg",
-                "/assets/demo/gimnasioReactDjango/demo-Usuario.jpg",
+                "/demo/gimnasioReactDjango/demo-Dashboard.jpg",                
+                "/demo/gimnasioReactDjango/demo-Listar.jpg",
+                "/demo/gimnasioReactDjango/demo-Usuario.jpg",
             ]
         },
         "stack": ["React", "TypeScript", "Django", "REST API", "Tailwind"],
@@ -64,12 +62,9 @@ export const proyectos = [
         },
         "imgDemo": {
             "img": [
-                "/assets/demo/institucionesV2/demo-loginIntitucion.jpg",
-                "/assets/demo/institucionesV2/demo-HomeInstitucion.jpg",
-                "/assets/demo/institucionesV2/demo-Profile.jpg",
-                "/assets/demo/institucionesV2/demo-RegistrarInstitucion.jpg",
-                "/assets/demo/institucionesV2/demo-ListarInstitucion.jpg",
-                "/assets/demo/institucionesV2/demo-CrearUsuario.jpg",
+                "/demo/institucionesV2/demo-HomeInstitucion.jpg",
+                "/demo/institucionesV2/demo-Profile.jpg",                
+                "/demo/institucionesV2/demo-ListarInstitucion.jpg",
             ]                     
         },
         "stack": ["React", "TypeScript", "Express", "Axios"],
@@ -94,11 +89,9 @@ export const proyectos = [
         },
         "imgDemo": {
             "img": [
-                "/assets/demo/instituciones/demo-loginIntitucion.jpg",
-                "/assets/demo/instituciones/demo-HomeInstitucion.jpg",
-                "/assets/demo/instituciones/demo-RegistrarInstitucion.jpg",
-                "/assets/demo/instituciones/demo-ListarInstitucion.jpg",
-                "/assets/demo/instituciones/demo-CrearUsuario.jpg",
+                "/demo/instituciones/demo-HomeInstitucion.jpg",
+                "/demo/instituciones/demo-RegistrarInstitucion.jpg",
+                "/demo/instituciones/demo-ListarInstitucion.jpg",                
             ]
         },
         "stack": ["HTML5", "Tailwind", "Express", "MySQL"],

@@ -190,6 +190,8 @@
         "repository": "Repository",
         "viewProject": "View Project",
         "video": "Video",
+        "btnVerTodo": "View All",
+        "btnVerMenos": "View Less",
         "projectDetails": {
             "2": {
                 "challenge": "Develop robust desktop software for comprehensive reservation and guest management, optimizing data handling through JDBC and ensuring a smooth user experience in a desktop environment."

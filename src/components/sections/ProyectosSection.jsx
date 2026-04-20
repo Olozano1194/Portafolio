@@ -1,13 +1,19 @@
 import { proyectos } from "../../data/proyectos";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 // icons
-import { MdArrowForward } from "react-icons/md";
+import { MdArrowForward, MdArrowBack } from "react-icons/md";
 
 
 function ProyectosSection() {
     const { t } = useTranslation();
-
+    const [showAll, setShowAll] = useState(false);
+    const initialProjects = 4;
+    const visibleProjects = showAll ? proyectos : proyectos.slice(0, initialProjects);
+    
+    const btnVerTodo = t('projects.btnVerTodo');
+    const btnVerMenos = t('projects.btnVerMenos');
 
     return (
         <section className="bg-surface-container py-24 px-8" id="proyectos">
@@ -17,17 +23,22 @@ function ProyectosSection() {
                         <h2 className="font-bold mb-4 text-5xl text-on-surface tracking-tighter">{t('projects.title')}</h2>
                         <p className="max-w-lg pt-6 text-on-surface-variant md:text-lg">{t('projects.description')}</p>
                     </div>
-                    <div className="hidden md:block">
-                        <button className="cursor-pointer font-label flex gap-2 items-center text-primary transition-all hover:gap-4 md:text-lg">
-                            Ver Todo
-                            <span className="text-2xl"><MdArrowForward /></span>
-                        </button>
-                    </div>
+                    {proyectos.length > initialProjects && (
+                        <div className="hidden md:block">
+                            <button 
+                                onClick={() => setShowAll(!showAll)}
+                                className="cursor-pointer font-label flex gap-2 items-center text-primary transition-all hover:gap-4 md:text-lg"
+                            >
+                                {showAll ? btnVerMenos : btnVerTodo}
+                                <span className="text-2xl">{showAll ? <MdArrowBack /> : <MdArrowForward />}</span>
+                            </button>
+                        </div>
+                    )}
                 </section>
                 {/* Cards */}
                 <section className="grid grid-cols-1 gap-6 md:grid-cols-12">
                     {
-                        proyectos.map((proyecto) => (
+                        visibleProjects.map((proyecto) => (
                             <article
                                 key={proyecto.id}
                                 className={`bg-surface-alt h-112.5 group overflow-hidden rounded-2xl relative ${proyecto.col}`}
@@ -52,7 +63,7 @@ function ProyectosSection() {
                                         {t(`projects.items.${proyecto.id}.description`)}
                                     </p>
                                     {/* BOTONES */}
-                                    <div className="flex gap-3 pt-2 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                                    <div className="flex gap-3 pt-2 opacity-100 translate-y-0 md:opacity-0 md:translate-y-4 md:transition-all md:duration-300 md:group-hover:opacity-100 md:group-hover:translate-y-0">
                                         {/* Repo */}
                                         <a
                                             href={proyecto.repo}

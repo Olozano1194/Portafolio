@@ -49,6 +49,7 @@ const DemoSection = () => {
     const architecturalStack = proyecto?.architecturalStack || { frontend: '', backend: '', database: '' };
     const credentials = proyecto?.credenciales;
     const verProyecto = proyecto?.ver_proyecto;
+    const imgDemo = proyecto?.imgDemo?.img || [];
     
     // Verificar si hay una URL válida para el proyecto
     const tieneDemoUrl = verProyecto && verProyecto.trim() !== '' && verProyecto !== '/' && verProyecto !== '#';
@@ -133,20 +134,28 @@ const DemoSection = () => {
                     </div>
                 {/* Right Column */}
                 <div className='space-y-6 md:col-span-7'>
-                    {/* Primary Img */}
+                    {/* Primary Img - Primera imagen del proyecto */}
                     <div className='aspect-16/10 border border-white/5 bg-surface-container group overflow-hidden relative rounded-xl'>
-                        <img src="" className='duration-700 group-hover:scale-105 h-full object-cover transition-transform w-full' alt="" />
-                        <div className='absolute bg-linear-to-t flex from-background/60 inset-0 items-end opacity-0 p-8 to-transparent transition-opacity group-hover:opacity-100'>
-                            <p className='font-label text-sm text-on-surface'>{mainInterface}</p>
-                        </div>
+                        {imgDemo[0] ? (
+                            <>
+                                <img src={imgDemo[0]} className='duration-700 group-hover:scale-105 h-full object-cover transition-transform w-full' alt={`${projectTitle} - Interface`} />
+                                <div className='absolute bg-linear-to-t flex from-background/60 inset-0 items-end opacity-0 p-8 to-transparent transition-opacity group-hover:opacity-100'>
+                                    <p className='font-label text-sm text-on-surface'>{mainInterface}</p>
+                                </div>
+                            </>
+                        ) : (
+                            <div className='flex items-center justify-center h-full text-on-surface-variant'>
+                                <span>No hay imagen disponible</span>
+                            </div>
+                        )}
                     </div>
-                    {/* Secondary Gallery */}
+                    {/* Secondary Gallery - Siguientes imágenes */}
                     <div className='grid grid-cols-2 gap-6'>
-                        <div className='aspect-square bg-surface-container border border-white/5 group overflow-hidden rounded-xl'>
-                            <img src="" className='duration-700 group-hover:scale-105 h-full object-cover transition-transform w-full' alt="" />
-                        </div>
-                        <div className='bg-surface-container border border-white/5 group overflow-hidden rounded-xl'>
-                            <img src="" className='duration-700 group-hover:scale-105 h-full object-cover transition-transform w-full' alt="" /></div>
+                        {imgDemo.slice(1, 3).map((img, index) => (
+                            <div key={index} className='aspect-square bg-surface-container border border-white/5 group overflow-hidden rounded-xl'>
+                                <img src={img} className='duration-700 group-hover:scale-105 h-full object-cover transition-transform w-full' alt={`${projectTitle} - ${index + 2}`} />
+                            </div>
+                        ))}
                     </div>
                     {/* Feature - Solo mostrar si hay performance */}
                     {projectPerformance && (

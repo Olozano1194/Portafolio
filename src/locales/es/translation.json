@@ -203,6 +203,8 @@
         "repository": "Repositorio",
         "viewProject": "Ver Proyecto",
         "video": "Video",
+        "btnVerTodo": "Ver Todo",
+        "btnVerMenos": "Ver Menos",
         "projectDetails": {
             "2": {
                 "challenge": "Desarrollar un software de escritorio robusto para la gestión integral de reservas y huéspedes, optimizando el manejo de datos mediante JDBC y garantizando una experiencia de usuario fluida en un entorno de escritorio."
