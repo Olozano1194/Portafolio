@@ -9,7 +9,40 @@
     --font-body: "Ubuntu Sans Mono", monospace;
     --font-headline: "Inter", sans-serif;
     --font-label: "Space Grotesk", sans-serif;
-    /* === COLORS === */
+
+    /* === LIGHT THEME (Default) === */
+    --color-primary: #2855a8;
+    --color-on-primary: #ffffff;
+    --color-primary-container: #dbe4ff;
+
+    --color-secondary: #546e7a;
+    --color-on-secondary: #ffffff;
+
+    --color-background: #f5f7fa;
+    --color-on-background: #1a1c1e;
+
+    --color-surface: #ffffff;
+    --color-surface-alt: #f0f2f5;
+    --color-on-surface: #1a1c1e;
+    --color-on-surface-variant: #44474e;
+    --color-surface-container: #e8eaed;
+    --color-surface-container-alt: #dde1e5;
+
+    --color-border: #74777f;
+    --color-on-border: #1a1c1e;
+
+    --color-error: #ba1a1a;
+    --color-on-error: #ffffff;
+
+    --radius: 0.25rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-full: 9999px;
+}
+
+/* === DARK THEME OVERRIDES === */
+.dark,
+html.dark {
     --color-primary: #b1c5ff;
     --color-on-primary: #002c70;
     --color-primary-container: #3a6bd1;
@@ -25,18 +58,13 @@
     --color-on-surface: #cde6f4;
     --color-on-surface-variant: #c3c6d5;
     --color-surface-container: #203842;
+    --color-surface-container-alt: #2a4149;
 
     --color-border: #8d909e;
-    --color-on-border: #43465326;
+    --color-on-border: #434653;
 
     --color-error: #ffb4ab;
     --color-on-error: #690005;
-
-    /* === BORDER RADIUS === */
-    --radius: 0.25rem;
-    --radius-lg: 0.5rem;
-    --radius-xl: 0.75rem;
-    --radius-full: 9999px;
 }
 
 /*-------Card-----------------*/

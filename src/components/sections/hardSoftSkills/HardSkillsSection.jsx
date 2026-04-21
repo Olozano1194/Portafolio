@@ -44,7 +44,7 @@ const HardsSkillsSection = () => {
                 key={item.id}
                 style={{ animationDelay: `${index * 60}ms` }} 
                 className="group relative bg-surface-container flex p-6 rounded-xl gap-4 items-center transition-all duration-300 ease-out
-             hover:bg-surface-alt hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(177,197,255,0. 15)]"
+              hover:bg-surface-alt hover:-translate-y-1 hover:shadow-lg"
               >
                 <span className="text-primary text-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">{Icon && <Icon />}</span>
                 <span className="font-label text-sm text-on-surface tracking-wide transition-colors group-hover:text-primary">

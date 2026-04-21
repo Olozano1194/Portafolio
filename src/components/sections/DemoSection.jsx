@@ -59,7 +59,7 @@ const DemoSection = () => {
                 <h2 className="text-2xl font-bold mb-4">{projectNotFound}</h2>
                 <button 
                     onClick={() => navigate(-1)} 
-                    className="bg-primary text-white px-4 py-2 rounded-md"
+                    className="bg-primary text-on-primary px-4 py-2 rounded-md"
                 >
                     {goBack}
                 </button>

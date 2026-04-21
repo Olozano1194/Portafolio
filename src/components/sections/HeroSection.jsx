@@ -41,7 +41,7 @@ const HeroSection = () => {
                             className="h-full object-cover rounded-2xl w-full" 
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhXMSpFZraCNW23z8RjZ1eFJt1FsQW_1KPX3K1lahsxr50Dts3QAecBLSg2--BVQws6RJCipi9rDtmIxHGyuC-w33l-5r-WVk6q7aCwxfIgSZqeqFYGzwLk2K6YMBRdyseb0AurJjbJaoVNepjw9odys-_hoGKHgvRB1VsnCgr1Yv9UdikUt32qYSZsXo3RJRUFuXt-vg-5nconznhi14_a1xEojwC1U8JvVz_5kA4Uk_CVnJ-OPypqOVoF6kBwgIc6qE6yEj4Ap9b" alt="high-tech abstract digital architecture visualization with glowing lines and deep blue atmospheric lighting" />
                     </picture>
-                    <div className="absolute bg-surface-container backdrop-blur-xl border border-white/10 -bottom-6 -left-6 max-w-xs p-6 rounded-xl shadow-xl md:ml-2 lg:ml-0">
+                    <div className="absolute bg-surface-container backdrop-blur-xl border border-on-border/10 -bottom-6 -left-6 max-w-xs p-6 rounded-xl shadow-xl md:ml-2 lg:ml-0">
                         <p className="font-label mb-2 text-xs tracking-widest text-primary uppercase">{t('home.card.title')}</p>
                         <p className="text-sm text-on-surface">{t('home.card.description')}</p>
                     </div>

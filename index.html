@@ -5,6 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portafolio</title>
+    <script>
+      // Apply dark theme immediately to prevent flash
+      (function() {
+        const theme = localStorage.getItem('portfolio-theme');
+        // Default to dark if no theme saved
+        if (!theme) {
+          document.documentElement.classList.add('dark');
+        } else if (theme === 'light') {
+          document.documentElement.classList.add('light');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
   <body class="font-body selection:bg-primary selection:text-on-primary">
     <div id="root"></div>

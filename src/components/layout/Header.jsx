@@ -4,9 +4,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useTranslation } from 'react-i18next';
 // utils
 import { scrollToSection } from '../../utils/scrollToSection';
+import { useTheme } from '../../hooks/useTheme';
 import logo from '../../assets/logoOscar.png';
 // icons
-import { MdDarkMode, MdLanguage } from "react-icons/md";
+import { MdDarkMode, MdLightMode, MdLanguage } from "react-icons/md";
 
 const classNames = (...classes) => {
     return classes.filter(Boolean).join(' ')
@@ -33,6 +34,8 @@ const Navbar = () => {
     const { t, i18n } = useTranslation();
     const location = useLocation();
     const navigate = useNavigate();
+    const { theme, toggleTheme } = useTheme();
+    const isDark = theme === 'dark';
     const isHome = location.pathname === '/';
 
     const navigation = [        
@@ -54,7 +57,7 @@ const Navbar = () => {
     };
 
     return (
-        <Disclosure as="nav" className="backdrop-blur-xl bg-background/70 fixed w-full top-0 z-50 dark:bg-background/70">
+        <Disclosure as="nav" className="backdrop-blur-xl bg-background/70 fixed w-full top-0 z-50">
             <div className="font-headline w-full mx-auto px-4 sm:px-3 lg:px-16">
                 <div className="flex gap-6 h-16 items-center justify-between">
                     {/* Logo y nombre */}
@@ -103,8 +106,10 @@ const Navbar = () => {
                                 className='cursor-pointer duration-300 p-2 rounded-full text-on-background/70 text-lg transition-all active:scale-95 hover:text-primary'>
                                 <MdLanguage />
                             </button>                            
-                            <button className='cursor-pointer duration-300 p-2 rounded-full text-on-background/70 text-lg transition-all active:scale-95 hover:text-primary'>
-                            <MdDarkMode />
+                            <button 
+                                onClick={toggleTheme}
+                                className='cursor-pointer duration-300 p-2 rounded-full text-on-background/70 text-lg transition-all active:scale-95 hover:text-primary'>
+                                {isDark ? <MdLightMode /> : <MdDarkMode />}
                             </button>
                         </div>                        
                     </div>
@@ -132,11 +137,15 @@ const Navbar = () => {
                         ))}
                         {/* language and dark/light */}
                         <div className='flex gap-4 justify-end'>
-                            <button className='cursor-pointer duration-300 p-2 rounded-full text-on-background/70 text-lg transition-all active:scale-95 hover:text-primary lg:text-2xl'>
+                            <button 
+                                onClick={changeLanguage}
+                                className='cursor-pointer duration-300 p-2 rounded-full text-on-background/70 text-lg transition-all active:scale-95 hover:text-primary lg:text-2xl'>
                             <MdLanguage />
                             </button>                            
-                            <button className='cursor-pointer duration-300 p-2 rounded-full text-on-background/70 text-lg transition-all active:scale-95 hover:text-primary lg:text-2xl'>
-                            <MdDarkMode />
+                            <button 
+                                onClick={toggleTheme}
+                                className='cursor-pointer duration-300 p-2 rounded-full text-on-background/70 text-lg transition-all active:scale-95 hover:text-primary lg:text-2xl'>
+                                {isDark ? <MdLightMode /> : <MdDarkMode />}
                             </button>
                         </div>
                     </div>

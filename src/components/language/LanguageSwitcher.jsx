@@ -13,8 +13,8 @@ function LanguageSwitcher() {
         onClick={() => changeLanguage('es')}
         className={`px-3 py-1 rounded ${
           i18n.language === 'es' 
-            ? 'bg-primary text-bg-card' 
-            : 'bg-dark-text-primary dark:bg-gray-700'
+            ? 'bg-primary text-on-primary' 
+            : 'bg-surface-alt text-on-surface'
         }`}
       >
         ES
@@ -23,8 +23,8 @@ function LanguageSwitcher() {
         onClick={() => changeLanguage('en')}
         className={`px-3 py-1 rounded ${
           i18n.language === 'en' 
-            ? 'bg-primary text-bg-card' 
-            : 'bg-dark-text-primary dark:bg-gray-700'
+            ? 'bg-primary text-on-primary' 
+            : 'bg-surface-alt text-on-surface'
         }`}
       >
         EN

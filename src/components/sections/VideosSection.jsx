@@ -71,7 +71,7 @@ const VideosSection = () => {
             {/* Description footer */}
             <section className='grid grid-cols-1 gap-12 mt-24 md:grid-cols-12'>
                 <div className='md:col-span-8'>
-                    <h2 className='font-bold font-headline mb-6 text-3xl'>{theChallenge}</h2>
+                    <h2 className='font-bold font-headline mb-6 text-3xl text-on-surface-variant'>{theChallenge}</h2>
                     <p className='leading-relaxed mb-8 text-lg text-on-surface-variant'>{projectChallenge}</p>
                     <div className='grid grid-cols-2 gap-8 mt-12'>
                         <div className='bg-surface-container p-8 rounded-xl'>

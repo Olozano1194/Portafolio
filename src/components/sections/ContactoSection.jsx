@@ -50,7 +50,7 @@ const ContactoSection = () => {
                 <p className="mb-12 text-xl text-on-surface-variant">{t('contact.description')}</p>
                 <form
                     onSubmit={onSubmit}
-                    className="bg-surface-alt border border-white/5 p-12 rounded-2xl space-y-6 shadow-2xl text-left"
+                    className="bg-surface-alt border border-on-border/5 p-12 rounded-2xl space-y-6 shadow-2xl text-left"
                 >
                     <input type="hidden" name="_captcha" value="true" />
                     <input type="hidden" name="_template" value="table" />
@@ -75,15 +75,15 @@ const ContactoSection = () => {
                                 {...register('nombre', {
                                 required: {
                                     value: true,
-                                    message: 'El nombre es requerido'
+                                    message: t('contact.form.errors.name.required')
                                 },
                                 minLength: {
                                     value: 4,
-                                    message: 'El nombre debe tener al menos 4 caracteres'
+                                    message: t('contact.form.errors.name.minLength', { count: 4 })
                                 },
                                 maxLength: {
                                     value: 20,
-                                    message: 'El nombre debe tener maximo de 20 caracteres'
+                                    message: t('contact.form.errors.name.maxLength', { count: 20 })
                                 }
                             })}    
                             />
@@ -103,11 +103,11 @@ const ContactoSection = () => {
                                 {...register('email', {
                                 required: {
                                     value: true,
-                                    message: 'El email es requerido'
+                                    message: t('contact.form.errors.email.required')
                                 },
                                 pattern: {
                                     value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                                    message: 'El email no es válido'
+                                    message: t('contact.form.errors.email.pattern')
                                 }
                             })
                             } 
@@ -130,15 +130,15 @@ const ContactoSection = () => {
                                 required:
                                 {
                                     value: true,
-                                    message: 'El mensaje es requerido',
+                                    message: t('contact.form.errors.message.required'),
                                 },
                                 minLength: {
                                     value: 10,
-                                    message: 'El mensaje debe tener al menos 10 caracteres'
+                                    message: t('contact.form.errors.message.minLength', { count: 10 })
                                 },
                                 maxLength: {
                                     value: 500,
-                                    message: 'El mensaje debe tener maximo 500 caracteres'
+                                    message: t('contact.form.errors.message.maxLength', { count: 500 })
                                 }
                             }
                         )}
@@ -148,7 +148,7 @@ const ContactoSection = () => {
                     </div>
                     <button
                         type="submit" 
-                        className="bg-primary cursor-pointer font-bold py-4 rounded-xl shadow-lg shadow-primary/10 text-on-primary transition-all w-full active:scale-95 hover:brightness-110" type="submit">
+                        className="bg-primary cursor-pointer font-bold py-4 rounded-xl shadow-lg text-on-primary transition-all w-full active:scale-95 hover:opacity-90" type="submit">
                         {t('contact.form.btn')}
                     </button>
                 </form>                

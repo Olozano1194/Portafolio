@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 const Footer = () => {
     const { t } = useTranslation();
     return (
-        <footer className="bg-[#001018] py-12 px-8 w-ful dark:bg-[#001018]">
+        <footer className="bg-background py-12 px-8 w-full">
             <section className="flex flex-col font-label gap-6 items-center justify-between max-w-7xl mx-auto text-sm tracking-widest uppercase md:flex-row">
                 <div className='text-on-surface text-xs uppercase'>@{new Date().getFullYear()} {t('footer.description')}</div>
                 {/* Redes Sociales */}

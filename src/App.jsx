@@ -9,10 +9,12 @@ import LayoutAdmin from "./layouts/LayoutAdmin";
 import Error404 from "./pages/Error404";
 import VideosSection from './components/sections/VideosSection';
 import DemoSection from './components/sections/DemoSection';
+import ThemeInitializer from './components/ThemeInitializer';
 
 
 const App = () => {
-  return (    
+  return (
+    <ThemeInitializer>    
       <Routes>
         <Route path="/" element={<LayoutAdmin />}>
           <Route index element={<HomePage />} />
@@ -21,6 +23,7 @@ const App = () => {
         </Route>
         <Route path="*" element={<Error404 />} />
       </Routes>      
+    </ThemeInitializer>
   )
 }
 export default App;

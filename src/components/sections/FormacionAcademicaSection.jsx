@@ -18,7 +18,7 @@ function FormacionAcademica() {
             <article
               key={item.id}
               style={{ animationDelay: `${index * 0.1}s` }}
-              className="card-formacion opacity-0 translate-y-3 animate-fadeInUp border border-white/5 rounded-xl space-y-4 flex flex-col items-center pb-3 text-center"
+              className="card-formacion opacity-0 translate-y-3 animate-fadeInUp border border-on-border/5 rounded-xl space-y-4 flex flex-col items-center pb-3 text-center"
             >
               {/* Imagen */}
               <div className="imgFormacion w-full h-40 overflow-hidden rounded-t-lg">
