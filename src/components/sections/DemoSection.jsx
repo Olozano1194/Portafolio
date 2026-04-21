@@ -1,6 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { proyectos } from '../../data/proyectos';
-import CarruselDemo from '../carruselDemo/CarruselDemo';
 // icons
 import { MdCheckCircle, MdArrowOutward } from "react-icons/md";
 import { FaArrowLeft, FaShareAlt, FaSignInAlt } from "react-icons/fa";

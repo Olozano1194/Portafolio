@@ -19,7 +19,7 @@ export const proyectos = [
         },
         "stack": ["React", "TypeScript", "Django", "REST API", "Tailwind"],
         "category": "Gestión de Gimnasios",
-        "year": "2024",
+        "year": "2026",
         "architecturalStack": {
             "frontend": "React, TypeScript, Tailwind CSS, JavaScript",
             "backend": "Django REST Framework, Python, Cors",
@@ -72,8 +72,8 @@ export const proyectos = [
         "year": "2024",
         "architecturalStack": {
             "frontend": "React, TypeScript, Tailwind CSS",
-            "backend": "Express, Node.js",
-            "database": "MySQL"
+            "backend": "Express, Node.js, Cors",
+            "database": "MongoDB"
         }
     },       
     {
@@ -99,8 +99,8 @@ export const proyectos = [
         "year": "2023",
         "architecturalStack": {
             "frontend": "HTML5, Tailwind CSS, JavaScript",
-            "backend": "Express, Node.js",
-            "database": "MySQL",
+            "backend": "Express, Node.js, Cors",
+            "database": "MongoDB",
             "infrastructure": "Vercel, GitHub",
         }
     } 

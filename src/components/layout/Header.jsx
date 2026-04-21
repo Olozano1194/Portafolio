@@ -48,6 +48,11 @@ const Navbar = () => {
         scrollToSection(getSectionId(href));
     };
 
+    const changeLanguage = () => {
+       const newLang = i18n.language === 'es' ? 'en' : 'es';
+       i18n.changeLanguage(newLang);
+    };
+
     return (
         <Disclosure as="nav" className="backdrop-blur-xl bg-background/70 fixed w-full top-0 z-50 dark:bg-background/70">
             <div className="font-headline w-full mx-auto px-4 sm:px-3 lg:px-16">
@@ -93,8 +98,10 @@ const Navbar = () => {
                         </div>
                         {/* language and dark/light */}
                         <div className='flex gap-4 items-center'>
-                            <button className='cursor-pointer duration-300 p-2 rounded-full text-on-background/70 text-lg transition-all active:scale-95 hover:text-primary'>
-                            <MdLanguage />
+                            <button
+                                onClick={changeLanguage} 
+                                className='cursor-pointer duration-300 p-2 rounded-full text-on-background/70 text-lg transition-all active:scale-95 hover:text-primary'>
+                                <MdLanguage />
                             </button>                            
                             <button className='cursor-pointer duration-300 p-2 rounded-full text-on-background/70 text-lg transition-all active:scale-95 hover:text-primary'>
                             <MdDarkMode />
