@@ -342,6 +342,22 @@
                 "name": "Anacleto Rupertino",
                 "email": "Anacleto@gmail.com",
                 "message": "Tell me about your project, your needs, and how I can help you bring it to life."
+            },
+            "errors": {
+                "name": {
+                    "required": "Name is required",
+                    "minLength": "Name must be at least {{count}} characters",
+                    "maxLength": "Name must be at most {{count}} characters"
+                },
+                "email": {
+                    "required": "Email is required",
+                    "pattern": "Invalid email address"
+                },
+                "message": {
+                    "required": "Message is required",
+                    "minLength": "Message must be at least {{count}} characters",
+                    "maxLength": "Message must be at most {{count}} characters"
+                }
             }
         }
     },
