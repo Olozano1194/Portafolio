@@ -36,7 +36,7 @@ const HeroSection = () => {
                     </div>
                 </section>
                 <section className="relative">
-                    <picture className="aspect-square overflow-hidden shadow-2xl">
+                    <picture className="aspect-square overflow-hidden shadow-2xl md:aspect-3/2">
                         <img
                             className="h-full object-cover rounded-2xl w-full" 
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhXMSpFZraCNW23z8RjZ1eFJt1FsQW_1KPX3K1lahsxr50Dts3QAecBLSg2--BVQws6RJCipi9rDtmIxHGyuC-w33l-5r-WVk6q7aCwxfIgSZqeqFYGzwLk2K6YMBRdyseb0AurJjbJaoVNepjw9odys-_hoGKHgvRB1VsnCgr1Yv9UdikUt32qYSZsXo3RJRUFuXt-vg-5nconznhi14_a1xEojwC1U8JvVz_5kA4Uk_CVnJ-OPypqOVoF6kBwgIc6qE6yEj4Ap9b" alt="high-tech abstract digital architecture visualization with glowing lines and deep blue atmospheric lighting" />

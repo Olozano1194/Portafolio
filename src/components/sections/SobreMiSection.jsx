@@ -13,7 +13,8 @@ function SobreMiSection() {
                         <h2 className='font-bold mb-8 text-4xl text-on-surface tracking-tight'>{t('about.title')}</h2>
                         <div className='aspect-4/5 overflow-hidden'>
                             <img src={imgPerfil} 
-                                alt="professional portrait of a confident developer in a modern workspace with natural soft lighting and neutral background" className='duration-700 grayscale h-full object-cover rounded-2xl transition-all w-full hover:grayscale-0' />
+                                alt="professional portrait of a confident developer in a modern workspace with natural soft lighting and neutral background" className='duration-700 grayscale h-full object-cover rounded-2xl transition-all w-full hover:grayscale-0' 
+                            />
                         </div>
                     </div>
                     <div className='flex flex-col justify-center space-y-8 lg:col-span-7'>
