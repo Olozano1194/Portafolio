@@ -60,7 +60,7 @@ const VideosSection = () => {
                         controls
                         width="100%"
                         height="100%"
-                        className="absolute top-0 left-0"
+                        className="absolute top-0 left-0 w-full h-full object-cover"
                         preload="metadata"
                     >
                         <source src={`/videos/videos-${proyecto.img}.mp4`} type="video/mp4" />
