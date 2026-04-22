@@ -10,9 +10,10 @@ function FormacionAcademica() {
   return (
     <section className="bg-surface py-24 px-8" id="formacionAcademica">
       <section className="max-w-7xl mx-auto">
-        <h2 className="font-label mb-12 text-sm text-primary/50 tracking-[0.3em] uppercase">
-          {t('education.title')}
-        </h2> 
+        <h2 className="font-label mb-6 text-sm text-primary/90 tracking-[0.3em] uppercase">
+          {t('education.subtitle')}
+        </h2>
+        <h3 className="font-bold mb-12 text-4xl text-on-surface tracking-tight">{t(`education.title`)}</h3> 
         <article className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           {datos.map((item, index) => (
             <article

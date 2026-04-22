@@ -70,7 +70,7 @@ const ContactoSection = () => {
                                 id="name"
                                 aria-invalid={errors.nombre ? "true" : "false"}
                                 aria-describedby="mensaje-error"
-                                className="bg-surface border-none p-2 rounded-lg text-on-surface w-full focus:ring-2 focus:ring-primary/20 placeholder:text-on-surface/20" 
+                                className="bg-surface border-none py-2 px-4 rounded-lg text-on-surface w-full focus:ring-2 focus:ring-primary/20 placeholder:text-on-surface/20" 
                                 placeholder={t('contact.form.placeholder.name')}
                                 {...register('nombre', {
                                 required: {
@@ -98,7 +98,7 @@ const ContactoSection = () => {
                                 id="email"
                                 aria-invalid={errors.email ? "true" : "false"}
                                 aria-describedby="mensaje-error" 
-                                className="bg-surface border-none p-2 rounded-lg text-on-surface w-full focus:ring-2 focus:ring-primary/20 placeholder:text-on-surface/20" 
+                                className="bg-surface border-none py-2 px-4 rounded-lg text-on-surface w-full focus:ring-2 focus:ring-primary/20 placeholder:text-on-surface/20" 
                                 placeholder={t('contact.form.placeholder.email')}
                                 {...register('email', {
                                 required: {
@@ -123,7 +123,7 @@ const ContactoSection = () => {
                             rows={5}
                             aria-invalid={errors.mensaje ? "true" : "false"}
                             aria-describedby="mensaje-error" 
-                            className="bg-surface border-none min-h-37.5 rounded-lg resize-none p-2 text-on-surface w-full focus:ring-2 focus:ring-primary/20 placeholder:text-on-surface/20"
+                            className="bg-surface border-none min-h-37.5 rounded-lg resize-none py-2 px-4 text-on-surface w-full focus:ring-2 focus:ring-primary/20 placeholder:text-on-surface/20"
                             placeholder={t('contact.form.placeholder.message')}
                             {...register('mensaje',
                             {

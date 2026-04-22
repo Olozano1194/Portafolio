@@ -79,7 +79,8 @@
         }
     },
     "education": {
-        "title": "Education & Background",
+        "title": "Academic Background",
+        "subtitle": "Education & Background",
         "items": {
             "1": {
                 "degree": "Full Stack Web Development"

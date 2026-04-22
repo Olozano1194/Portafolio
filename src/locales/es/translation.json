@@ -79,7 +79,8 @@
         }
     },
     "education": {
-        "title": "Formación & Trayectoria",
+        "title": "Formación Académica",
+        "subtitle": "Formación & Trayectoria",
         "items": {
             "1": {
                 "degree": "Desarrollo Web Full Stack"
