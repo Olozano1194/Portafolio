@@ -1,6 +1,5 @@
 {
     "nav": {
-        "home": "Home",
         "about": "About me",
         "education": "Education",
         "projects": "Projects",
@@ -9,27 +8,25 @@
         "contact": "Contact"
     },
     "home": {
+        "button": "Junior Developer Portfolio",
         "greeting": {
             "intro": "Building the ",
             "name": "Digital Future."
         },
         "description": {
-            "intro": "Systems Engineer dedicated to software development, with a focus on the web ecosystem. My goal is to apply my technical knowledge in real projects, creating maintainable code and solutions that provide real value to the user.",
+            "intro": "I'm a Systems Engineer focused on software development, with a particular interest in the modern web ecosystem. My goal is to contribute to real-world projects by building maintainable code, scalable solutions, and user-centered experiences.",
             "btnProjects": "View Projects",
             "btnContact": "Contact"
         },
         "card": {
             "title": "Current Status",
             "description": "Available for strategic, high-impact projects in 2026"
-        },
-        "learning": "I am constantly learning and prepared to provide technical solutions in professional development environments.",
-        "cta": "I invite you to explore my projects!",
-        "downloadCV": "Download CV"
+        }
     },
     "about": {
         "title": "About Me",
         "greeting": {
-            "description": "Systems Engineer focused on modern web development. My approach combines technical logic with creating clean and functional interfaces."
+            "description": "Hi, I'm Oscar Lozano, a Systems Engineer passionate about modern web development. While I enjoy working across the Full Stack, my greatest passion lies in Frontend development, where I create clean, interactive, and intuitive user interfaces that deliver meaningful user experiences."
         },
         "cards": {
             "1": {
@@ -40,165 +37,49 @@
             }
         },
         "intro": {
-            "description": "My career focuses on building web applications from academia and personal projects, implementing scalable architectures and refining user experience. I believe in code as a tool to solve real problems."
-        },
-        "foundations": {
-            "icon": "✅",
-            "title": "Solid Foundations:",
-            "description": {
-                "intro": "Through ",
-                "alura": "Oracle Next Education (Alura), ",
-                "platzi": "Platzi ",
-                "and": "and ",
-                "tic": "Misión TIC ",
-                "programming": "I consolidated my programming logic in ",
-                "java": "Java",
-                "ad": "and ",
-                "js": "JavaScript",
-                "db": ", along with relational database management ",
-                "mysql": "(MySQL)."
-            }
-        },
-        "modernStack": {
-            "icon": "✅",
-            "title": "Modern Stack:",
-            "description": {
-                "intro": "I am currently deepening my knowledge in high-demand technologies such as ",
-                "react": "React, ",
-                "type": "Typescript ",
-                "django": "and Django Rest Framework ",
-                "goal": ", always seeking to write clean and scalable code."
-            }
-        },
-        "goal": {
-            "intro": "My goal is to integrate into a team where I can apply my ",
-            "analysis": "analytical skills",
-            "my": ", my ",
-            "adaptability": "adaptability ",
-            "description": "and my technical foundations to create products that improve the user experience. I am a firm believer that engineering and web development go hand in hand to create efficient solutions."
+            "description": "As a Junior Developer seeking my first professional opportunity, I continuously invest in my growth through self-learning, online courses, and bootcamps. I'm committed to strengthening my technical skills and contributing value to a development team from day one."
         }
     },
     "education": {
         "title": "Academic Background",
         "subtitle": "Education & Background",
         "items": {
-            "1": {
-                "degree": "Full Stack Web Development"
-            },
-            "2": {
-                "degree": "Global Technologist"
-            },
-            "3": {
-                "degree": "Systems Engineer"
-            },
-            "4": {
-                "degree": "Alura Trainee"
-            },
-            "5": {
-                "degree": "MisionTic Trainee"
-            },
-            "6": {
-                "degree": "IT Management Technologist"
-            },
-            "7": {
-                "degree": "Web Solutions Technician"
-            }
+            "1": { "degree": "Full Stack Web Development" },
+            "2": { "degree": "Global Technologist" },
+            "3": { "degree": "Systems Engineer" },
+            "4": { "degree": "Alura Trainee" },
+            "5": { "degree": "MisionTic Trainee" },
+            "6": { "degree": "IT Management Technologist" },
+            "7": { "degree": "Web Solutions Technician" }
         }
     },
     "projects": {
         "title": "Selected Projects",
-        "description": "A curated sample of digital solutions that combine aesthetics and performance.",
+        "description": "Building web projects and solutions with a strong focus on functionality, attention to detail, and user experience.",
         "items": {
             "1": {
-                "title": "GymFlow App",
-                "subtitle": "Full-Stack React + Django",
-                "description": "Gym management app with React and Django. Includes Admin and User roles, member management, and responsive design.",
-                "demoDescription": [
-                    "Comprehensive gym management application with Admin and User roles.",
-                    "Admin: complete member management, membership assignment, and user creation.",
-                    "User: manages their profile and assigned members.",
-                    "Dynamic React frontend and Django Rest Framework backend.",
-                    "Focuses on data persistence and responsive design."
-                ],
-                "demoTitles": [
-                    "Login",
-                    "Home",
-                    "Register",
-                    "List",
-                    "User"
-                ],
-                "demoDescriptions": [
-                    "User login",
-                    "User home",
-                    "Member registration",
-                    "List members",
-                    "User profile"
-                ]
+                "title": "ControlFit",
+                "description": "Gym management app with React and Django. Includes Admin and User roles, member management, and responsive design."
             },
             "2": {
                 "title": "Hotel Alura Management",
-                "subtitle": "Java 6 Backend with JDBC",
                 "description": "Desktop software for managing reservations and guests. Java backend using JDBC for efficient database handling."
             },
             "3": {
                 "title": "TaskMaster",
-                "subtitle": "Full-Stack with Django + MySQL",
                 "description": "Productivity app to manage tasks in real time. Backend built with Django and MySQL, and a minimalist React frontend."
             },
             "4": {
                 "title": "Institutional Management (Update)",
-                "subtitle": "Full-Stack Refactoring and Optimization",
-                "description": "Educational platform refactored with React and TypeScript, optimizing user experience and scalability.",
-                "demoDescription": [
-                    "Updated version of a management application for educational institutions.",
-                    "Implements React and TypeScript for data integrity and Axios communication.",
-                    "Allows creating users by role (admin, teacher, student) with adapted authentication.",
-                    "Automatically initializes roles and basic data in the database.",
-                    "Integrates external API for Colombian departments and municipalities.",
-                    "Administrators can register institutions and manage teachers/students.",
-                    "Designed to scale with future functionalities."
-                ],
-                "demoTitles": [
-                    "Login",
-                    "Home",
-                    "Profile",
-                    "Register",
-                    "List",
-                    "User"
-                ],
-                "demoDescriptions": [
-                    "User login",
-                    "User home",
-                    "User profile by role",
-                    "Register institutions",
-                    "List institutions",
-                    "Register user"
-                ]
+                "description": "Educational platform refactored with React and TypeScript, optimizing user experience and scalability."
             },
             "5": {
                 "title": "EduBase",
-                "subtitle": "Final Full-Stack Project (MinTic)",
-                "description": "Full-Stack academic platform developed with HTML5 and Tailwind. It allows efficient data management and serves as a foundation for future developments.",
-                "demoDescription": [
-                    "Academic platform developed as a final Full-Stack project in MinTic.",
-                    "Allows registering institutions and creating users.",
-                    "Frontend built with HTML5 and Tailwind, backend designed for efficient data consumption.",
-                    "Provides a foundation to add future functionalities and scale the project."
-                ],
-                "demoTitles": [
-                    "Login",
-                    "Home",
-                    "Register",
-                    "List",
-                    "User"
-                ],
-                "demoDescriptions": [
-                    "User login",
-                    "User home",
-                    "Institution registration",
-                    "List institutions",
-                    "User profile"
-                ]
+                "description": "Full-Stack academic platform developed with HTML5 and Tailwind. It allows efficient data management and serves as a foundation for future developments."
+            },
+            "6": {
+                "title": "FiadoApp",
+                "description": "Commercial management platform for small neighborhood stores with sales dashboard, intelligent inventory and customer control."
             }
         },
         "repository": "Repository",
@@ -219,39 +100,17 @@
         "title": "Technical Skills",
         "subtitle": "Capabilities",
         "items": {
-            "1": {
-                "description": "HTML5"
-            },
-            "2": {
-                "description": "Java"
-            },
-            "3": {
-                "description": "CSS3"
-            },
-            "4": {
-                "description": "Python"
-            },
-            "5": {
-                "description": "JavaScript"
-            },
-            "6": {
-                "description": "Django"
-            },
-            "7": {
-                "description": "React"
-            },
-            "8": {
-                "description": "Tailwind"
-            },
-            "9": {
-                "description": "MySQL"
-            },
-            "10": {
-                "description": "Git"
-            },
-            "11": {
-                "description": "TypeScript"
-            }
+            "1": { "description": "HTML5" },
+            "2": { "description": "Java" },
+            "3": { "description": "CSS3" },
+            "4": { "description": "Python" },
+            "5": { "description": "JavaScript" },
+            "6": { "description": "Django" },
+            "7": { "description": "React" },
+            "8": { "description": "Tailwind" },
+            "9": { "description": "MySQL" },
+            "10": { "description": "Git" },
+            "11": { "description": "TypeScript" }
         }
     },
     "softSkills": {
@@ -268,14 +127,12 @@
         "backBtn": "Back to Projects",
         "browserNotSupported": "Your browser does not support the video element.",
         "theChallenge": "The Challenge",
-        "uptimeReliability": "Server Uptime",
         "techStack": "Tech Stack",
         "viewCaseStudy": "View Case Study",
         "category": "Category",
         "year": "Year"
     },
     "demoProject": {
-        "backBtn": "Back",
         "projectNotFound": "Project not found",
         "goBack": "Go Back",
         "caseStudy": "case study",
@@ -322,6 +179,16 @@
                     "RESTful API for efficient communication between frontend and backend."
                 ],
                 "performance": "The platform provides optimal response times thanks to the clear separation between frontend and backend, allowing each layer to scale independently."
+            },
+            "6": {
+                "description": "Comprehensive commercial management platform for small neighborhood stores, designed to optimize inventory, sales and customer control. Includes an interactive dashboard with daily activity metrics, allowing small business owners to have total control of their business from any device.",
+                "features": [
+                    "Interactive dashboard with real-time sales and daily activity metrics.",
+                    "Smart inventory system with low stock alerts and automated management.",
+                    "Credit customer control with payment and credit history.",
+                    "Detailed reports on sales, revenue and business performance."
+                ],
+                "performance": "The platform centralizes business administration in one place, reducing time spent on operational tasks by 60% and eliminating the need for multiple disconnected tools."
             }
         }
     },
@@ -338,7 +205,6 @@
             "email": "Email",
             "message": "Message",
             "btn": "Send Proposal",
-            "footer": "Developed by Oscar Lozano",
             "placeholder": {
                 "name": "Anacleto Rupertino",
                 "email": "Anacleto@gmail.com",
@@ -364,141 +230,5 @@
     },
     "footer": {
         "description": "Systems Engineer. Built with precision and technical detail."
-    },
-    "demo": {
-        "items": {
-            "4": {
-                "title": "Institutional Management (Update)",
-                "descriptions": [
-                    "Updated version of a management application for educational institutions.",
-                    "Implements React and TypeScript for data integrity and Axios communication to Express backend.",
-                    "Allows creating users by role (admin, teacher, student) with adapted authentication.",
-                    "Automatically initializes roles and basic data in the database.",
-                    "Integrates external API for Colombian departments and municipalities.",
-                    "Administrators can register institutions and manage teachers/students.",
-                    "Designed to scale with future functionalities."
-                ],
-                "credentials": {
-                    "intro": "Credentials if you want to browse the Demo",
-                    "userLabel": "User: ",
-                    "passwordLabel": "Password: "
-                },
-                "btn": "Go to Demo",
-                "imgSection": {
-                    "title": "Project Images",
-                    "items": {
-                        "0": {
-                            "title": "Login",
-                            "description": "User login"
-                        },
-                        "1": {
-                            "title": "Home",
-                            "description": "User home"
-                        },
-                        "2": {
-                            "title": "Profile",
-                            "description": "User profile by role"
-                        },
-                        "3": {
-                            "title": "Register",
-                            "description": "Register institutions"
-                        },
-                        "4": {
-                            "title": "List",
-                            "description": "List institutions"
-                        },
-                        "5": {
-                            "title": "User",
-                            "description": "Register user"
-                        }
-                    }
-                }
-            },
-            "1": {
-                "title": "GymFlow App",
-                "descriptions": [
-                    "Comprehensive gym management application with Admin and User roles.",
-                    "Admin: complete member management, membership assignment, and user creation.",
-                    "User: manages their profile and assigned members.",
-                    "Dynamic React frontend and Django Rest Framework backend.",
-                    "Focuses on data persistence and responsive design."
-                ],
-                "credentials": {
-                    "intro": "Credentials if you want to browse the Demo",
-                    "userLabel": "User: ",
-                    "passwordLabel": "Password: "
-                },
-                "btn": "Go to Demo",
-                "imgSection": {
-                    "title": "Project Images",
-                    "items": {
-                        "0": {
-                            "title": "Login",
-                            "description": "User login"
-                        },
-                        "1": {
-                            "title": "Home",
-                            "description": "User home"
-                        },
-                        "2": {
-                            "title": "Register",
-                            "description": "Register members"
-                        },
-                        "3": {
-                            "title": "List",
-                            "description": "List members"
-                        },
-                        "4": {
-                            "title": "User",
-                            "description": "User profile"
-                        }
-                    }
-                }
-            },
-            "5": {
-                "title": "EduBase",
-                "descriptions": [
-                    "Academic platform developed as a Full-Stack final project at MinTic.",
-                    "Allows registering institutions and creating users.",
-                    "Frontend built with HTML5 and Tailwind, backend with Express for efficient data consumption.",
-                    "Provides a foundation to add future features and scale the project."
-                ],
-                "credentials": {
-                    "intro": "Credentials if you want to browse the Demo",
-                    "userLabel": "User: ",
-                    "passwordLabel": "Password: "
-                },
-                "btn": "Go to Demo",
-                "imgSection": {
-                    "title": "Project Images",
-                    "items": {
-                        "0": {
-                            "title": "Login",
-                            "description": "User login"
-                        },
-                        "1": {
-                            "title": "Home",
-                            "description": "User home"
-                        },
-                        "2": {
-                            "title": "Profile",
-                            "description": "User profile by role"
-                        },
-                        "3": {
-                            "title": "Register",
-                            "description": "Institution registration"
-                        },
-                        "4": {
-                            "title": "List",
-                            "description": "List institutions"
-                        },
-                        "5": {
-                            "title": "User",
-                            "description": "Register user"
-                        }
-                    }
-                }
-            }
-        }
     }
 }

@@ -1,6 +1,5 @@
 {
     "nav": {
-        "home": "Home",
         "about": "Sobre mi",
         "education": "Formación",
         "projects": "Proyectos",
@@ -9,27 +8,25 @@
         "contact": "Contacto"
     },
     "home": {
+        "button": "Portafolio de desarrollador junior",
         "greeting": {
             "intro": "Construyendo el ",
             "name": "Futuro Digital."
         },
         "description": {
-            "intro": "Ingeniero de Sistemas dedicado al desarrollo de software, con enfoque en el ecosistema web. Mi objetivo es aplicar mis conocimientos técnicos en proyectos reales, creando código mantenible y soluciones que aporten valor real al usuario.",
+            "intro": "Ingeniero de Sistemas dedicado al desarrollo de software, con enfoque en el ecosistema web. Mi objetivo es aportar mis conocimientos técnicos en el despliegue de proyectos reales, creando código mantenible y soluciones funcionales centradas en el usuario.",
             "btnProjects": "Ver Proyectos",
             "btnContact": "Contacto"
         },
         "card": {
             "title": "Estado Actual",
-            "description": "Disponible para proyectos estratégicos de alto impacto en 2026"
-        },
-        "learning": "Estoy en constante aprendizaje y preparado para aportar soluciones técnicas en entornos de desarrollo profesional.",
-        "cta": "¡Te invito a explorar mis proyectos!",
-        "downloadCV": "Descargar CV"
+            "description": "Disponible para incorporarme a equipos de desarrollo y asumir nuevos retos técnicos."
+        }
     },
     "about": {
         "title": "Sobre Mi",
         "greeting": {
-            "description": "Ingeniero de Sistemas enfocado en el desarrollo web moderno. Mi enfoque combina la lógica técnica con la creación de interfaces limpias y funcionales."
+            "description": "Hola! Soy Oscar Lozano, Ingeniero de Sistemas apasionado por el desarrollo web moderno. Aunque disfruto construir proyectos Full Stack, mi gran pasión está en el Frontend, creando interfaces limpias, interactivas y funcionales."
         },
         "cards": {
             "1": {
@@ -40,165 +37,49 @@
             }
         },
         "intro": {
-            "description": "Mi trayectoria se centra en la construcción de aplicaciones web desde la academia y proyectos personales, implementando arquitecturas escalables y refinando la experiencia de usuario. Creo en el código como una herramienta para solucionar problemas reales."
-        },
-        "foundations": {
-            "icon": "✅",
-            "title": "Fundamentos Sólidos:",
-            "description": {
-                "intro": "A través de ",
-                "alura": "Oracle Next Education (Alura), ",
-                "platzi": "Platzi ",
-                "and": "y ",
-                "tic": "Misión TIC ",
-                "programming": "consolidé mi lógica de programación en ",
-                "java": "Java",
-                "ad": "y ",
-                "js": "JavaScript",
-                "db": ", junto con el manejo de bases de datos relacionales ",
-                "mysql": "(MySQL)."
-            }
-        },
-        "modernStack": {
-            "icon": "✅",
-            "title": "Stack Moderno:",
-            "description": {
-                "intro": "Actualmente profundizo en tecnologías de alta demanda como ",
-                "react": "React, ",
-                "type": "Typescript ",
-                "django": "y Django Rest Framework ",
-                "goal": ", buscando siempre escribir código limpio y escalable."
-            }
-        },
-        "goal": {
-            "intro": "Mi objetivo es integrarme a un equipo donde pueda aplicar mi ",
-            "analysis": "capacidad de análisis",
-            "my": ", mi ",
-            "adaptability": "adaptabilidad ",
-            "description": "y mis bases técnicas para crear productos que mejoren la experiencia del usuario. Soy un firme creyente de que la ingeniería y el desarrollo web van de la mano para crear soluciones eficientes."
+            "description": "Como desarrollador Junior en busca de mi primera oportunidad laboral, dedico mi tiempo a formarme de manera autodidacta a través de cursos y bootcamps, perfeccionando mis habilidades para aportar valor real desde el primer día."
         }
     },
     "education": {
         "title": "Formación Académica",
         "subtitle": "Formación & Trayectoria",
         "items": {
-            "1": {
-                "degree": "Desarrollo Web Full Stack"
-            },
-            "2": {
-                "degree": "Tecnólogo Global"
-            },
-            "3": {
-                "degree": "Ingeniero de Sistemas"
-            },
-            "4": {
-                "degree": "Practicante Alura"
-            },
-            "5": {
-                "degree": "Practicante MisionTic"
-            },
-            "6": {
-                "degree": "Tecnólogo en Gestión Informática"
-            },
-            "7": {
-                "degree": "Técnico en Soluciones Web"
-            }
+            "1": { "degree": "Desarrollo Web Full Stack" },
+            "2": { "degree": "Tecnólogo Global" },
+            "3": { "degree": "Ingeniero de Sistemas" },
+            "4": { "degree": "Practicante Alura" },
+            "5": { "degree": "Practicante MisionTic" },
+            "6": { "degree": "Tecnólogo en Gestión Informática" },
+            "7": { "degree": "Técnico en Soluciones Web" }
         }
     },
     "projects": {
         "title": "Proyectos Seleccionados",
-        "description": "Una muestra curada de soluciones digitales que combinan estética y rendimiento.",
+        "description": "Proyectos y soluciones web enfocados en la funcionalidad, el detalle y la experiencia de usuario.",
         "items": {
             "1": {
-                "title": "GymFlow App",
-                "subtitle": "Full-Stack React + Django",
-                "description": "App para gestión de gimnasios con React y Django. Incluye roles de Admin y Usuario, gestión de miembros y diseño responsivo.",
-                "demoDescription": [
-                    "Aplicación integral para gestión de gimnasios, con roles de Admin y Usuario.",
-                    "Admin: gestión completa de miembros, asignación de membresías y creación de usuarios.",
-                    "Usuario: gestiona su perfil y miembros asignados.",
-                    "Frontend dinámico en React y backend en Django Rest Framework.",
-                    "Se enfoca en persistencia de datos y diseño responsivo."
-                ],
-                "demoTitles": [
-                    "Login",
-                    "Home",
-                    "Registrar",
-                    "Listar",
-                    "Usuario"
-                ],
-                "demoDescriptions": [
-                    "Login de usuario",
-                    "Home del usuario",
-                    "Registro de miembros",
-                    "Listar miembros",
-                    "Perfil de usuario"
-                ]
+                "title": "ControlFit",
+                "description": "App para gestión de gimnasios con React y Django. Incluye roles de Admin y Usuario, gestión de miembros y diseño responsivo."
             },
             "2": {
                 "title": "Hotel Alura Management",
-                "subtitle": "Backend Java 6 con JDBC",
                 "description": "Software de escritorio para gestión de reservas y huéspedes. Backend en Java con JDBC para manejo eficiente de la base de datos."
             },
             "3": {
                 "title": "TaskMaster",
-                "subtitle": "Full-Stack con Django + MySQL",
                 "description": "App de productividad para gestionar tareas en tiempo real. Backend con Django y MySQL, frontend en React minimalista."
             },
             "4": {
                 "title": "Gestión Institucional (Actualización)",
-                "subtitle": "Refactorización y optimización Full-Stack",
-                "description": "Plataforma educativa refactorizada con React y TypeScript, optimizando la experiencia de usuario y la escalabilidad.",
-                "demoDescription": [
-                    "Versión actualizada de una aplicación de gestión para instituciones educativas.",
-                    "Implementa React y TypeScript para integridad de datos y comunicación con Axios.",
-                    "Permite crear usuarios por rol (admin, docente, estudiante) con autenticación adaptada.",
-                    "Inicializa automáticamente roles y datos básicos en la base de datos.",
-                    "Integra API externa para departamentos y municipios de Colombia.",
-                    "Administradores pueden registrar instituciones y gestionar docentes/estudiantes.",
-                    "Diseñada para escalar con nuevas funcionalidades futuras."
-                ],
-                "demoTitles": [
-                    "Login",
-                    "Home",
-                    "Perfil",
-                    "Registrar",
-                    "Listar",
-                    "Usuario"
-                ],
-                "demoDescriptions": [
-                    "Login de usuario",
-                    "Home del usuario",
-                    "Perfil del usuario según el rol",
-                    "Registro de instituciones",
-                    "Listar instituciones",
-                    "Registrar usuario"
-                ]
+                "description": "Plataforma educativa refactorizada con React y TypeScript, optimizando la experiencia de usuario y la escalabilidad."
             },
             "5": {
                 "title": "EduBase",
-                "subtitle": "Proyecto final Full-Stack MinTic",
-                "description": "Plataforma académica Full-Stack desarrollada con HTML5 y Tailwind. Permite gestionar datos de manera eficiente y es base para futuros desarrollos.",
-                "demoDescription": [
-                    "Plataforma académica desarrollada como proyecto final Full-Stack en MinTic.",
-                    "Permite registrar instituciones y crear usuarios.",
-                    "Frontend con HTML5 y Tailwind, backend para consumo eficiente de datos.",
-                    "Proporciona base para agregar futuras funcionalidades y escalar el proyecto."
-                ],
-                "demoTitles": [
-                    "Login",
-                    "Home",
-                    "Registrar",
-                    "Listar",
-                    "Usuario"
-                ],
-                "demoDescriptions": [
-                    "Login de usuario",
-                    "Home del usuario",
-                    "Registro de instituciones",
-                    "Listar instituciones",
-                    "Perfil de usuario"
-                ]
+                "description": "Plataforma académica Full-Stack desarrollada con HTML5 y Tailwind. Permite gestionar datos de manera eficiente y es base para futuros desarrollos."
+            },
+            "6": {
+                "title": "FiadoApp",
+                "description": "Plataforma de administración comercial para tiendas de barrio con dashboard de ventas, inventario inteligente y control de clientes."
             }
         },
         "repository": "Repositorio",
@@ -219,39 +100,17 @@
         "title": "Habilidades Técnicas",
         "subtitle": "Capacidades",
         "items": {
-            "1": {
-                "description": "HTML5"
-            },
-            "2": {
-                "description": "Java"
-            },
-            "3": {
-                "description": "CSS3"
-            },
-            "4": {
-                "description": "Python"
-            },
-            "5": {
-                "description": "JavaScript"
-            },
-            "6": {
-                "description": "Django"
-            },
-            "7": {
-                "description": "React"
-            },
-            "8": {
-                "description": "Tailwind"
-            },
-            "9": {
-                "description": "MySQL"
-            },
-            "10": {
-                "description": "Git"
-            },
-            "11": {
-                "description": "TypeScript"
-            }
+            "1": { "description": "HTML5" },
+            "2": { "description": "Java" },
+            "3": { "description": "CSS3" },
+            "4": { "description": "Python" },
+            "5": { "description": "JavaScript" },
+            "6": { "description": "Django" },
+            "7": { "description": "React" },
+            "8": { "description": "Tailwind" },
+            "9": { "description": "MySQL" },
+            "10": { "description": "Git" },
+            "11": { "description": "TypeScript" }
         }
     },
     "softSkills": {
@@ -261,24 +120,22 @@
             "communication": "Comunicación Asertiva",
             "teamwork": "Trabajo en Equipo",
             "collaboration": "Colaboración",
-            "empatity": "Emaptía"
+            "empatity": "Empatía"
         }
-    },    
+    },
     "videoProject": {
         "backBtn": "Volver a Proyectos",
         "browserNotSupported": "Tu navegador no soporta el elemento video.",
         "theChallenge": "El Desafío",
-        "uptimeReliability": "Fiabilidad del Servidor",
         "techStack": "Stack Tecnológico",
         "viewCaseStudy": "Ver Caso de Estudio",
         "category": "Categoría",
         "year": "Año"
     },
     "demoProject": {
-        "backBtn": "Volver",
         "projectNotFound": "Proyecto no encontrado",
         "goBack": "Volver",
-        "caseStudy": "case study",
+        "caseStudy": "Estudio del caso",
         "projectDetailsTitle": "Detalles del Proyecto",
         "features": "Características Principales",
         "credentials": "Credenciales de la Demo",
@@ -322,6 +179,16 @@
                     "API RESTful para comunicación eficiente entre frontend y backend."
                 ],
                 "performance": "La plataforma proporciona tiempos de respuesta óptimos gracias a la separación clara entre frontend y backend, permitiendo escalar cada capa de forma independiente."
+            },
+            "6": {
+                "description": "Plataforma de administración comercial integral para tiendas de barrio, diseñada para optimizar la gestión de inventario, ventas y control de clientes. Incluye un dashboard interactivo con métricas de actividad diaria, permitiendo a los dueños de pequeños comercios tener un control total de su negocio desde cualquier dispositivo.",
+                "features": [
+                    "Dashboard interactivo con métricas de ventas y actividad diaria en tiempo real.",
+                    "Sistema de inventario inteligente con alertas de stock bajo y gestión automatizada.",
+                    "Control de clientes fiados con historial de créditos y abonos.",
+                    "Reportes detallados de ventas, ingresos y rendimiento del negocio."
+                ],
+                "performance": "La plataforma centraliza la administración del negocio en un solo lugar, reduciendo el tiempo dedicado a tareas operativas en un 60% y eliminando la necesidad de múltiples herramientas desconectadas."
             }
         }
     },
@@ -338,7 +205,6 @@
             "email": "Correo",
             "message": "Mensaje",
             "btn": "Enviar Propuesta",
-            "footer": "Desarrollado por Oscar Lozano",
             "placeholder": {
                 "name": "Anacleto Rupertino",
                 "email": "Anacleto@gmail.com",
@@ -364,141 +230,5 @@
     },
     "footer": {
         "description": "Ingeniero de Sistemas. Construido con precisión y detalle técnico."
-    },
-    "demo": {
-        "items": {
-            "4": {
-                "title": "Gestión Institucional (Actualización)",
-                "descriptions": [
-                    "Versión actualizada de una aplicación de gestión para instituciones educativas.",
-                    "Implementa React y TypeScript para integridad de datos y comunicación con Axios hacia el backend con Express.",
-                    "Permite crear usuarios por rol (admin, docente, estudiante) con autenticación adaptada.",
-                    "Inicializa automáticamente roles y datos básicos en la base de datos.",
-                    "Integra API externa para departamentos y municipios de Colombia.",
-                    "Administradores pueden registrar instituciones y gestionar docentes/estudiantes.",
-                    "Diseñada para escalar con nuevas funcionalidades futuras."
-                ],
-                "credentials": {
-                    "intro": "Credenciales por si desea navegar en el Demo",
-                    "userLabel": "Usuario: ",
-                    "passwordLabel": "Contraseña: "
-                },
-                "btn": "Ir a la Demo",
-                "imgSection": {
-                    "title": "Imágenes del Proyecto",
-                    "items": {
-                        "0": {
-                            "title": "Login",
-                            "description": "Login de usuario"
-                        },
-                        "1": {
-                            "title": "Home",
-                            "description": "Home de usuario"
-                        },
-                        "2": {
-                            "title": "Perfil",
-                            "description": "Perfil de usuario según rol"
-                        },
-                        "3": {
-                            "title": "Registrar",
-                            "description": "Registro de Instituciones"
-                        },
-                        "4": {
-                            "title": "Listar",
-                            "description": "Listar instituciones"
-                        },
-                        "5": {
-                            "title": "Usuario",
-                            "description": "Registrar usuario"
-                        }
-                    }
-                }
-            },
-            "1": {
-                "title": "GymFlow App",
-                "descriptions": [
-                    "Aplicación integral para gestión de gimnasios, con roles de Admin y Usuario.",
-                    "Admin: gestión completa de miembros, asignación de membresías y creación de usuarios.",
-                    "Usuario: gestiona su perfil y miembros asignados.",
-                    "Frontend dinámico en React y backend en Django Rest Framework.",
-                    "Se enfoca en persistencia de datos y diseño responsivo."
-                ],
-                "credentials": {
-                    "intro": "Credenciales por si desea navegar en el Demo",
-                    "userLabel": "Usuario: ",
-                    "passwordLabel": "Contraseña: "
-                },
-                "btn": "Ir a la Demo",
-                "imgSection": {
-                    "title": "Imágenes del Proyecto",
-                    "items": {
-                        "0": {
-                            "title": "Login",
-                            "description": "Login de usuario"
-                        },
-                        "1": {
-                            "title": "Home",
-                            "description": "Home del usuario"
-                        },
-                        "2": {
-                            "title": "Registrar",
-                            "description": "Registro de miembros"
-                        },
-                        "3": {
-                            "title": "Listar",
-                            "description": "Listar miembros"
-                        },
-                        "4": {
-                            "title": "Usuario",
-                            "description": "Perfil de usuario"
-                        }
-                    }
-                }
-            },
-            "5": {
-                "title": "EduBase",
-                "descriptions": [
-                    "Plataforma académica desarrollada como proyecto final Full-Stack en MinTic. ",
-                    "Permite registrar instituciones y crear usuarios. ",
-                    "Frontend con HTML5 y Tailwind, backend con Expres para consumo eficiente de datos. ",
-                    "Proporciona base para agregar futuras funcionalidades y escalar el proyecto."
-                ],
-                "credentials": {
-                    "intro": "Credenciales por si desea navegar en el Demo",
-                    "userLabel": "Usuario: ",
-                    "passwordLabel": "Contraseña: "
-                },
-                "btn": "Ir a la Demo",
-                "imgSection": {
-                    "title": "Imágenes del Proyecto",
-                    "items": {
-                        "0": {
-                            "title": "Login",
-                            "description": "Login de usuario"
-                        },
-                        "1": {
-                            "title": "Home",
-                            "description": "Home de usuario"
-                        },
-                        "2": {
-                            "title": "Perfil",
-                            "description": "Perfil de usuario según rol"
-                        },
-                        "3": {
-                            "title": "Registrar",
-                            "description": "Registro de Instituciones"
-                        },
-                        "4": {
-                            "title": "Listar",
-                            "description": "Listar instituciones"
-                        },
-                        "5": {
-                            "title": "Usuario",
-                            "description": "Registrar usuario"
-                        }
-                    }
-                }
-            }
-        }
     }
 }
