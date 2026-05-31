@@ -21,7 +21,7 @@ const HobbiesSection = () => {
                 <section className="flex flex-col gap-16 items-center md:flex-row">
                     <div className="flex-1 space-y-6">
                         <h2 className="font-bold leading-relaxed text-on-surface-variant text-4xl tracking-tight">{t('hobbies.title')}<span className="text-primary">{t('hobbies.subtitle')}</span></h2>
-                        <p className="leading-relaxed text-on-surface-variant">
+                        <p className="leading-relaxed text-on-surface-variant text-justify">
                             {t('hobbies.description')}
                         </p>
                         <div className="flex gap-4">

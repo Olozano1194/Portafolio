@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import imgPerfil from '../../assets/fotoPerfil.png';
+import imgPerfil from '../../assets/fotoPerfil.webp';
 
 function SobreMiSection() {
     const { t } = useTranslation();
@@ -18,7 +18,7 @@ function SobreMiSection() {
                         </div>
                     </div>
                     <div className='flex flex-col justify-center space-y-8 lg:col-span-7'>
-                        <p className='font-light leading-relaxed text-2xl text-on-surface-variant'>{t('about.greeting.description')}</p>
+                        <p className='font-light leading-relaxed text-2xl text-justify text-on-surface-variant'>{t('about.greeting.description')}</p>
                         <div className='grid grid-cols-2 gap-8 py-8'>
                             <div>
                                 <h4 className='font-bold font-label mb-2 text-primary text-3xl'>+5</h4>
@@ -30,7 +30,7 @@ function SobreMiSection() {
                             </div>
 
                         </div>
-                        <p className='leading-loose text-on-surface/80'>
+                        <p className='leading-loose text-justify text-on-surface/80'>
                             {t('about.intro.description')}
                         </p>                       
                     </div>  

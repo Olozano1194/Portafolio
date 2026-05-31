@@ -9,17 +9,17 @@ const HeroSection = () => {
 
 
     return (
-        <section className="overflow-hidden pt-32 pb-24 px-8 relative" id="inicio">
+        <section className="overflow-hidden pt-18 pb-24 px-8 relative" id="inicio">
             <div className="grid gap-16 items-center max-w-7xl mx-auto lg:grid-cols-2">
-                <section className="space-y-8">
-                    <p className="bg-surface-container font-label inline-flex items-center px-3 py-1 rounded-full text-primary text-sm tracking-widest uppercase">Junior Developer Portfolio</p>
-                    <h1 className="font-extrabold leading-none text-6xl text-on-surface tracking-tighter md:text-8xl">
+                <section className="space-y-8 w-full">
+                    <p className="bg-surface-container font-label inline-flex items-center px-3 py-1.5 rounded-full text-primary text-xs tracking-widest uppercase md:text-sm">{t('home.button')}</p>
+                    <h1 className="font-extrabold leading-none text-center text-5xl text-on-surface tracking-tighter md:text-start md:text-8xl">
                         {t('home.greeting.intro')}
                         <span className="italic text-primary">
                             {t('home.greeting.name')}
                         </span>
                     </h1>
-                    <p className="leading-relaxed max-w-2xl text-xl text-on-surface-variant">
+                    <p className="leading-relaxed max-w-2xl text-xl text-justify text-on-surface-variant">
                         {t('home.description.intro')}
                     </p>
                     <div className="flex gap-4">
@@ -43,7 +43,7 @@ const HeroSection = () => {
                     </picture>
                     <div className="absolute bg-surface-container backdrop-blur-xl border border-on-border/10 -bottom-6 -left-6 max-w-xs p-6 rounded-xl shadow-xl md:ml-2 lg:ml-0">
                         <p className="font-label mb-2 text-xs tracking-widest text-primary uppercase">{t('home.card.title')}</p>
-                        <p className="text-sm text-on-surface">{t('home.card.description')}</p>
+                        <p className="text-sm text-on-surface text-justify">{t('home.card.description')}</p>
                     </div>
                 </section>                
             </div>            
