@@ -3,7 +3,7 @@ export const proyectos = [
         id: 1,
         "img": "GymReactDjango",
         "tipo": "Ver proyecto",
-        "col": "md:col-span-8",
+        "col": "md:col-span-7",
         "repo": "https://github.com/Olozano1194/GimnasioReactDjango",
         "ver_proyecto": "https://gimnasio-react-django.vercel.app",
         "credenciales": { 
@@ -21,7 +21,7 @@ export const proyectos = [
         "category": "Gestión de Gimnasios",
         "year": "2026",
         "architecturalStack": {
-            "frontend": "React, TypeScript, Tailwind CSS, JavaScript",
+            "frontend": "Vite, React, TypeScript, Tailwind CSS, JavaScript",
             "backend": "Django REST Framework, Python, Cors",
             "database": "MySQL",
             "infrastructure": "Vercel, GitHub, Render",
@@ -30,30 +30,38 @@ export const proyectos = [
     {
         id: 2,                        
         "img": "HotelAlura",
-        "col": "md:col-span-4",
+        "col": "md:col-span-5",
         "tipo": "Video",
         "repo": "https://github.com/Olozano1194/alura-Hotel",
         "stack": ["Java", "JDBC", "MySQL", "Swing"],
         "category": "Gestión Hotelera",
         "year": "2023",
-        "challenge": "Desarrollar un software de escritorio robusto para la gestión integral de reservas y huéspedes, optimizando el manejo de datos mediante JDBC y garantizando una experiencia de usuario fluida en un entorno de escritorio."
+        "challenge": "Desarrollar un software de escritorio robusto para la gestión integral de reservas y huéspedes, optimizando el manejo de datos mediante JDBC y garantizando una experiencia de usuario fluida en un entorno de escritorio.",
+        "metrics": [
+            { "value": "JDBC", "labelES": "Persistencia de Datos", "labelEN": "Data Persistence" },
+            { "value": "Java Swing", "labelES": "Interfaz de Escritorio", "labelEN": "Desktop Interface" }
+        ]
     },
     {
         id: 3,                        
         "img": "TaskReact",
-        "col": "md:col-span-4",
+        "col": "md:col-span-5",
         "tipo": "Video",
         "repo": "https://github.com/Olozano1194/todoListReactDjango",
         "stack": ["Django", "React", "MySQL", "REST API"],
         "category": "Productividad",
         "year": "2024",
-        "challenge": "Crear una aplicación de productividad que permita gestionar tareas en tiempo real, enfocándose en la persistencia de datos, una API REST eficiente y una interfaz de usuario minimalista que maximice el enfoque del usuario."
+        "challenge": "Crear una aplicación de productividad que permita gestionar tareas en tiempo real, enfocándose en la persistencia de datos, una API REST eficiente y una interfaz de usuario minimalista que maximice el enfoque del usuario.",
+        "metrics": [
+            { "value": "Django REST", "labelES": "API Backend", "labelEN": "Backend API" },
+            { "value": "React", "labelES": "Frontend Dinámico", "labelEN": "Dynamic Frontend" }
+        ]
     },     
     {
         id: 4,
         "img": "InstitucionesV2",
         "tipo": "Ver proyecto",
-        "col": "md:col-span-8",
+        "col": "md:col-span-7",
         "repo": "https://github.com/Olozano1194/entidadesReact",
         "ver_proyecto": "#",
         "credenciales": { 
@@ -71,16 +79,17 @@ export const proyectos = [
         "category": "Gestión Educativa",
         "year": "2024",
         "architecturalStack": {
-            "frontend": "React, TypeScript, Tailwind CSS",
+            "frontend": "Vite, React, TypeScript, Tailwind CSS",
             "backend": "Express, Node.js, Cors",
-            "database": "MongoDB"
+            "database": "MongoDB",
+            "infrastructure": "GitHub",
         }
     },       
     {
         id: 5,
         "img": "Instituciones",
         "tipo": "Ver proyecto",
-        "col": "md:col-span-8",
+        "col": "md:col-span-7",
         "repo": "https://github.com/Olozano1194/InstitucionesV1",
         "ver_proyecto": "https://instituciones-v1.vercel.app",
         "credenciales": { 
@@ -103,5 +112,33 @@ export const proyectos = [
             "database": "MongoDB",
             "infrastructure": "Vercel, GitHub",
         }
-    } 
+    },
+    {
+        id: 6,
+        "img": "FiadoApp",
+        "tipo": "Ver proyecto",
+        "col": "md:col-span-5",
+        "repo": "https://github.com/Olozano1194/FiadoApp",
+        "ver_proyecto": "#",
+        "credenciales": { 
+            "user": "#", 
+            "pass": "#" 
+        },
+        "imgDemo": {
+            "img": [
+                "/demo/fiadoApp/demo-clientes.webp",
+                "/demo/fiadoApp/demo-inventory.webp",                
+                "/demo/fiadoApp/demo-venta.webp",
+            ]                     
+        },
+        "stack": ["React", "TypeScript", "Django", "Axios"],
+        "category": "Business",
+        "year": "2026",
+        "architecturalStack": {
+            "frontend": "Vite, React, TypeScript, Tailwind CSS",
+            "backend": "Django, Django Rest Framework, Python",
+            "database": "MySql",
+            "infrastructure": "GitHub",
+        }
+    },        
 ]
