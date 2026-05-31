@@ -47,8 +47,14 @@ const Navbar = () => {
         { name: t('nav.contact'), href: '#contacto', current: false}
     ];
 
-    const handleNavClick = (href) => {
-        scrollToSection(getSectionId(href));
+    const handleNavClick = (e, href) => {
+        e.preventDefault();
+        const sectionId = getSectionId(href);
+        if (isHome) {
+            scrollToSection(sectionId);
+        } else {
+            navigate('/', { state: { scrollTo: sectionId }, replace: true });
+        }
     };
 
     const changeLanguage = () => {
@@ -89,6 +95,7 @@ const Navbar = () => {
                                 <a
                                     key={item.name}
                                     href={item.href}
+                                    onClick={(e) => handleNavClick(e, item.href)}
                                     aria-current={item.current ? 'page' : undefined}
                                     className={classNames(
                                         item.current ? 'border-b-2 border-primary font-semibold text-primary transition-colors' : 'text-on-background/70 hover:text-on-background',
@@ -123,9 +130,9 @@ const Navbar = () => {
                             <DisclosureButton
                                 key={item.name}
                                 as="button"
-                                onClick={() => {
+                                onClick={(e) => {
                                     close(); // cierra el menú móvil
-                                    handleNavClick(item.href); // luego hace scroll
+                                    handleNavClick(e, item.href); // luego hace scroll o navega
                                 }}
                                 className={classNames(
                                     item.current ? 'flex font-semibold justify-end text-primary transition-colors' : 'flex justify-end text-on-background/70 hover:text-on-background w-full',
