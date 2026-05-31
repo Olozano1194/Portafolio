@@ -18,21 +18,19 @@ function ProyectosSection() {
     return (
         <section className="bg-surface-container py-24 px-8" id="proyectos">
             <div className="max-w-7xl mx-auto">
-                <section className="flex items-end justify-between mb-16">
+                <section className="flex flex-col items-end mb-16 md:justify-between md:flex-row">
                     <div>
                         <h2 className="font-bold mb-4 text-5xl text-on-surface tracking-tighter">{t('projects.title')}</h2>
                         <p className="max-w-lg pt-6 text-on-surface-variant md:text-lg">{t('projects.description')}</p>
                     </div>
                     {proyectos.length > initialProjects && (
-                        <div className="hidden md:block">
-                            <button 
-                                onClick={() => setShowAll(!showAll)}
-                                className="cursor-pointer font-label flex gap-2 items-center text-primary transition-all hover:gap-4 md:text-lg"
-                            >
-                                {showAll ? btnVerMenos : btnVerTodo}
-                                <span className="text-2xl">{showAll ? <MdArrowBack /> : <MdArrowForward />}</span>
-                            </button>
-                        </div>
+                        <button 
+                            onClick={() => setShowAll(!showAll)}
+                            className="cursor-pointer font-label flex gap-2 items-center text-primary transition-all hover:gap-4"
+                        >
+                            {showAll ? btnVerMenos : btnVerTodo}
+                            <span className="text-2xl">{showAll ? <MdArrowBack /> : <MdArrowForward />}</span>
+                        </button>
                     )}
                 </section>
                 {/* Cards */}
