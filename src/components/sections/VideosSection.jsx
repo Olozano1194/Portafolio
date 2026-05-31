@@ -6,24 +6,25 @@ import { useTranslation } from "react-i18next";
 
 const VideosSection = () => {
     const { id } = useParams();
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const proyecto = proyectos.find((proyecto) => proyecto.id === parseInt(id));
     const navigate = useNavigate();
     
     const backBtn = t('videoProject.backBtn');
     const browserNotSupported = t('videoProject.browserNotSupported');
     const theChallenge = t('videoProject.theChallenge');
-    const uptimeReliability = t('videoProject.uptimeReliability');
     const techStackLabel = t('videoProject.techStack');
     const viewCaseStudy = t('videoProject.viewCaseStudy');
     const categoryLabel = t('videoProject.category');
     const yearLabel = t('videoProject.year');
     
+    const lang = i18n.language.startsWith('en') ? 'labelEN' : 'labelES';
+    
     // Datos dinámicos del proyecto
     const projectCategory = proyecto?.category || 'Proyecto';
     const projectYear = proyecto?.year || '2024';
     const projectStack = proyecto?.stack || [];
-    const projectChallenge = proyecto?.challenge ? t(`projects.projectDetails.${id}.challenge`) : t(`projects.projectDetails.${id}.challenge`);
+    const projectChallenge = t(`projects.projectDetails.${id}.challenge`);
 
     useEffect(() => {
         if (!proyecto || proyecto.tipo !== 'Video') {
@@ -73,16 +74,16 @@ const VideosSection = () => {
                 <div className='md:col-span-8'>
                     <h2 className='font-bold font-headline mb-6 text-3xl text-on-surface-variant'>{theChallenge}</h2>
                     <p className='leading-relaxed mb-8 text-lg text-on-surface-variant'>{projectChallenge}</p>
-                    <div className='grid grid-cols-2 gap-8 mt-12'>
-                        <div className='bg-surface-container p-8 rounded-xl'>
-                            <p className='font-label font-bold mb-2 text-3xl text-primary'>99.9%</p>
-                            <span className='font-label text-on-surface-variant text-xs tracking-widest uppercase'>{uptimeReliability}</span>
+                    {proyecto.metrics && (
+                        <div className='grid grid-cols-2 gap-8 mt-12'>
+                            {proyecto.metrics.map((metric, index) => (
+                                <div key={index} className='bg-surface-container p-8 rounded-xl'>
+                                    <p className='font-label font-bold mb-2 text-3xl text-primary'>{metric.value}</p>
+                                    <span className='font-label text-on-surface-variant text-xs tracking-widest uppercase'>{metric[lang]}</span>
+                                </div>
+                            ))}
                         </div>
-                        <div className='bg-surface-container p-8 rounded-xl'>
-                            <p className='font-label font-bold flex flex-col mb-2 text-3xl text-primary'>99.9%</p>
-                            <span className='font-label text-on-surface-variant text-xs tracking-widest uppercase'>{uptimeReliability}</span>
-                        </div>
-                    </div>
+                    )}
                 </div>
                 <div className='flex flex-col gap-8 md:col-span-4'>
                     <div className='bg-surface-container p-8 rounded-xl'>
@@ -95,9 +96,16 @@ const VideosSection = () => {
                             ))}
                         </div>
                     </div>
-                    <button className='bg-primary cursor-pointer flex font-bold gap-2 items-center justify-center py-4 rounded-xl text-on-primary transition-transform hover:scale-[1.02] w-full'>
-                        {viewCaseStudy}
-                    </button>
+                    {proyecto.repo && (
+                        <a 
+                            href={proyecto.repo}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='bg-primary cursor-pointer flex font-bold gap-2 items-center justify-center py-4 rounded-xl text-on-primary transition-transform hover:scale-[1.02] w-full'
+                        >
+                            {viewCaseStudy}
+                        </a>
+                    )}
                 </div>
             </section>
         </section>
