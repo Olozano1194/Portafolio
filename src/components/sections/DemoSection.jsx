@@ -1,8 +1,9 @@
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { proyectos } from '../../data/proyectos';
 // icons
-import { MdCheckCircle, MdArrowOutward } from "react-icons/md";
-import { FaArrowLeft, FaShareAlt, FaSignInAlt } from "react-icons/fa";
+import { MdCheckCircle, MdArrowOutward, MdClose, MdChevronLeft, MdChevronRight } from "react-icons/md";
+import { FaArrowLeft, FaShareAlt } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 
 
@@ -49,7 +50,31 @@ const DemoSection = () => {
     const credentials = proyecto?.credenciales;
     const verProyecto = proyecto?.ver_proyecto;
     const imgDemo = proyecto?.imgDemo?.img || [];
+    const [selectedImg, setSelectedImg] = useState(null);
+    const totalImages = imgDemo.length;
     
+    // Navegación del lightbox
+    const openLightbox = (index) => setSelectedImg(index);
+    const closeLightbox = () => setSelectedImg(null);
+    const goToPrev = () => setSelectedImg((prev) => (prev - 1 + totalImages) % totalImages);
+    const goToNext = () => setSelectedImg((prev) => (prev + 1) % totalImages);
+    
+    // Keyboard support para lightbox
+    useEffect(() => {
+        if (selectedImg === null) return;
+        const handleKey = (e) => {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') goToPrev();
+            if (e.key === 'ArrowRight') goToNext();
+        };
+        window.addEventListener('keydown', handleKey);
+        document.body.style.overflow = 'hidden'; // Lock scroll
+        return () => {
+            window.removeEventListener('keydown', handleKey);
+            document.body.style.overflow = ''; // Restore scroll
+        };
+    }, [selectedImg]);
+
     // Verificar si hay una URL válida para el proyecto
     const tieneDemoUrl = verProyecto && verProyecto.trim() !== '' && verProyecto !== '/' && verProyecto !== '#';
 
@@ -137,8 +162,13 @@ const DemoSection = () => {
                     <div className='aspect-16/10 border border-white/5 bg-surface-container group overflow-hidden relative rounded-xl'>
                         {imgDemo[0] ? (
                             <>
-                                <img src={imgDemo[0]} className='duration-700 group-hover:scale-105 h-full object-cover transition-transform w-full' alt={`${projectTitle} - Interface`} />
-                                <div className='absolute bg-linear-to-t flex from-background/60 inset-0 items-end opacity-0 p-8 to-transparent transition-opacity group-hover:opacity-100'>
+                                <img 
+                                    src={imgDemo[0]} 
+                                    className='cursor-pointer duration-700 group-hover:scale-105 h-full object-cover transition-transform w-full' 
+                                    alt={`${projectTitle} - Interface`} 
+                                    onClick={() => openLightbox(0)}
+                                />
+                                <div onClick={() => openLightbox(0)} className='absolute bg-linear-to-t cursor-pointer flex from-background/60 inset-0 items-end opacity-0 p-8 to-transparent transition-opacity group-hover:opacity-100'>
                                     <p className='font-label text-sm text-on-surface'>{mainInterface}</p>
                                 </div>
                             </>
@@ -151,7 +181,11 @@ const DemoSection = () => {
                     {/* Secondary Gallery - Siguientes imágenes */}
                     <div className='grid grid-cols-2 gap-6'>
                         {imgDemo.slice(1, 3).map((img, index) => (
-                            <div key={index} className='aspect-square bg-surface-container border border-white/5 group overflow-hidden rounded-xl'>
+                            <div 
+                                key={index} 
+                                className='aspect-square bg-surface-container border border-white/5 cursor-pointer group overflow-hidden rounded-xl'
+                                onClick={() => openLightbox(index + 1)}
+                            >
                                 <img src={img} className='duration-700 group-hover:scale-105 h-full object-cover transition-transform w-full' alt={`${projectTitle} - ${index + 2}`} />
                             </div>
                         ))}
@@ -188,6 +222,59 @@ const DemoSection = () => {
                 </div>
             </section>
         </section>
+
+            {/* Lightbox */}
+            {selectedImg !== null && (
+                <div 
+                    className='fixed inset-0 z-50 bg-black/90 flex items-center justify-center'
+                    onClick={closeLightbox}
+                >
+                    {/* Close button */}
+                    <button 
+                        onClick={closeLightbox}
+                        className='absolute top-4 right-4 z-10 text-white/80 hover:text-white transition-colors'
+                        aria-label='Cerrar'
+                    >
+                        <MdClose size={36} />
+                    </button>
+
+                    {/* Prev/Next navigation */}
+                    {totalImages > 1 && (
+                        <>
+                            <button 
+                                onClick={(e) => { e.stopPropagation(); goToPrev(); }}
+                                className='absolute left-4 z-10 text-white/80 hover:text-white transition-colors'
+                                aria-label='Anterior'
+                            >
+                                <MdChevronLeft size={48} />
+                            </button>
+                            <button 
+                                onClick={(e) => { e.stopPropagation(); goToNext(); }}
+                                className='absolute right-4 z-10 text-white/80 hover:text-white transition-colors'
+                                aria-label='Siguiente'
+                            >
+                                <MdChevronRight size={48} />
+                            </button>
+                        </>
+                    )}
+
+                    {/* Image */}
+                    <img 
+                        src={imgDemo[selectedImg]} 
+                        className='max-h-[90vh] max-w-[90vw] object-contain rounded-lg select-none'
+                        onClick={(e) => e.stopPropagation()}
+                        alt={`${projectTitle} - ${selectedImg + 1}`}
+                        draggable={false}
+                    />
+
+                    {/* Counter */}
+                    {totalImages > 1 && (
+                        <span className='absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 text-sm font-label tracking-widest'>
+                            {selectedImg + 1} / {totalImages}
+                        </span>
+                    )}
+                </div>
+            )}
         </>
     );
 };
