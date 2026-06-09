@@ -1,5 +1,6 @@
 {
     "nav": {
+        "icons": "The Digital Architect",
         "about": "About me",
         "education": "Education",
         "projects": "Projects",
@@ -20,7 +21,7 @@
         },
         "card": {
             "title": "Current Status",
-            "description": "Available for strategic, high-impact projects in 2026"
+            "description": "Available to join development teams and take on new technical challenges."
         }
     },
     "about": {

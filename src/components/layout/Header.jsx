@@ -78,7 +78,7 @@ const Navbar = () => {
                             onClick={() => handleLogoClick(isHome, navigate)}
                             className="font-bold text-xl tracking-tight text-on-background cursor-pointer md:text-lg"
                         >
-                            The Digital Architect
+                            {t('nav.icons')}
                         </button>
                     </div>
                     {/* Botón menú móvil */}

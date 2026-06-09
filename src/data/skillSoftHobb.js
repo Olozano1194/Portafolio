@@ -30,7 +30,7 @@ export const skill = [
     },
     {
         "id": 8,
-        "icon": "SiTailwind",
+        "icon": "SiTailwindcss",
     },
     {
         "id": 9,

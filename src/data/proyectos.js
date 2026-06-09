@@ -28,19 +28,32 @@ export const proyectos = [
         }
     },
     {
-        id: 2,                        
-        "img": "HotelAlura",
+        id: 6,
+        "img": "FiadoApp",
+        "tipo": "Ver proyecto",
         "col": "md:col-span-5",
-        "tipo": "Video",
-        "repo": "https://github.com/Olozano1194/alura-Hotel",
-        "stack": ["Java", "JDBC", "MySQL", "Swing"],
-        "category": "Gestión Hotelera",
-        "year": "2023",
-        "challenge": "Desarrollar un software de escritorio robusto para la gestión integral de reservas y huéspedes, optimizando el manejo de datos mediante JDBC y garantizando una experiencia de usuario fluida en un entorno de escritorio.",
-        "metrics": [
-            { "value": "JDBC", "labelES": "Persistencia de Datos", "labelEN": "Data Persistence" },
-            { "value": "Java Swing", "labelES": "Interfaz de Escritorio", "labelEN": "Desktop Interface" }
-        ]
+        "repo": "https://github.com/Olozano1194/FiadoApp",
+        "ver_proyecto": "#",
+        "credenciales": { 
+            "user": "#", 
+            "pass": "#" 
+        },
+        "imgDemo": {
+            "img": [
+                "/demo/fiadoApp/demo-clientes.webp",
+                "/demo/fiadoApp/demo-inventory.webp",                
+                "/demo/fiadoApp/demo-venta.webp",
+            ]                     
+        },
+        "stack": ["React", "TypeScript", "Django", "Axios"],
+        "category": "Business",
+        "year": "2026",
+        "architecturalStack": {
+            "frontend": "Vite, React, TypeScript, Tailwind CSS",
+            "backend": "Django, Django Rest Framework, Python",
+            "database": "MySql",
+            "infrastructure": "GitHub",
+        }
     },
     {
         id: 3,                        
@@ -56,7 +69,7 @@ export const proyectos = [
             { "value": "Django REST", "labelES": "API Backend", "labelEN": "Backend API" },
             { "value": "React", "labelES": "Frontend Dinámico", "labelEN": "Dynamic Frontend" }
         ]
-    },     
+    },
     {
         id: 4,
         "img": "InstitucionesV2",
@@ -84,7 +97,7 @@ export const proyectos = [
             "database": "MongoDB",
             "infrastructure": "GitHub",
         }
-    },       
+    },
     {
         id: 5,
         "img": "Instituciones",
@@ -112,33 +125,20 @@ export const proyectos = [
             "database": "MongoDB",
             "infrastructure": "Vercel, GitHub",
         }
-    },
+    }, 
     {
-        id: 6,
-        "img": "FiadoApp",
-        "tipo": "Ver proyecto",
+        id: 2,                        
+        "img": "HotelAlura",
         "col": "md:col-span-5",
-        "repo": "https://github.com/Olozano1194/FiadoApp",
-        "ver_proyecto": "#",
-        "credenciales": { 
-            "user": "#", 
-            "pass": "#" 
-        },
-        "imgDemo": {
-            "img": [
-                "/demo/fiadoApp/demo-clientes.webp",
-                "/demo/fiadoApp/demo-inventory.webp",                
-                "/demo/fiadoApp/demo-venta.webp",
-            ]                     
-        },
-        "stack": ["React", "TypeScript", "Django", "Axios"],
-        "category": "Business",
-        "year": "2026",
-        "architecturalStack": {
-            "frontend": "Vite, React, TypeScript, Tailwind CSS",
-            "backend": "Django, Django Rest Framework, Python",
-            "database": "MySql",
-            "infrastructure": "GitHub",
-        }
+        "tipo": "Video",
+        "repo": "https://github.com/Olozano1194/alura-Hotel",
+        "stack": ["Java", "JDBC", "MySQL", "Swing"],
+        "category": "Gestión Hotelera",
+        "year": "2023",
+        "challenge": "Desarrollar un software de escritorio robusto para la gestión integral de reservas y huéspedes, optimizando el manejo de datos mediante JDBC y garantizando una experiencia de usuario fluida en un entorno de escritorio.",
+        "metrics": [
+            { "value": "JDBC", "labelES": "Persistencia de Datos", "labelEN": "Data Persistence" },
+            { "value": "Java Swing", "labelES": "Interfaz de Escritorio", "labelEN": "Desktop Interface" }
+        ]
     },        
 ]
