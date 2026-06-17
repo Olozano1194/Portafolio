@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
-const SITE_URL = 'https://portafolio-phi-sepia.vercel.app';
+const SITE_URL = window.location.origin;
 
 const setMeta = (name, content, attr = 'name') => {
   let el = document.querySelector(`meta[${attr}="${name}"]`);
@@ -20,7 +20,7 @@ const SEO = ({ title, description, image, url, type = 'website' }) => {
   const siteName = t('seo.siteName');
   const fullTitle = title ? `${title} | ${siteName}` : siteName;
   const pageUrl = url || `${SITE_URL}${location.pathname}`;
-  const ogImage = image || 'https://portafolio-phi-sepia.vercel.app/assets/fotoPerfil.webp';
+  const ogImage = image || `${SITE_URL}/assets/fotoPerfil.webp`;
 
   useEffect(() => {
     document.title = fullTitle;
