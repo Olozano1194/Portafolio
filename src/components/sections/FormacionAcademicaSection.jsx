@@ -34,9 +34,9 @@ function FormacionAcademica() {
                 {t(`education.items.${item.id}.degree`)}
               </h3>
               {/* Institución */}
-              <p className="text-sm text-on-surface-variant">
+              {/* <p className="text-sm text-on-surface-variant">
                 {t(`education.items.${item.id}.degree`)}
-              </p>
+              </p> */}
               {/* Fecha */}
               <p className="font-label text-primary/70 text-xs">
                 {item.date}

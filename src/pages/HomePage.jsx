@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-// import { SEO } from "../components/ui/SEO";
+import { useTranslation } from 'react-i18next';
+import SEO from "../components/ui/SEO";
 import HeroSection from "../components/sections/HeroSection";
 import SobreMiSection from "../components/sections/SobreMiSection";
 import FormacionAcademicaSection from "../components/sections/FormacionAcademicaSection";
@@ -10,6 +11,7 @@ import ContactoSection from "../components/sections/ContactoSection";
 
 
 const HomePage = () => {
+    const { t } = useTranslation();
     // Scroll a sección si hay hash en la URL
     // useEffect(() => {
     //     const hash = window.location.hash;
@@ -33,10 +35,7 @@ const HomePage = () => {
 
     return (
         <>
-            {/* <SEO
-                image="/logo.png"
-                favicon="/favicon.png"                 
-            /> */}
+            <SEO title={t('seo.home.title')} description={t('seo.home.description')} />
             <HeroSection />
             <SobreMiSection /> 
             <FormacionAcademicaSection /> 

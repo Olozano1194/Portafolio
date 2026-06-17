@@ -68,26 +68,3 @@ export const softSkills = [
         "level": 70        
     }
 ]
-
-export const hobbies = [
-    {
-        "id": 1,
-        "icon": "FaFutbol",
-    },
-    {
-        "id": 2,
-        "icon": "CgGym",
-    },
-    {
-        "id": 3,
-        "icon": "FaHeadphones",
-    },
-    {
-        "id": 4,
-        "icon": "FaGamepad",
-    },
-    {
-        "id": 5,
-        "icon": "GiCook",
-    }
-]

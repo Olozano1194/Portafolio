@@ -49,10 +49,12 @@ export const proyectos = [
         "category": "Business",
         "year": "2026",
         "architecturalStack": {
-            "frontend": "Vite, React, TypeScript, Tailwind CSS",
-            "backend": "Django, Django Rest Framework, Python",
-            "database": "MySql",
-            "infrastructure": "GitHub",
+            frontend: "Vite, React, TypeScript, Tailwind CSS",
+            backend: "Django, Django REST Framework, Python",
+            database: "MySQL, SQLite",
+            infrastructure: "GitHub",
+            desktop: "Tauri",
+            packaging: "PyInstaller"
         }
     },
     {
