@@ -17,7 +17,7 @@ export const proyectos = [
                 "/demo/gimnasioReactDjango/demo-Usuario.jpg",
             ]
         },
-        "stack": ["React", "TypeScript", "Django", "REST API", "Tailwind"],
+        "stack": ["React", "TypeScript", "Vite", "Django REST Framework", "Tailwind", "Axios"],
         "category": "Gestión de Gimnasios",
         "year": "2026",
         "architecturalStack": {
@@ -45,7 +45,7 @@ export const proyectos = [
                 "/demo/fiadoApp/demo-venta.webp",
             ]                     
         },
-        "stack": ["React", "TypeScript", "Django", "Axios"],
+        "stack": ["React", "TypeScript", "Vite", "Tailwind", "Zustand", "Django REST Framework", "MySQL", "Tauri", "Axios"],
         "category": "Business",
         "year": "2026",
         "architecturalStack": {
@@ -63,7 +63,7 @@ export const proyectos = [
         "col": "md:col-span-5",
         "tipo": "Video",
         "repo": "https://github.com/Olozano1194/todoListReactDjango",
-        "stack": ["Django", "React", "MySQL", "REST API"],
+        "stack": ["React", "TypeScript", "Django", "Django REST Framework", "MySQL", "Tailwind"],
         "category": "Productividad",
         "year": "2024",
         "challenge": "Crear una aplicación de productividad que permita gestionar tareas en tiempo real, enfocándose en la persistencia de datos, una API REST eficiente y una interfaz de usuario minimalista que maximice el enfoque del usuario.",
@@ -118,7 +118,7 @@ export const proyectos = [
                 "/demo/instituciones/demo-ListarInstitucion.jpg",                
             ]
         },
-        "stack": ["HTML5", "Tailwind", "Express", "MySQL"],
+        "stack": ["HTML5", "Tailwind", "Express", "MongoDB"],
         "category": "Gestión Educativa",
         "year": "2023",
         "architecturalStack": {
