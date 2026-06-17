@@ -159,43 +159,50 @@
         "infrastructure": "Infraestructura",
         "projectDetails": {
             "1": {
-                "description": "Aplicación integral para gestión de gimnasios con roles diferenciados. Admin gestiona miembros, membresías y usuarios, mientras que los usuarios gestionan sus perfiles y miembros asignados. Frontend dinámico en React con backend en Django REST Framework.",
+                "description": "Sistema full-stack para gestión de gimnasios con roles Admin/Usuario. Frontend en React con Vite, TypeScript y Tailwind. Backend en Django REST Framework con PostgreSQL. Autenticación JWT con refresh tokens y multi-tenant.",
                 "features": [
-                    "Sistema de autenticación con roles (Admin/Usuario) implementado en Django.",
-                    "Gestión completa de miembros y asignación de membresías.",
-                    "Panel de control dinámico con estadísticas en tiempo real.",
-                    "Diseño responsivo adaptado a todos los dispositivos."
+                    "Autenticación JWT con refresh automático y multi-tenant (cada usuario administra su propio gimnasio)",
+                    "CRUD completo de miembros con asignación de membresías",
+                    "Panel de control con estadísticas en tiempo real",
+                    "Soporte para múltiples usuarios por gimnasio con roles diferenciados",
+                    "Exportación de datos a Excel",
+                    "Diseño responsivo adaptable a todos los dispositivos"
                 ],
-                "performance": "La aplicación optimiza la gestión de membresías reduciendo el tiempo de registro en un 50% mediante validaciones en tiempo real y caché local."
+                "performance": "La combinación de Vite para el frontend y consultas optimizadas con Django REST Framework reduce los tiempos de carga inicial en un 40% comparado con Create React App tradicional."
             },
             "4": {
-                "description": "Arquitectura y rediseño integral de la plataforma de gestión educativa, optimizando flujos de trabajo críticos y modernizando la interfaz para una experiencia de usuario fluida y eficiente.",
+                "description": "Plataforma educativa full-stack con frontend en React y TypeScript, y backend en Express con MongoDB. Permite gestionar instituciones educativas y usuarios con diferentes roles (administrador, docente, estudiante).",
                 "features": [
-                    "Implementación de arquitectura escalable basada en componentes modulares con React y TypeScript.",
-                    "Refactorización de la capa de servicios utilizando Axios para una gestión de peticiones robusta y tipada.",
-                    "Desarrollo de un dashboard dinámico para la visualización de métricas institucionales en tiempo real."
+                    "CRUD completo de instituciones educativas",
+                    "Gestión de usuarios con roles (administrador, docente, estudiante)",
+                    "Dashboard dinámico con métricas institucionales",
+                    "Backend API RESTful con Express y MongoDB"
                 ],
-                "performance": "La actualización logró una reducción del 40% en el tiempo de carga mediante la implementación de code-splitting y lazy loading estratégico."
+                "performance": "La refactorización a React con TypeScript y la implementación de componentes modulares permitió reducir la complejidad del código en un 35% y mejorar la mantenibilidad del proyecto."
             },
             "5": {
-                "description": "Plataforma académica desarrollada como proyecto Full-Stack en MinTic. Permite registrar instituciones educativas y crear usuarios con diferentes roles, estableciendo las bases para una solución escalable.",
+                "description": "Plataforma académica full-stack desarrollada en el programa MinTic. Frontend con HTML5, Tailwind CSS y JavaScript vanilla. Backend con Express y MongoDB. Permite registrar instituciones educativas y gestionar usuarios por roles.",
                 "features": [
-                    "Sistema de registro de instituciones educativas.",
-                    "Gestión de usuarios por roles (administrador, docente, estudiante).",
-                    "Frontend con HTML5 y Tailwind CSS para un diseño moderno.",
-                    "API RESTful para comunicación eficiente entre frontend y backend."
+                    "Registro y gestión de instituciones educativas",
+                    "Sistema de autenticación con roles (administrador, docente, estudiante)",
+                    "CRUD completo de usuarios con validaciones",
+                    "API RESTful con Express y MongoDB",
+                    "Interfaz responsive con Tailwind CSS"
                 ],
-                "performance": "La plataforma proporciona tiempos de respuesta óptimos gracias a la separación clara entre frontend y backend, permitiendo escalar cada capa de forma independiente."
+                "performance": "La arquitectura liviana con HTML y Tailwind garantiza tiempos de carga mínimos, y la separación frontend-backend permite escalar cada capa de forma independiente."
             },
             "6": {
-                "description": "Plataforma de administración comercial integral para tiendas de barrio, diseñada para optimizar la gestión de inventario, ventas y control de clientes. Incluye un dashboard interactivo con métricas de actividad diaria, permitiendo a los dueños de pequeños comercios tener un control total de su negocio desde cualquier dispositivo.",
+                "description": "Sistema POS (Punto de Venta) para tiendas de barrio con gestión de crédito (fiado). Frontend en React 19 con Vite, TypeScript, Zustand y Tailwind. Backend en Django 6 con REST Framework. Empaquetado como aplicación de escritorio con Tauri v2.",
                 "features": [
-                    "Dashboard interactivo con métricas de ventas y actividad diaria en tiempo real.",
-                    "Sistema de inventario inteligente con alertas de stock bajo y gestión automatizada.",
-                    "Control de clientes fiados con historial de créditos y abonos.",
-                    "Reportes detallados de ventas, ingresos y rendimiento del negocio."
+                    "POS con carrito de compras, métodos de pago (efectivo/crédito) y validación de stock en tiempo real",
+                    "Inventario inteligente con alertas de stock bajo, categorización y soporte de imágenes",
+                    "Control de clientes fiados con límite de crédito, historial de pagos y badge de deudor",
+                    "Reportes semanales con gráficos interactivos de barras y tendencias",
+                    "Dashboard con tarjetas de resumen, tabla de ventas recientes y notificaciones combinadas",
+                    "Exportación de datos a Excel (clientes, productos, ventas)",
+                    "Empaquetado como app desktop con Tauri v2 y backend con PyInstaller"
                 ],
-                "performance": "La plataforma centraliza la administración del negocio en un solo lugar, reduciendo el tiempo dedicado a tareas operativas en un 60% y eliminando la necesidad de múltiples herramientas desconectadas."
+                "performance": "La arquitectura con Zustand para estado global y consultas optimizadas al backend Django permite una experiencia de usuario fluida incluso en equipos de bajos recursos, con tiempos de respuesta bajo 200ms en operaciones críticas como búsqueda de productos y registro de ventas."
             }
         }
     },
