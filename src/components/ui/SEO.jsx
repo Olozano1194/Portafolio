@@ -1,8 +1,18 @@
-import { Helmet } from 'react-helmet-async';
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
 const SITE_URL = 'https://portafolio-phi-sepia.vercel.app';
+
+const setMeta = (name, content, attr = 'name') => {
+  let el = document.querySelector(`meta[${attr}="${name}"]`);
+  if (!el) {
+    el = document.createElement('meta');
+    el.setAttribute(attr, name);
+    document.head.appendChild(el);
+  }
+  el.setAttribute('content', content || '');
+};
 
 const SEO = ({ title, description, image, url, type = 'website' }) => {
   const { t } = useTranslation();
@@ -12,19 +22,20 @@ const SEO = ({ title, description, image, url, type = 'website' }) => {
   const pageUrl = url || `${SITE_URL}${location.pathname}`;
   const ogImage = image || 'https://portafolio-phi-sepia.vercel.app/assets/fotoPerfil.webp';
 
-  return (
-    <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={pageUrl} />
-      <meta property="og:type" content={type} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-    </Helmet>
-  );
+  useEffect(() => {
+    document.title = fullTitle;
+    setMeta('description', description);
+    setMeta('og:title', fullTitle, 'property');
+    setMeta('og:description', description, 'property');
+    setMeta('og:image', ogImage, 'property');
+    setMeta('og:url', pageUrl, 'property');
+    setMeta('og:type', type, 'property');
+    setMeta('twitter:card', 'summary_large_image');
+    setMeta('twitter:title', fullTitle);
+    setMeta('twitter:description', description);
+  });
+
+  return null;
 };
+
 export default SEO;
