@@ -45,7 +45,7 @@ function ProyectosSection() {
                                 <img
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     src={`/assets/proyecto-${proyecto.img}.webp`}
-                                    alt={`imagen ${proyecto.img}`}
+                                    alt={t(`projects.items.${proyecto.id}.alt`)}
                                 />
 
                                 {/* Overlay */}

@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { proyectos } from '../../data/proyectos';
 import { FaArrowLeft } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import SEO from '../ui/SEO';
 
 const VideosSection = () => {
     const { id } = useParams();
@@ -36,6 +37,11 @@ const VideosSection = () => {
 
 
     return (
+        <>
+        <SEO 
+            title={t(`projects.items.${id}.title`)}
+            description={t(`projects.items.${id}.description`)}
+        />
         <section className='max-w-7xl mx-auto pt-32 pb-24 px-6 md:px-10'>
             <div className='mb-12'>
                 <button onClick={() => navigate(-1)} className="group gap-2 inline-flex items-center text-primary transition-colors hover:text-primary-container"><FaArrowLeft />{backBtn}</button>
@@ -109,6 +115,7 @@ const VideosSection = () => {
                 </div>
             </section>
         </section>
+        </>
     );
 }
 export default VideosSection;

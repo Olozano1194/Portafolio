@@ -60,27 +60,33 @@
         "items": {
             "1": {
                 "title": "ControlFit",
-                "description": "Gym management app with React and Django. Includes Admin and User roles, member management, and responsive design."
+                "description": "Gym management app with React and Django. Includes Admin and User roles, member management, and responsive design.",
+                "alt": "ControlFit dashboard showing the gym management interface"
             },
             "2": {
                 "title": "Hotel Alura Management",
-                "description": "Desktop software for managing reservations and guests. Java backend using JDBC for efficient database handling."
+                "description": "Desktop software for managing reservations and guests. Java backend using JDBC for efficient database handling.",
+                "alt": "Hotel Alura desktop software for reservation management"
             },
             "3": {
                 "title": "TaskMaster",
-                "description": "Productivity app to manage tasks in real time. Backend built with Django and MySQL, and a minimalist React frontend."
+                "description": "Productivity app to manage tasks in real time. Backend built with Django and MySQL, and a minimalist React frontend.",
+                "alt": "TaskMaster productivity app interface"
             },
             "4": {
                 "title": "Institutional Management (Update)",
-                "description": "Educational platform refactored with React and TypeScript, optimizing user experience and scalability."
+                "description": "Educational platform refactored with React and TypeScript, optimizing user experience and scalability.",
+                "alt": "Institutional Management platform dashboard"
             },
             "5": {
                 "title": "EduBase",
-                "description": "Full-Stack academic platform developed with HTML5 and Tailwind. It allows efficient data management and serves as a foundation for future developments."
+                "description": "Full-Stack academic platform developed with HTML5 and Tailwind. It allows efficient data management and serves as a foundation for future developments.",
+                "alt": "EduBase academic platform main page"
             },
             "6": {
                 "title": "FiadoApp",
-                "description": "Commercial management platform for small neighborhood stores with sales dashboard, intelligent inventory and customer control."
+                "description": "Commercial management platform for small neighborhood stores with sales dashboard, intelligent inventory and customer control.",
+                "alt": "FiadoApp commercial management dashboard"
             }
         },
         "repository": "Repository",
@@ -227,6 +233,17 @@
                     "maxLength": "Message must be at most {{count}} characters"
                 }
             }
+        }
+    },
+    "seo": {
+        "siteName": "Oscar Lozano",
+        "home": {
+            "title": "Full-Stack Developer",
+            "description": "Oscar Lozano's portfolio — Systems Engineer and Full-Stack Developer. Projects built with React, TypeScript, Django and more."
+        },
+        "error404": {
+            "title": "Page not found",
+            "description": "The page you're looking for doesn't exist. Go back to the portfolio home."
         }
     },
     "footer": {
