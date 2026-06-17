@@ -30,7 +30,7 @@ const handleLogoClick = (isHome, navigate) => {
     }
 };
 
-const Navbar = () => {
+const Header = () => {
     const { t, i18n } = useTranslation();
     const location = useLocation();
     const navigate = useNavigate();
@@ -161,4 +161,4 @@ const Navbar = () => {
         </Disclosure >
     );
 };
-export default Navbar;
+export default Header;

@@ -1,15 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-
-const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-        const headerOffset = 64;
-        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = elementPosition - headerOffset;
-        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    }
-};
+import { scrollToSection } from '../../utils/scrollToSection';
 
 const ScrollToTop = () => {
     const { pathname, state } = useLocation();
