@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import imgPerfil from '../../assets/fotoPerfil.webp';
+import imgPerfil from '/assets/fotoPerfil.webp';
 
 function SobreMiSection() {
     const { t } = useTranslation();

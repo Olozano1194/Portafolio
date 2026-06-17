@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
-const SITE_URL = 'https://olozano1194.github.io/Portafolio';
+const SITE_URL = 'https://portafolio-phi-sepia.vercel.app';
 
 const SEO = ({ title, description, image, url, type = 'website' }) => {
   const { t } = useTranslation();
@@ -10,7 +10,7 @@ const SEO = ({ title, description, image, url, type = 'website' }) => {
   const siteName = t('seo.siteName');
   const fullTitle = title ? `${title} | ${siteName}` : siteName;
   const pageUrl = url || `${SITE_URL}${location.pathname}`;
-  const ogImage = image || 'https://olozano1194.github.io/Portafolio/assets/fotoPerfil.webp';
+  const ogImage = image || 'https://portafolio-phi-sepia.vercel.app/assets/fotoPerfil.webp';
 
   return (
     <Helmet>
