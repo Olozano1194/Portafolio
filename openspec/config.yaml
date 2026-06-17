@@ -1,0 +1,16 @@
+# SDD Project Configuration
+project: Portafolio
+version: 1.0.0
+stack:
+  framework: React 19
+  build: Vite 8
+  styling: Tailwind CSS 4
+  routing: React Router 7
+  i18n: i18next 26
+  language: JavaScript (JSX)
+testing:
+  runner: none
+  strict_tdd: false
+  notes: No testing framework configured. Add vitest or similar.
+persistence: openspec
+created: 2026-06-17
