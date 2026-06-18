@@ -34,10 +34,10 @@ export const proyectos = [
         "col": "md:col-span-5",
         "repo": "https://github.com/Olozano1194/FiadoApp",
         "ver_proyecto": "#",
-        "credenciales": { 
-            "user": "#", 
-            "pass": "#" 
-        },
+        // "credenciales": { 
+        //     "user": "#", 
+        //     "pass": "#" 
+        // },
         "imgDemo": {
             "img": [
                 "/demo/fiadoApp/demo-clientes.webp",
@@ -79,10 +79,10 @@ export const proyectos = [
         "col": "md:col-span-7",
         "repo": "https://github.com/Olozano1194/entidadesReact",
         "ver_proyecto": "#",
-        "credenciales": { 
-            "user": "PedroNel@gmail.com", 
-            "pass": "123456" 
-        },
+        // "credenciales": { 
+        //     "user": "PedroNel@gmail.com", 
+        //     "pass": "123456" 
+        // },
         "imgDemo": {
             "img": [
                 "/demo/institucionesV2/demo-HomeInstitucion.jpg",

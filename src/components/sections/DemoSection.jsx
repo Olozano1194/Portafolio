@@ -38,7 +38,7 @@ const DemoSection = () => {
     const projectTitle = t(`projects.items.${projectId}.title`);
     const projectYear = proyecto?.year || '2024';
     const projectStack = proyecto?.stack || [];
-    const projectCategory = proyecto?.category || 'Proyecto';
+    const projectCategory = proyecto?.category || 'Proyecto';    
 
     // Descripción y features con fallback a projects.items
     const demoDesc = t(`demoProject.projectDetails.${projectId}.description`);
@@ -53,6 +53,12 @@ const DemoSection = () => {
     const imgDemo = proyecto?.imgDemo?.img || [];
     const [selectedImg, setSelectedImg] = useState(null);
     const totalImages = imgDemo.length;
+    // Credenciales - solo mostrar si existen
+    const credentialLabels = {
+        user: userLabel,
+        pass: passwordLabel,
+    };
+    const credentialsEntries = Object.entries(credentials ?? {});
 
     // Navegación del lightbox
     const openLightbox = (index) => setSelectedImg(index);
@@ -95,7 +101,7 @@ const DemoSection = () => {
 
     return (
         <>
-            <SEO 
+            <SEO
                 title={projectTitle}
                 description={projectDescription}
                 image={imgDemo[0]}
@@ -135,31 +141,46 @@ const DemoSection = () => {
                         {/* Credentials */}
                         {credentials && (
                             <section className='bg-surface-container/50 border border-white/5 p-4 rounded-xl'>
-                                <h2 className='font-label mb-6 text-xs tracking-widest text-primary'>{credentialsLabel}</h2>
+                                <h2 className='font-label mb-6 text-xs tracking-widest text-primary'>
+                                    {credentialsLabel}
+                                </h2>
                                 <div className='space-y-4'>
-                                    <div className='border-b border-white/5 flex items-center justify-between pb-4'>
-                                        <span className='font-label text-sm text-on-surface-variant'>{userLabel}</span>
-                                        <code className='font-medium text-primary tracking-wider'>{credentials.user}</code>
-                                    </div>
-                                    <div className='flex items-center justify-between'>
-                                        <span className='font-label text-sm text-on-surface-variant'>{passwordLabel}</span>
-                                        <code className='font-medium text-primary tracking-wider'>{credentials.pass}</code>
-                                    </div>
+                                    {credentialsEntries.map(([key, value], index) => (
+                                        <div
+                                            key={key}
+                                            className={`flex items-center justify-between ${index !== credentialsEntries.length - 1
+                                                ? 'border-b border-white/5 pb-4'
+                                                : ''
+                                                }`}
+                                        >
+                                            <span className='font-label text-sm text-on-surface-variant'>
+                                                {{
+                                                    user: userLabel,
+                                                    pass: passwordLabel,
+                                                }[key]}
+                                            </span>
+                                            <code className='font-medium text-primary tracking-wider'>
+                                                {value}
+                                            </code>
+                                        </div>
+                                    ))}                                    
                                 </div>
                             </section>
                         )}
                         {/* CTA */}
                         <section className='flex gap-4'>
                             {tieneDemoUrl ? (
+                                <>
                                 <a href={verProyecto} target='_blank' className='bg-linear-to-r cursor-pointer font-bold flex flex-1 gap-2 items-center justify-center from-primary py-4 rounded-xl to-primary-container text-on-primary transition-all active:scale-95 hover:brightness-110'>
                                     {viewProjectLabel}<MdArrowOutward />
                                 </a>
+                                <button className='bg-surface-alt cursor-pointer p-4 rounded-xl text-on-surface transition-colors hover:bg-on-surface-variant'>
+                                    <FaShareAlt />
+                                </button>
+                                </>                                
                             ) : (
                                 <div className='flex-1'></div>
-                            )}
-                            <button className='bg-surface-alt cursor-pointer p-4 rounded-xl text-on-surface transition-colors hover:bg-on-surface-variant'>
-                                <FaShareAlt />
-                            </button>
+                            )}                            
                         </section>
                     </div>
                     {/* Right Column */}
@@ -205,7 +226,7 @@ const DemoSection = () => {
                         )}
                     </div>
                 </section>
-                {/* Details */}
+                {/* Stack Arquitectónico */}
                 <section className='border-t border-white/5 mt-24 pt-24'>
                     <h2 className='font-bold mb-12 text-3xl text-on-surface-variant tracking-tighter'>{architecturalStackLabel}</h2>
                     <div className='grid grid-cols-1 gap-12 md:grid-cols-3'>
@@ -216,7 +237,7 @@ const DemoSection = () => {
                                 </p>
                                 <p className='font-medium text-on-surface/60'>{value}</p>
                             </div>
-                        ))}                        
+                        ))}
                     </div>
                 </section>
             </section>
