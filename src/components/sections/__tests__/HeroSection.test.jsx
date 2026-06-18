@@ -1,6 +1,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi } from 'vitest';
+import { scrollToSection } from '../../../utils/scrollToSection';
 import HeroSection from '../HeroSection';
 
 // Mock i18next
@@ -56,5 +58,12 @@ describe('HeroSection', () => {
     render(<HeroSection />);
     expect(screen.getByText('Current Status')).toBeInTheDocument();
     expect(screen.getByText('Available for work.')).toBeInTheDocument();
+  });
+
+  it('calls scrollToSection with "proyectos" when clicking "View Projects"', async () => {
+    const user = userEvent.setup();
+    render(<HeroSection />);
+    await user.click(screen.getByText('View Projects'));
+    expect(scrollToSection).toHaveBeenCalledWith('proyectos');
   });
 });
