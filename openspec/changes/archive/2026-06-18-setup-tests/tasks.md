@@ -33,9 +33,9 @@ Chain strategy: size-exception
 - [x] 3.3 Mock `scrollToSection` via `vi.fn()`
 - [x] 3.4 Assert heading renders with translation key
 - [x] 3.5 Assert both buttons render with correct text
-- [ ] 3.6 Assert `scrollToSection('proyectos')` called on "Ver Proyectos" click
+- [x] 3.6 Assert `scrollToSection('proyectos')` called on "Ver Proyectos" click
 
 ## Phase 4: Verification
 
-- [ ] 4.1 Run `npm run test` — confirm at least 1 test passes
-- [ ] 4.2 Confirm test uses Vitest (not Jest) and file lives in `__tests__` directory
+- [x] 4.1 Run `npm run test` — confirm at least 1 test passes
+- [x] 4.2 Confirm test uses Vitest (not Jest) and file lives in `__tests__` directory
