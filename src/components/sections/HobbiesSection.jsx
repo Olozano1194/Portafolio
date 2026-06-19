@@ -4,10 +4,10 @@ import { FaFutbol, FaMusic } from "react-icons/fa";
 import { CgGym } from "react-icons/cg";
 import { MdVideogameAsset } from "react-icons/md";
 // images
-import imgFutbol from "../../assets/imgFutbol.png";
-import imgMusic from "../../assets/imgMusic.png";
-import imgGym from "../../assets/imgGym.png";
-import imgVideoGame from "../../assets/imgVideoGame.png";
+import imgFutbol from "../../assets/imgFutbol.webp";
+import imgMusic from "../../assets/imgMusic.webp";
+import imgGym from "../../assets/imgGym.webp";
+import imgVideoGame from "../../assets/imgVideoGame.webp";
 
 
 

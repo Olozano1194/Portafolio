@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 // utils
 import { scrollToSection } from '../../utils/scrollToSection';
 import { useTheme } from '../../hooks/useTheme';
-import logo from '../../assets/logoOscar.png';
+import logo from '../../assets/logoOscar.webp';
 // icons
 import { MdDarkMode, MdLightMode, MdLanguage } from "react-icons/md";
 

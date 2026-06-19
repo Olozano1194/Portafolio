@@ -25,7 +25,7 @@ function FormacionAcademica() {
               <div className="imgFormacion w-full h-40 overflow-hidden rounded-t-lg">
                 <img
                   className="w-full h-full object-cover"
-                  src={`/assets/formacion-${item.imagen}.png`}
+                  src={`/assets/formacion-${item.imagen}.webp`}
                   alt={`Logo ${item.imagen}`}
                 />
               </div>
