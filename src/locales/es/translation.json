@@ -117,7 +117,9 @@
             "8": { "description": "Tailwind" },
             "9": { "description": "MySQL" },
             "10": { "description": "Git" },
-            "11": { "description": "TypeScript" }
+            "11": { "description": "TypeScript" },
+            "12": { "description": "Express" },
+            "13": { "description": "MongoDb" }
         }
     },
     "softSkills": {

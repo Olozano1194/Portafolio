@@ -10,7 +10,7 @@ import {
   FaReact 
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiDjango, SiTailwindcss, SiMysql, SiTypescript } from "react-icons/si";
+import { SiDjango, SiTailwindcss, SiMysql, SiTypescript, SiExpress, SiMongodb } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa6";
 
 const HardsSkillsSection = () => {
@@ -26,7 +26,9 @@ const HardsSkillsSection = () => {
   SiTailwindcss: SiTailwindcss,
   SiMysql: SiMysql,
   FaGitAlt: FaGitAlt,
-  SiTypescript: SiTypescript
+  SiTypescript: SiTypescript,
+  SiExpress: SiExpress,
+  SiMongodb: SiMongodb
   };  
 
 
@@ -50,6 +52,15 @@ const HardsSkillsSection = () => {
                 <span className="font-label text-sm text-on-surface tracking-wide transition-colors group-hover:text-primary">
                   {t(`skills.items.${item.id}.description`)}
                 </span>
+                {item.level && (
+                  <span className={`ml-2 px-2 py-0.5 rounded-full text-xs font-semibold ${
+                    item.level === 'mid' 
+                      ? 'bg-primary/20 text-primary' 
+                      : 'bg-surface-alt text-on-surface-variant'
+                  }`}>
+                    {item.level === 'mid' ? 'Mid' : 'Junior'}
+                  </span>
+                )}
               </article>
 
             )            

@@ -1,56 +1,24 @@
 export const skill = [
-    {
-        "id": 1,
-        "icon": "FaHtml5"
-    },
-    {
-        "id": 2,
-        "icon": "FaJava",
-       
-    },
-    {
-        "id": 3,
-        "icon": "FaCss3",
-    },
-    {
-        "id": 4,
-        "icon": "FaPython",
-    },
-    {
-        "id": 5,
-        "icon": "IoLogoJavascript",
-    },
-    {
-        "id": 6,
-        "icon": "SiDjango",
-    },
-    {
-        "id": 7,
-        "icon": "FaReact",
-    },
-    {
-        "id": 8,
-        "icon": "SiTailwindcss",
-    },
-    {
-        "id": 9,
-        "icon": "SiMysql",
-    },
-    {
-        "id": 10,
-        "icon": "FaGitAlt"
-    },
-    {
-        "id": 11,
-        "icon": "SiTypescript"
-    }
+    { id: 1,  icon: "FaHtml5",        level: "mid" },
+    { id: 2,  icon: "FaJava",          level: "junior" },
+    { id: 3,  icon: "FaCss3",         level: "mid" },
+    { id: 4,  icon: "FaPython",       level: "junior" },
+    { id: 5,  icon: "IoLogoJavascript", level: "junior" },
+    { id: 6,  icon: "SiDjango",       level: "junior" },
+    { id: 7,  icon: "FaReact",        level: "junior" },
+    { id: 8,  icon: "SiTailwindcss",  level: "junior" },
+    { id: 9,  icon: "SiMysql",        level: "junior" },
+    { id: 10, icon: "FaGitAlt",       level: "junior" },
+    { id: 11, icon: "SiTypescript",   level: "junior" },
+    { id: 12, icon: "SiExpress",      level: "junior" },
+    { id: 13, icon: "SiMongodb",      level: "junior" },
 ]
 
 export const softSkills = [
     {
         "id": 1,
         "key": "communication",
-        "level": 65        
+        "level": 50        
     },
     {
         "id": 2,
