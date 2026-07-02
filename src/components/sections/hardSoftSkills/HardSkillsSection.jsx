@@ -45,15 +45,15 @@ const HardsSkillsSection = () => {
               <article
                 key={item.id}
                 style={{ animationDelay: `${index * 60}ms` }} 
-                className="group relative bg-surface-container flex p-6 rounded-xl gap-4 items-center transition-all duration-300 ease-out
-              hover:bg-surface-alt hover:-translate-y-1 hover:shadow-lg"
+                className="group relative bg-surface-container flex rounded-xl gap-2 items-center min-w-0 p-3 transition-all duration-300 ease-out
+              hover:bg-surface-alt hover:-translate-y-1 hover:shadow-lg md:p-6 md:gap-4 md:justify-between md:items-start"
               >
-                <span className="text-primary text-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">{Icon && <Icon />}</span>
-                <span className="font-label text-sm text-on-surface tracking-wide transition-colors group-hover:text-primary">
+                <span className="text-primary text-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 md:text-2xl">{Icon && <Icon />}</span>
+                <span className="font-label text-xs text-on-surface tracking-wide transition-colors truncate group-hover:text-primary md:text-lg">
                   {t(`skills.items.${item.id}.description`)}
                 </span>
                 {item.level && (
-                  <span className={`ml-2 px-2 py-0.5 rounded-full text-xs font-semibold ${
+                  <span className={`px-2 py-0.5 rounded-full text-xs font-semibold md:text-[14px] md:px-4 md:py-1 ${
                     item.level === 'mid' 
                       ? 'bg-primary/20 text-primary' 
                       : 'bg-surface-alt text-on-surface-variant'
@@ -62,7 +62,6 @@ const HardsSkillsSection = () => {
                   </span>
                 )}
               </article>
-
             )            
           })
         }
