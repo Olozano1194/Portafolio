@@ -17,7 +17,7 @@ const Footer = () => {
                     <a href="https://www.linkedin.com/in/olozanobocanegra" target="_blank" className="text-on-surface-variant text-2xl transition-colors hover:text-primary"><FaLinkedin /></a>
                     <a href="https://github.com/Olozano1194" target="_blank" className="text-on-surface-variant text-2xl transition-colors hover:text-primary"><FaGithub /></a>                    
                     <a 
-                        href="../curriculum/CV_Oscar_Lozano_Front_Developer_Jr.pdf"
+                        href="../curriculum/CV_Oscar_Lozano_Frontend_Jr.pdf"
                         target="_blank"
                         rel="noopener noreferrer" 
                         className="text-on-surface-variant text-2xl transition-colors hover:text-primary"
