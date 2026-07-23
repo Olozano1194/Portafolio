@@ -1,20 +1,20 @@
 export const proyectos = [
     {
         id: 1,
-        "img": "GymReactDjango",
+        "img": "ControlFit",
         "tipo": "Ver proyecto",
         "col": "md:col-span-7",
-        "repo": "https://github.com/Olozano1194/GimnasioReactDjango",
-        "ver_proyecto": "https://gimnasio-react-django.vercel.app",
+        "repo": "https://github.com/Olozano1194/ControlFit",
+        "ver_proyecto": "https://controlfit.vercel.app",
         "credenciales": { 
             "user": "reclutador@gimnasio.com", 
             "pass": "Gimnasio2026!"
         },
         "imgDemo": {
             "img": [
-                "/demo/gimnasioReactDjango/demo-Dashboard.jpg",                
-                "/demo/gimnasioReactDjango/demo-Listar.jpg",
-                "/demo/gimnasioReactDjango/demo-Usuario.jpg",
+                "/demo/controlFit/demo-Dashboard.webp",                
+                "/demo/controlFit/demo-Listar.webp",
+                "/demo/controlFit/demo-Usuario.webp",
             ]
         },
         "stack": ["React", "TypeScript", "Vite", "Django REST Framework", "Tailwind", "Axios"],
@@ -33,11 +33,7 @@ export const proyectos = [
         "tipo": "Ver proyecto",
         "col": "md:col-span-5",
         "repo": "https://github.com/Olozano1194/FiadoApp",
-        "ver_proyecto": "#",
-        // "credenciales": { 
-        //     "user": "#", 
-        //     "pass": "#" 
-        // },
+        "ver_proyecto": "#",        
         "imgDemo": {
             "img": [
                 "/demo/fiadoApp/demo-clientes.webp",
@@ -49,12 +45,12 @@ export const proyectos = [
         "category": "Business",
         "year": "2026",
         "architecturalStack": {
-            frontend: "Vite, React, TypeScript, Tailwind CSS",
-            backend: "Django, Django REST Framework, Python",
-            database: "MySQL, SQLite",
-            infrastructure: "GitHub",
-            desktop: "Tauri",
-            packaging: "PyInstaller"
+            "frontend": "Vite, React, TypeScript, Tailwind CSS",
+            "backend": "Django, Django REST Framework, Python",
+            "database": "MySQL, SQLite",
+            "infrastructure": "GitHub",
+            "desktop": "Tauri",
+            "packaging": "PyInstaller"
         }
     },
     {
@@ -78,16 +74,12 @@ export const proyectos = [
         "tipo": "Ver proyecto",
         "col": "md:col-span-7",
         "repo": "https://github.com/Olozano1194/entidadesReact",
-        "ver_proyecto": "#",
-        // "credenciales": { 
-        //     "user": "PedroNel@gmail.com", 
-        //     "pass": "123456" 
-        // },
+        "ver_proyecto": "#",        
         "imgDemo": {
             "img": [
-                "/demo/institucionesV2/demo-HomeInstitucion.jpg",
-                "/demo/institucionesV2/demo-Profile.jpg",                
-                "/demo/institucionesV2/demo-ListarInstitucion.jpg",
+                "/demo/institucionesV2/demo-HomeInstitucion.webp",
+                "/demo/institucionesV2/demo-Profile.webp",                
+                "/demo/institucionesV2/demo-ListarInstitucion.webp",
             ]                     
         },
         "stack": ["React", "TypeScript", "Express", "Axios"],
@@ -113,9 +105,9 @@ export const proyectos = [
         },
         "imgDemo": {
             "img": [
-                "/demo/instituciones/demo-HomeInstitucion.jpg",
-                "/demo/instituciones/demo-RegistrarInstitucion.jpg",
-                "/demo/instituciones/demo-ListarInstitucion.jpg",                
+                "/demo/instituciones/demo-HomeInstitucion.webp",
+                "/demo/instituciones/demo-RegistrarInstitucion.webp",
+                "/demo/instituciones/demo-ListarInstitucion.webp",                
             ]
         },
         "stack": ["HTML5", "Tailwind", "Express", "MongoDB"],
