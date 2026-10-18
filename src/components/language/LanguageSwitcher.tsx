@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
-  const changeLanguage = (lng) => {
+  const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
   };
 
@@ -12,8 +12,8 @@ function LanguageSwitcher() {
       <button
         onClick={() => changeLanguage('es')}
         className={`px-3 py-1 rounded ${
-          i18n.language === 'es' 
-            ? 'bg-primary text-on-primary' 
+          i18n.language === 'es'
+            ? 'bg-primary text-on-primary'
             : 'bg-surface-alt text-on-surface'
         }`}
       >
@@ -22,8 +22,8 @@ function LanguageSwitcher() {
       <button
         onClick={() => changeLanguage('en')}
         className={`px-3 py-1 rounded ${
-          i18n.language === 'en' 
-            ? 'bg-primary text-on-primary' 
+          i18n.language === 'en'
+            ? 'bg-primary text-on-primary'
             : 'bg-surface-alt text-on-surface'
         }`}
       >
@@ -32,5 +32,4 @@ function LanguageSwitcher() {
     </div>
   );
 }
-
 export default LanguageSwitcher;
