@@ -1,12 +1,7 @@
-import { Link } from 'react-router-dom';
-// utils
-import { scrollToSection } from '../../utils/scrollToSection';
-// icons
-import { FaLinkedin, FaGithub } from "react-icons/fa6";
-import { SiReaddotcv } from "react-icons/si";
+import { GitHubIcon, LinkedInIcon, CvIcon } from '../ui/icons/BrandIcons';
 import { useTranslation } from "react-i18next";
 
-const Footer = () => {
+const Footer = (): React.ReactElement => {
     const { t } = useTranslation();
     return (
         <footer className="bg-background py-12 px-8 w-full">
@@ -14,15 +9,15 @@ const Footer = () => {
                 <div className='text-on-surface text-xs uppercase'>@{new Date().getFullYear()} {t('footer.description')}</div>
                 {/* Redes Sociales */}
                 <ul className="flex gap-8">
-                    <a href="https://www.linkedin.com/in/olozanobocanegra" target="_blank" className="text-on-surface-variant text-2xl transition-colors hover:text-primary"><FaLinkedin /></a>
-                    <a href="https://github.com/Olozano1194" target="_blank" className="text-on-surface-variant text-2xl transition-colors hover:text-primary"><FaGithub /></a>                    
+                    <a href="https://www.linkedin.com/in/olozanobocanegra" target="_blank" className="text-on-surface-variant text-2xl transition-colors hover:text-primary"><LinkedInIcon /></a>
+                    <a href="https://github.com/Olozano1194" target="_blank" className="text-on-surface-variant text-2xl transition-colors hover:text-primary"><GitHubIcon /></a>                    
                     <a 
                         href="../curriculum/CV_Oscar_Lozano_Frontend_Jr.pdf"
                         target="_blank"
                         rel="noopener noreferrer" 
                         className="text-on-surface-variant text-2xl transition-colors hover:text-primary"
                     >
-                        <SiReaddotcv />
+                        <CvIcon />
                     </a>
                 </ul>                
             </section>            

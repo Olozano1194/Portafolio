@@ -2,11 +2,11 @@ import { proyectos } from "../../data/proyectos";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-// icons
+import { isProyectoVerProyecto, isProyectoVideo } from "../../types/proyecto";
+import type { Proyecto } from "../../types/proyecto";
 import { MdArrowForward, MdArrowBack } from "react-icons/md";
 
-
-function ProyectosSection() {
+const ProyectosSection = (): React.ReactElement => {
     const { t } = useTranslation();
     const [showAll, setShowAll] = useState(false);
     const initialProjects = 4;
@@ -36,7 +36,7 @@ function ProyectosSection() {
                 {/* Cards */}
                 <section className="grid grid-cols-1 gap-6 md:grid-cols-12">
                     {
-                        visibleProjects.map((proyecto) => (
+                        visibleProjects.map((proyecto: Proyecto) => (
                             <article
                                 key={proyecto.id}
                                 className={`bg-surface-alt h-112.5 group overflow-hidden rounded-2xl relative ${proyecto.col}`}
@@ -71,21 +71,21 @@ function ProyectosSection() {
                                             {t("projects.repository")}
                                         </a>
                                         {/* Condicional */}
-                                        {proyecto.tipo === "Ver proyecto" ? (
+                                        {isProyectoVerProyecto(proyecto) ? (
                                             <Link
                                                 to={`/demo/${proyecto.id}`}
                                                 className="px-4 py-2 text-sm rounded-lg bg-secondary text-on-secondary"
                                             >
                                                 {t("projects.viewProject")}
                                             </Link>
-                                        ) : (
+                                        ) : isProyectoVideo(proyecto) ? (
                                             <Link
                                                 to={`/videos/${proyecto.id}`}
                                                 className="px-4 py-2 text-sm rounded-lg bg-secondary text-on-secondary"
                                             >
                                                 {t("projects.video")}
                                             </Link>
-                                        )}
+                                        ) : null}
                                     </div>
                                 </div>
                             </article>
@@ -95,5 +95,5 @@ function ProyectosSection() {
             </div>   
         </section>
     );
-}
+};
 export default ProyectosSection;

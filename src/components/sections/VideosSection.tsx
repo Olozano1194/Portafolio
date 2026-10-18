@@ -1,14 +1,18 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { proyectos } from '../../data/proyectos';
-import { FaArrowLeft } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import SEO from '../ui/SEO';
+import { getParamAsNumber } from '../../types/routing';
+import { asProyectoId } from '../../types/branded';
+import { isProyectoVideo } from '../../types/proyecto';
+import { FaArrowLeft } from "react-icons/fa";
 
-const VideosSection = () => {
-    const { id } = useParams();
+const VideosSection = (): React.ReactElement | null => {
+    const params = useParams<{ id: string }>();
     const { t, i18n } = useTranslation();
-    const proyecto = proyectos.find((proyecto) => proyecto.id === parseInt(id));
+    const proyectoId = asProyectoId(getParamAsNumber(params, 'id'));
+    const proyecto = proyectos.find((p) => p.id === proyectoId);
     const navigate = useNavigate();
     
     const backBtn = t('videoProject.backBtn');
@@ -25,22 +29,21 @@ const VideosSection = () => {
     const projectCategory = proyecto?.category || 'Proyecto';
     const projectYear = proyecto?.year || '2024';
     const projectStack = proyecto?.stack || [];
-    const projectChallenge = t(`projects.projectDetails.${id}.challenge`);
+    const projectChallenge = t(`projects.projectDetails.${proyectoId}.challenge`);
 
     useEffect(() => {
-        if (!proyecto || proyecto.tipo !== 'Video') {
+        if (!proyecto || !isProyectoVideo(proyecto)) {
             navigate('/');
         };
     }, [proyecto, navigate]);
 
     if (!proyecto) return null;
 
-
     return (
         <>
         <SEO 
-            title={t(`projects.items.${id}.title`)}
-            description={t(`projects.items.${id}.description`)}
+            title={t(`projects.items.${proyectoId}.title`)}
+            description={t(`projects.items.${proyectoId}.description`)}
         />
         <section className='max-w-7xl mx-auto pt-32 pb-24 px-6 md:px-10'>
             <div className='mb-12'>
@@ -49,14 +52,14 @@ const VideosSection = () => {
             <header className='mb-16'>
                 <div className='flex flex-col gap-6 justify-between md:items-end md:flex-row'>
                     <div className='max-w-4xl'>
-                        <h1 className='font-bold mb-4 text-3xl text-on-background tracking-tighter md:text-5xl'>{t(`projects.items.${id}.title`)}</h1>
+                        <h1 className='font-bold mb-4 text-3xl text-on-background tracking-tighter md:text-5xl'>{t(`projects.items.${proyectoId}.title`)}</h1>
                         <div className='flex gap-3'>
                             <span className='bg-surface-container font-label px-3 py-1 rounded-full text-xs text-on-surface-variant uppercase'>{categoryLabel}: {projectCategory}</span>
                             <span className='bg-surface-container font-label px-3 py-1 rounded-full text-xs text-on-surface-variant uppercase'>{yearLabel}: {projectYear}</span>
                         </div>
                     </div>
                     <div className='leading-relaxed font-body max-w-lg text-on-surface-variant/80 text-lg'>
-                        {t(`projects.items.${id}.description`)}                        
+                        {t(`projects.items.${proyectoId}.description`)}                        
                     </div>
                 </div>
             </header>
@@ -80,7 +83,7 @@ const VideosSection = () => {
                 <div className='md:col-span-8'>
                     <h2 className='font-bold font-headline mb-6 text-3xl text-on-surface-variant'>{theChallenge}</h2>
                     <p className='leading-relaxed mb-8 text-lg text-on-surface-variant'>{projectChallenge}</p>
-                    {proyecto.metrics && (
+                    {isProyectoVideo(proyecto) && proyecto.metrics && (
                         <div className='grid grid-cols-2 gap-8 mt-12'>
                             {proyecto.metrics.map((metric, index) => (
                                 <div key={index} className='bg-surface-container p-8 rounded-xl'>
@@ -118,4 +121,5 @@ const VideosSection = () => {
         </>
     );
 }
+
 export default VideosSection;

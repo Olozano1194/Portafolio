@@ -2,27 +2,31 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useTranslation } from 'react-i18next';
-// utils
 import { scrollToSection } from '../../utils/scrollToSection';
 import { useTheme } from '../../hooks/useTheme';
 import logo from '../../assets/logoOscar.webp';
-// icons
 import { MdDarkMode, MdLightMode, MdLanguage } from "react-icons/md";
 
-const classNames = (...classes) => {
-    return classes.filter(Boolean).join(' ')
+const classNames = (...classes: (string | boolean | undefined | null)[]): string => {
+    return classes.filter(Boolean).join(' ');
 };
 
-const getSectionId = (href) => {
+const getSectionId = (href: string): string => {
     return href.replace('#', '');
 };
 
-const scrollToTop = () => {
+const scrollToTop = (): void => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
+interface NavItem {
+    name: string;
+    href: string;
+    current: boolean;
+}
+
 // Logo handler: scroll to top if on home, navigate to home if elsewhere
-const handleLogoClick = (isHome, navigate) => {
+const handleLogoClick = (isHome: boolean, navigate: ReturnType<typeof useNavigate>): void => {
     if (isHome) {
         scrollToTop();
     } else {
@@ -30,7 +34,7 @@ const handleLogoClick = (isHome, navigate) => {
     }
 };
 
-const Header = () => {
+const Header = (): React.ReactElement => {
     const { t, i18n } = useTranslation();
     const location = useLocation();
     const navigate = useNavigate();
@@ -38,7 +42,7 @@ const Header = () => {
     const isDark = theme === 'dark';
     const isHome = location.pathname === '/';
 
-    const navigation = [        
+    const navigation: NavItem[] = [        
         { name: t('nav.about'), href: '#sobreMi', current: false},
         { name: t('nav.education'), href: '#formacionAcademica', current: false },
         { name: t('nav.projects'), href: '#proyectos', current: false },
@@ -47,7 +51,7 @@ const Header = () => {
         { name: t('nav.contact'), href: '#contacto', current: false}
     ];
 
-    const handleNavClick = (e, href) => {
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, href: string): void => {
         e.preventDefault();
         const sectionId = getSectionId(href);
         if (isHome) {
@@ -57,7 +61,7 @@ const Header = () => {
         }
     };
 
-    const changeLanguage = () => {
+    const changeLanguage = (): void => {
        const newLang = i18n.language === 'es' ? 'en' : 'es';
        i18n.changeLanguage(newLang);
     };
@@ -131,8 +135,8 @@ const Header = () => {
                                 key={item.name}
                                 as="button"
                                 onClick={(e) => {
-                                    close(); // cierra el menú móvil
-                                    handleNavClick(e, item.href); // luego hace scroll o navega
+                                    close();
+                                    handleNavClick(e, item.href);
                                 }}
                                 className={classNames(
                                     item.current ? 'flex font-semibold justify-end text-primary transition-colors' : 'flex justify-end text-on-background/70 hover:text-on-background w-full',
