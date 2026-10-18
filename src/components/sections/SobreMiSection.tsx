@@ -4,7 +4,6 @@ import imgPerfil from '/assets/fotoPerfil.webp';
 function SobreMiSection() {
     const { t } = useTranslation();
 
-
     return (
         <section id='sobreMi' className="bg-surface-container py-24 px-8">
             <section className='max-w-7xl mx-auto'>

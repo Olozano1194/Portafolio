@@ -1,36 +1,42 @@
 import { useTranslation } from "react-i18next";
 import { skill as skills } from "../../../data/skillSoftHobb";
-// icons
-import { MdTerminal } from "react-icons/md";
-import { 
-  FaHtml5,
-  FaJava,
-  FaCss3,
-  FaPython,
-  FaReact 
-} from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
-import { SiDjango, SiTailwindcss, SiMysql, SiTypescript, SiExpress, SiMongodb } from "react-icons/si";
-import { FaGitAlt } from "react-icons/fa6";
+import type { Skill } from "@/types/skill";
+import {
+  Html5Icon,
+  Css3Icon,
+  JavaScriptIcon,
+  ReactIcon,
+  TypeScriptIcon,
+  TailwindIcon,
+  DjangoIcon,
+  ExpressIcon,
+  MySqlIcon,
+  MongoDbIcon,
+  GitIcon,
+  JavaIcon,
+  PythonIcon,
+} from "../../../components/ui/icons/BrandIcons";
 
-const HardsSkillsSection = () => {
+const HardSkillsSection = () => {
   const { t } = useTranslation();
-  const icons = {
-  FaHtml5: FaHtml5,
-  FaJava: FaJava,
-  FaCss3: FaCss3,
-  FaPython: FaPython,
-  IoLogoJavascript: IoLogoJavascript,
-  SiDjango: SiDjango,
-  FaReact: FaReact,
-  SiTailwindcss: SiTailwindcss,
-  SiMysql: SiMysql,
-  FaGitAlt: FaGitAlt,
-  SiTypescript: SiTypescript,
-  SiExpress: SiExpress,
-  SiMongodb: SiMongodb
-  };  
 
+  const skillsData = skills as Skill[];
+
+  const icons: Record<string, React.FC<React.SVGProps<SVGSVGElement> & { size?: number; color?: string }>> = {
+    FaHtml5: Html5Icon,
+    FaJava: JavaIcon,
+    FaCss3: Css3Icon,
+    FaPython: PythonIcon,
+    IoLogoJavascript: JavaScriptIcon,
+    SiDjango: DjangoIcon,
+    FaReact: ReactIcon,
+    SiTailwindcss: TailwindIcon,
+    SiMysql: MySqlIcon,
+    FaGitAlt: GitIcon,
+    SiTypescript: TypeScriptIcon,
+    SiExpress: ExpressIcon,
+    SiMongodb: MongoDbIcon,
+  };
 
   return (
     <section className=''>
@@ -39,7 +45,7 @@ const HardsSkillsSection = () => {
       <div className="grid grid-cols-2 gap-4">
         {/* cards */}
         {
-          skills.map((item, index) => {
+          skillsData.map((item: Skill, index: number) => {
             const Icon = icons[item.icon];
             return (
               <article
@@ -69,4 +75,4 @@ const HardsSkillsSection = () => {
     </section>
   );
 }
-export default HardsSkillsSection;
+export default HardSkillsSection;

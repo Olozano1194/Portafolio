@@ -1,12 +1,9 @@
 import { useTranslation } from 'react-i18next';
-import { ArrowRightIcon } from "@heroicons/react/16/solid";
 // utils
 import { scrollToSection } from "../../utils/scrollToSection";
 
-
 const HeroSection = () => {
     const { t } = useTranslation();
-
 
     return (
         <section className="overflow-hidden pt-18 pb-24 px-8 relative" id="inicio">
@@ -50,4 +47,5 @@ const HeroSection = () => {
         </section>
     );
 };
+
 export default HeroSection;

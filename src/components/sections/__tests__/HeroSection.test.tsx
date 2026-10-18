@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi } from 'vitest';
@@ -8,8 +7,8 @@ import HeroSection from '../HeroSection';
 // Mock i18next
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({
-    t: (key) => {
-      const translations = {
+    t: (key: string) => {
+      const translations: Record<string, string> = {
         'home.button': 'Junior Developer Portfolio',
         'home.greeting.intro': 'Building the ',
         'home.greeting.name': 'Digital Future.',

@@ -1,11 +1,11 @@
 import { datos } from "../../data/formacionAcademica";
 import { useTranslation } from "react-i18next";
-// icons
-import { IoSchool } from "react-icons/io5";
+import type { FormacionAcademica } from "@/types/formacion";
 
-function FormacionAcademica() {
+function FormacionAcademicaSection() {
   const { t } = useTranslation();
 
+  const formacionData = datos as FormacionAcademica[];
 
   return (
     <section className="bg-surface py-24 px-8" id="formacionAcademica">
@@ -15,7 +15,7 @@ function FormacionAcademica() {
         </h2>
         <h3 className="font-bold mb-12 text-4xl text-on-surface tracking-tight">{t(`education.title`)}</h3> 
         <article className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-          {datos.map((item, index) => (
+          {formacionData.map((item: FormacionAcademica, index: number) => (
             <article
               key={item.id}
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -48,4 +48,4 @@ function FormacionAcademica() {
       </section>
   );
 }
-export default FormacionAcademica;
+export default FormacionAcademicaSection;

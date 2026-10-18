@@ -9,11 +9,8 @@ import imgMusic from "../../assets/imgMusic.webp";
 import imgGym from "../../assets/imgGym.webp";
 import imgVideoGame from "../../assets/imgVideoGame.webp";
 
-
-
 const HobbiesSection = () => {
     const { t } = useTranslation();
-
 
     return (
         <section className="bg-surface-container overflow-hidden py-24 px-8" id="hobbies">

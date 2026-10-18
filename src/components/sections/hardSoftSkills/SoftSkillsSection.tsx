@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { softSkills } from "../../../data/skillSoftHobb";
-// icons
-import { MdTerminal } from "react-icons/md";
+import type { SoftSkill } from "@/types/skill";
 
 const SoftSkillsSection = () => {
     const { t } = useTranslation();
+
+    const softSkillsData = softSkills as SoftSkill[];
 
     return (
         <section className=''>
@@ -12,7 +13,7 @@ const SoftSkillsSection = () => {
             <h3 className="font-bold mb-12 text-4xl text-on-surface tracking-tight">{t(`softSkills.title`)}</h3>
             <div className="space-y-6">
                 {/* cards */}
-                {softSkills.map(item => (
+                {softSkillsData.map((item: SoftSkill) => (
                     <article key={item.id} className="group text-on-surface">
                         <div className="flex items-center justify-between mb-2">
                             <span className="font-bold">{t(`softSkills.items.${item.key}`)}</span>
@@ -25,7 +26,6 @@ const SoftSkillsSection = () => {
                             ></div>
                         </div>
                     </article>
-
                 ))}
             </div>
         </section>

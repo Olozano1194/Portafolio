@@ -1,19 +1,24 @@
-import { useForm } from "react-hook-form"; //importación del useForm para validar el formulario
+import { useForm } from "react-hook-form";
 import { useState } from 'react';
 // icons
-import { BiMessageAltDetail, BiRename } from "react-icons/bi";
 import { MdDriveFileRenameOutline, MdEmail, MdOutlineMessage } from "react-icons/md";
 // Notifications
 import toast from "react-hot-toast";
 import { useTranslation } from "react-i18next";
 
+interface ContactFormData {
+  nombre: string;
+  email: string;
+  mensaje: string;
+  website?: string;
+}
 
 const ContactoSection = () => {
-    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>();
     const { t } = useTranslation();
     const [isLoading, setIsLoading] = useState(false);
 
-    const onSubmit = handleSubmit(async (data) => {
+    const onSubmit = handleSubmit(async (data: ContactFormData) => {
         if (isLoading) return;
         if (data.website) return; // honeypot
         setIsLoading(true);
@@ -41,7 +46,6 @@ const ContactoSection = () => {
             setIsLoading(false);
         }
     });
-
 
     return (
         <section className="bg-surface py-24 px-8 text-on-surface" id="contacto">
@@ -87,8 +91,7 @@ const ContactoSection = () => {
                                 }
                             })}    
                             />
-                            {errors.nombre && <span id="mensaje-error" className="text-error text-lg">{errors.nombre.message}
-                        </span>}
+                            {errors.nombre && <span id="mensaje-error" className="text-error text-lg">{errors.nombre.message}</span>}
                         </div>                        
                         {/* Email */}
                         <div className="space-y-2">
@@ -109,8 +112,7 @@ const ContactoSection = () => {
                                     value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
                                     message: t('contact.form.errors.email.pattern')
                                 }
-                            })
-                            } 
+                            })} 
                             />
                             {errors.email && <span id="mensaje-error" className="text-error text-lg">{errors.email.message}</span>}
                         </div>                        
@@ -148,7 +150,7 @@ const ContactoSection = () => {
                     </div>
                     <button
                         type="submit" 
-                        className="bg-primary cursor-pointer font-bold py-4 rounded-xl shadow-lg text-on-primary transition-all w-full active:scale-95 hover:opacity-90" type="submit">
+                        className="bg-primary cursor-pointer font-bold py-4 rounded-xl shadow-lg text-on-primary transition-all w-full active:scale-95 hover:opacity-90">
                         {t('contact.form.btn')}
                     </button>
                 </form>                
