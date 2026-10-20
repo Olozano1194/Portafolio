@@ -9,7 +9,7 @@ Portafolio profesional desarrollado con React, Vite y Tailwind CSS. Un sitio web
 - **Internacionalización (i18n)**: Soporte completo para Español e Inglés
 - **Navegación Suave**: Scroll fluido entre secciones
 - **Proyectos Interactivos**: Sección de demos y videos de proyectos
-- **Formulario de Contacto**: Integración con EmailJS
+- **Formulario de Contacto**: Integración con Formspree
 
 ## 🛠️ Tech Stack
 

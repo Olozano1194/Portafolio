@@ -216,11 +216,18 @@
     "contact": {
         "title": "¿Tienes un proyecto en mente?",
         "description": "Hablemos sobre cómo puedo ayudarte a materializar tu visión tecnológica.",
+        "toast": {
+            "success": "Mensaje enviado; respondo en menos de 24 h",
+            "error": "No se pudo enviar el mensaje. Intenta de nuevo",
+            "envMissing": "Formulario sin configurar. Contacta por otro medio"
+        },
         "form": {
             "name": "Nombre",
             "email": "Correo",
             "message": "Mensaje",
             "btn": "Enviar Propuesta",
+            "sending": "Enviando…",
+            "emailSubject": "Nuevo mensaje desde la web",
             "placeholder": {
                 "name": "Anacleto Rupertino",
                 "email": "Anacleto@gmail.com",

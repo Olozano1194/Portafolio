@@ -216,11 +216,18 @@
     "contact": {
         "title": "Do you have a project in mind?",
         "description": "Let's talk about how I can help you materialize your technological vision.",
+        "toast": {
+            "success": "Message sent; you'll get a reply within 24 hours",
+            "error": "Sorry, your message could not be sent. Please try again",
+            "envMissing": "Contact form is not configured. Please reach out another way"
+        },
         "form": {
             "name": "Name",
             "email": "Email",
             "message": "Message",
             "btn": "Send Proposal",
+            "sending": "Sending…",
+            "emailSubject": "New message from the website",
             "placeholder": {
                 "name": "Anacleto Rupertino",
                 "email": "Anacleto@gmail.com",
