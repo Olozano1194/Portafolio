@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { isProyectoVerProyecto, isProyectoVideo } from "../../types/proyecto";
 import type { Proyecto } from "../../types/proyecto";
-import { MdArrowForward, MdArrowBack } from "react-icons/md";
+import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 
 const ProyectosSection = (): React.ReactElement => {
     const { t } = useTranslation();
@@ -29,7 +29,7 @@ const ProyectosSection = (): React.ReactElement => {
                             className="cursor-pointer font-label flex gap-2 items-center text-primary transition-all hover:gap-4"
                         >
                             {showAll ? btnVerMenos : btnVerTodo}
-                            <span className="text-2xl">{showAll ? <MdArrowBack /> : <MdArrowForward />}</span>
+                            <span className="text-2xl">{showAll ? <ArrowLeftIcon /> : <ArrowRightIcon />}</span>
                         </button>
                     )}
                 </section>
@@ -52,7 +52,7 @@ const ProyectosSection = (): React.ReactElement => {
                                 <div className="absolute inset-0 bg-linear-to-t from-surface-container to-transparent opacity-90 group-hover:opacity-70 transition-opacity"></div>
 
                                 {/* Contenido */}
-                                <div className="absolute bottom-0 p-8 space-y-2">
+                                <div className="absolute bottom-0 p-8 space-y-2 z-10">
                                     <h3 className="text-3xl font-bold text-on-surface">
                                         {t(`projects.items.${proyecto.id}.title`)}
                                     </h3>
@@ -60,6 +60,7 @@ const ProyectosSection = (): React.ReactElement => {
                                     <p className="text-sm text-on-surface-variant max-w-md">
                                         {t(`projects.items.${proyecto.id}.description`)}
                                     </p>
+
                                     {/* BOTONES */}
                                     <div className="flex gap-3 pt-2 opacity-100 translate-y-0 md:opacity-0 md:translate-y-4 md:transition-all md:duration-300 md:group-hover:opacity-100 md:group-hover:translate-y-0">
                                         {/* Repo */}
