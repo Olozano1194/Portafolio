@@ -46,21 +46,29 @@ const DemoSection = (): React.ReactElement => {
         
         const tieneDemoUrl = verProyecto && verProyecto.trim() !== '' && verProyecto !== '/' && verProyecto !== '#';
         
-        if (imgDemo.length > 0 && !tieneDemoUrl && credenciales) {
-            demoProps = {
-                type: 'interactive',
-                proyectoId,
-                titulo: projectTitle,
-                descripcion: projectDescription,
-                iframeUrl: verProyecto || '',
-                credenciales,
-            };
-        } else if (imgDemo.length > 0) {
+        // Datos comunes que necesitan TODOS los demos
+        const commonProps = {
+            proyectoId,
+            titulo: projectTitle,
+            descripcion: projectDescription,
+            stack: proyecto.stack,
+            year: proyecto.year,
+            architecturalStack: proyecto.architecturalStack,
+        };
+        
+        // Nueva lógica:
+        // 1. Si tiene imágenes de demo → ImageGalleryDemo (siempre, prioriza capturas)
+        // 2. Si NO tiene imágenes pero tiene URL de demo → InteractiveDemo (iframe del sitio real)
+        // 3. Si NO tiene imágenes ni URL → VideoDemo (si tiene video) o ImageGalleryDemo vacío
+        
+        if (imgDemo.length > 0) {
+            // Tiene imágenes de demo → ImageGalleryDemo (pantallazos del portfolio)
+            // Pasa verProyecto y credenciales para botón "Ver Proyecto" y sección credenciales
             demoProps = {
                 type: 'images',
-                proyectoId,
-                titulo: projectTitle,
-                descripcion: projectDescription,
+                ...commonProps,
+                verProyecto,
+                credenciales,
                 images: imgDemo.map((src, index) => ({
                     src,
                     alt: `${projectTitle} - ${index + 1}`,
@@ -68,28 +76,31 @@ const DemoSection = (): React.ReactElement => {
                 })),
             };
         } else if (tieneDemoUrl) {
+            // No tiene imágenes de demo, pero tiene URL → InteractiveDemo (iframe del sitio real)
             demoProps = {
-                type: 'video',
-                proyectoId,
-                titulo: projectTitle,
-                descripcion: projectDescription,
-                videos: [{ src: verProyecto, titulo: projectTitle }],
+                type: 'interactive',
+                ...commonProps,
+                iframeUrl: verProyecto,
+                ...(credenciales && { credenciales }),
             };
         } else {
+            // Fallback: sin imágenes ni URL → VideoDemo si tipo Video, sino galería vacía
             demoProps = {
                 type: 'images',
-                proyectoId,
-                titulo: projectTitle,
-                descripcion: projectDescription,
+                ...commonProps,
                 images: [],
             };
         }
     } else {
+        // tipo === 'Video' - no tiene architecturalStack ni year en el type, usar defaults
         demoProps = {
             type: 'video',
             proyectoId,
             titulo: projectTitle,
             descripcion: projectDescription,
+            stack: proyecto.stack,
+            year: proyecto.year,
+            architecturalStack: { frontend: '', backend: '', database: '', infrastructure: '' },
             videos: [{ src: `/videos/videos-${proyecto.img}.mp4`, titulo: projectTitle }],
         };
     }
