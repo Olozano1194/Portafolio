@@ -9,12 +9,15 @@ const InteractiveDemo = ({
     credenciales, 
     titulo, 
     descripcion, 
-    proyectoId 
+    proyectoId,
+    stack,
+    year,
+    architecturalStack
 }: InteractiveDemoProps): React.ReactElement => {
     const { t } = useTranslation();
 
-    const projectYear = '2024';
-    const projectStack: string[] = [];
+    const projectYear = year || '2024';
+    const projectStack = stack || [];
     const caseStudyLabel = t('demoProject.caseStudy');
     const projectDetailsTitle = t('demoProject.projectDetailsTitle');
     const credentialsLabel = t('demoProject.credentials');
@@ -31,7 +34,7 @@ const InteractiveDemo = ({
 
     const projectFeatures = t(`demoProject.projectDetails.${proyectoId}.features`, { returnObjects: true }) || [];
     const projectPerformance = t(`demoProject.projectDetails.${proyectoId}.performance`);
-    const architecturalStack = { frontend: '', backend: '', database: '', infrastructure: '' };
+    const archStack = architecturalStack || { frontend: '', backend: '', database: '', infrastructure: '' };
 
     const tieneDemoUrl = iframeUrl && iframeUrl.trim() !== '' && iframeUrl !== '/' && iframeUrl !== '#';
     const credentialsEntries = Object.entries(credenciales ?? {});
@@ -51,7 +54,7 @@ const InteractiveDemo = ({
                         </div>
                         <div className='flex flex-wrap gap-3'>
                             {projectStack.map((tech, index) => (
-                                <span key={index} className='bg-surface-container font-label font-medi px-4 py-1.5 rounded-full text-xs text-on-surface-variant'>{tech}</span>
+                                <span key={index} className='bg-surface-container font-label font-medium px-4 py-1.5 rounded-full text-xs text-on-surface-variant'>{tech}</span>
                             ))}
                         </div>
                     </div>
@@ -140,7 +143,7 @@ const InteractiveDemo = ({
                 <section className='border-t border-white/5 mt-24 pt-24'>
                     <h2 className='font-bold mb-12 text-3xl text-on-surface-variant tracking-tighter'>{architecturalStackLabel}</h2>
                     <div className='grid grid-cols-1 gap-12 md:grid-cols-3'>
-                        {Object.entries(architecturalStack).map(([key, value]) => (
+                        {Object.entries(archStack).map(([key, value]) => (
                             <div key={key} className='space-y-2'>
                                 <p className='font-label text-xs text-primary tracking-widest md:text-lg'>
                                     {key.charAt(0).toUpperCase() + key.slice(1)}
