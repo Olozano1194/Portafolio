@@ -6,16 +6,30 @@ export interface BaseDemoProps {
   readonly proyectoId: ProyectoId;
   readonly titulo: string;
   readonly descripcion: string;
+  readonly stack?: readonly string[];
+  readonly year?: string;
+  readonly architecturalStack?: {
+    readonly frontend: string;
+    readonly backend: string;
+    readonly database: string;
+    readonly infrastructure: string;
+    readonly desktop?: string;
+    readonly packaging?: string;
+  };
 }
 
 export interface VideoDemoProps extends BaseDemoProps {
   readonly type: 'video';
   readonly videos: readonly { readonly src: string; readonly titulo: string }[];
+  readonly verProyecto?: string;
+  readonly credenciales?: { readonly user: string; readonly pass: string } | undefined;
 }
 
 export interface ImageGalleryDemoProps extends BaseDemoProps {
   readonly type: 'images';
   readonly images: readonly { readonly src: string; readonly alt: string; readonly titulo: string }[];
+  readonly verProyecto?: string;
+  readonly credenciales?: { readonly user: string; readonly pass: string } | undefined;
 }
 
 export interface InteractiveDemoProps extends BaseDemoProps {
