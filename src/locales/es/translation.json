@@ -262,6 +262,11 @@
             "description": "La página que buscas no existe. Regresa al inicio del portafolio."
         }
     },
+    "error404": {
+        "title": "Página no encontrada",
+        "description": "La página que buscas no existe o ha sido movida.",
+        "button": "Volver al inicio"
+    },
     "footer": {
         "description": "Ingeniero de Sistemas. Construido con precisión y detalle técnico."
     }
