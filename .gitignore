@@ -26,3 +26,9 @@ dist-ssr
 
 # OpenCode
 .atl/
+
+# Coverage
+coverage/
+
+# SDD local cache (Engram artifacts)
+sdd/
