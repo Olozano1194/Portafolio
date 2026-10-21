@@ -1,6 +1,16 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach, type Mock } from 'vitest';
 import { renderWithProviders } from '../../../test/i18n';
+
+vi.mock('../seo-config', () => ({
+  getSiteUrl: vi.fn(() => 'https://test.example.com'),
+  normalizeCanonicalPath: (pathname: string) => {
+    if (pathname === '/') return '/';
+    return pathname.replace(/\/+$/, '');
+  },
+}));
+
 import SEO from '../SEO';
+import { getSiteUrl } from '../seo-config';
 
 describe('SEO', () => {
   let originalTitle: string;
@@ -8,12 +18,16 @@ describe('SEO', () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
+    (getSiteUrl as Mock).mockReturnValue('https://test.example.com');
     originalTitle = document.title;
     originalHeadHTML = document.head.innerHTML;
-    // Clear any existing meta tags that SEO might have set
     document.title = '';
     const metaTags = document.head.querySelectorAll('meta[name], meta[property]');
     metaTags.forEach(tag => tag.remove());
+    const linkTags = document.head.querySelectorAll('link[rel="canonical"]');
+    linkTags.forEach(tag => tag.remove());
+    const jsonLdScripts = document.head.querySelectorAll('script[data-seo-webpage]');
+    jsonLdScripts.forEach(tag => tag.remove());
   });
 
   afterEach(() => {
@@ -165,5 +179,4 @@ describe('SEO', () => {
     const metaDescription = document.querySelector('meta[name="description"]');
     expect(metaDescription?.getAttribute('content')).toBe('Test description');
   });
-
-  });
+});

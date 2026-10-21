@@ -32,3 +32,7 @@ coverage/
 
 # SDD local cache (Engram artifacts)
 sdd/
+
+# Generated SEO artifacts (created by prebuild script)
+public/sitemap.xml
+public/robots.txt

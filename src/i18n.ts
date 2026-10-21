@@ -25,5 +25,14 @@ i18n
     interpolation: {
       escapeValue: false // React ya protege contra XSS
     }
+  })
+  .then(() => {
+    // R1: Sync document.documentElement.lang on init
+    document.documentElement.lang = i18n.language;
   });
+
+// R2: Sync document.documentElement.lang on language change (no reload)
+i18n.on('languageChanged', (lng) => {
+  document.documentElement.lang = lng;
+});
 export default i18n;

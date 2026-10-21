@@ -34,6 +34,21 @@ const jsdomGlobals = {
   HTMLFormElement: 'readonly',
 };
 
+const nodeGlobals = {
+  process: 'readonly',
+  console: 'readonly',
+  URL: 'readonly',
+  __dirname: 'readonly',
+  __filename: 'readonly',
+  global: 'readonly',
+  globalThis: 'readonly',
+  Buffer: 'readonly',
+  setTimeout: 'readonly',
+  clearTimeout: 'readonly',
+  setInterval: 'readonly',
+  clearInterval: 'readonly',
+};
+
 export default tseslint.config(
   { ignores: ['dist/', 'node_modules/', '*.config.*'] },
   js.configs.recommended,
@@ -63,6 +78,13 @@ export default tseslint.config(
     },
     rules: {
       '@typescript-eslint/no-empty-function': 'off',
+    },
+  },
+  {
+    files: ['scripts/**/*.mjs'],
+    languageOptions: {
+      parserOptions: { ecmaVersion: 2022, sourceType: 'module' },
+      globals: { ...testGlobals, ...nodeGlobals },
     },
   }
 );
