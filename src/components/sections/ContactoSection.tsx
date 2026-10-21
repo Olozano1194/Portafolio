@@ -47,9 +47,8 @@ const ContactoSection = () => {
 
       toast.success(t("contact.toast.success"));
       reset();
-    } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : t("contact.toast.error");
-      toast.error(errorMessage);
+    } catch {
+      toast.error(t("contact.toast.error"));
     } finally {
       setIsLoading(false);
     }
@@ -68,7 +67,7 @@ const ContactoSection = () => {
           {t("contact.title")}
         </h2>
         <p className="mb-12 text-xl text-on-surface-variant">{t("contact.description")}</p>
-        <form onSubmit={onSubmit} className="bg-surface-alt border border-on-border/5 p-12 rounded-2xl space-y-6 shadow-2xl text-left">
+        <form onSubmit={onSubmit} noValidate className="bg-surface-alt border border-on-border/5 p-12 rounded-2xl space-y-6 shadow-2xl text-left">
           <input type="hidden" name="_captcha" value="true" />
           <input type="hidden" name="_template" value="table" />
           {/* D5: _subject from i18n */}
