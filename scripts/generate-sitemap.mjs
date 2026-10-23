@@ -9,7 +9,7 @@
 
 import { writeFileSync, mkdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { buildRouteManifest } from "./sitemap-manifest.mjs";
 import { renderSitemapXml } from "./sitemap-render.mjs";
@@ -78,9 +78,7 @@ export async function generate() {
 }
 
 // Run if executed directly (not imported)
-const scriptPath = process.argv[1]
-  ? `file:///${process.argv[1].replace(/\\/g, "/").replace(/ /g, "%20")}`
-  : "";
+const scriptPath = process.argv[1] ? pathToFileURL(process.argv[1]).href : "";
 if (import.meta.url === scriptPath) {
   generate().catch((err) => {
     console.error("Generation failed:", err);
