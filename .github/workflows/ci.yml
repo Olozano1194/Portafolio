@@ -3,6 +3,8 @@ on: [push, pull_request]
 jobs:
   ci:
     runs-on: ubuntu-latest
+    env:
+      VITE_SITE_URL: ${{ secrets.VITE_SITE_URL }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

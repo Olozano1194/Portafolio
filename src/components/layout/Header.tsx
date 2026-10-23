@@ -4,8 +4,9 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useTranslation } from 'react-i18next';
 import { scrollToSection } from '../../utils/scrollToSection';
 import { useTheme } from '../../hooks/useTheme';
-import logo from '../../assets/logoOscar.webp';
 import { MdDarkMode, MdLightMode, MdLanguage } from "react-icons/md";
+
+const LOGO_SRC = '/logo.webp';
 
 const classNames = (...classes: (string | boolean | undefined | null)[]): string => {
     return classes.filter(Boolean).join(' ');
@@ -71,16 +72,16 @@ const Header = (): React.ReactElement => {
             <div className="font-headline w-full mx-auto px-4 sm:px-3 lg:px-16">
                 <div className="flex gap-6 h-16 items-center justify-between">
                     {/* Logo y nombre */}
-                    <div className="flex gap-1 w-auto items-center">
+                    <div className="flex gap-2 w-auto items-center">
                         <img
-                            className="hidden rounded-lg size-9 h-8 w-auto cursor-pointer sm:block"
-                            src={logo}
+                            className="rounded-lg size-9 h-8 w-auto cursor-pointer"
+                            src={LOGO_SRC}
                             alt="logo"
                             onClick={() => handleLogoClick(isHome, navigate)}
                         />
                         <button
                             onClick={() => handleLogoClick(isHome, navigate)}
-                            className="font-bold text-xl tracking-tight text-on-background cursor-pointer md:text-lg"
+                            className="font-bold text-xl tracking-tight text-on-background cursor-pointer hidden md:block"
                         >
                             {t('nav.icons')}
                         </button>
