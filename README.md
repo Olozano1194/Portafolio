@@ -124,7 +124,7 @@ public/
 
 ## 🚀 Deploy en Vercel
 
-El repo está linkeado a Vercel (team `oscars-projects-0f3a365c`, proyecto `portafolio`).
+El repo está configurado para deploy automático en Vercel.
 
 - **Push a `master`** → Production deployment automático
 - **Push a cualquier branch / PR** → Preview deployment automático (URL efímera)
@@ -133,11 +133,13 @@ El repo está linkeado a Vercel (team `oscars-projects-0f3a365c`, proyecto `port
 
 ```bash
 # Link manual (solo primera vez)
-vercel link --repo --scope oscars-projects-0f3a365c
+vercel link --repo
 
 # Deploy manual si hiciera falta
-vercel deploy --prod --scope oscars-projects-0f3a365c
+vercel deploy --prod
 ```
+
+> Los flags `--scope <team>` son opcionales; Vercel los resuelve desde la config local (`.vercel/`) o el account por defecto.
 
 ---
 
