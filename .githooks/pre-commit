@@ -1,0 +1,14 @@
+#!/bin/sh
+# Enforces AGENTS.md R4 (250-line cap) and blocks secret-bearing files.
+# Wired with: git config core.hooksPath .githooks
+set -e
+
+node scripts/check-file-size.mjs --staged
+
+blocked=$(git diff --cached --name-only --diff-filter=ACMR \
+  | grep -E '(^|/)\.env$|(^|/)\.env\.local$|\.pem$|\.key$|(^|/)\.npmrc$' || true)
+
+if [ -n "$blocked" ]; then
+  printf 'pre-commit: refusing to commit secret-bearing files:\n%s\n' "$blocked"
+  exit 1
+fi

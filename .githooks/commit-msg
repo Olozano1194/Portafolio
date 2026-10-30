@@ -1,0 +1,6 @@
+#!/bin/sh
+# Enforces AGENTS.md R3: Spanish Conventional Commits, no AI attribution.
+# Wired with: git config core.hooksPath .githooks
+set -e
+
+node scripts/check-commit-msg.mjs "$1"

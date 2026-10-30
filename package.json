@@ -12,7 +12,11 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "check:size": "node scripts/check-file-size.mjs",
+    "check:commit": "node scripts/check-commit-msg.mjs",
+    "hooks:install": "git config core.hooksPath .githooks",
+    "verify": "npm run typecheck && npm run lint && npm test && npm run check:size"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.10",
