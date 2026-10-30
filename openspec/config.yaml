@@ -7,10 +7,10 @@ stack:
   styling: Tailwind CSS 4
   routing: React Router 7
   i18n: i18next 26
-  language: JavaScript (JSX)
+  language: TypeScript (TSX)
 testing:
-  runner: none
+  runner: vitest 3
   strict_tdd: false
-  notes: No testing framework configured. Add vitest or similar.
+  notes: Unit + behavior tests with @testing-library/react. Coverage via @vitest/coverage-v8. Policy in AGENTS.md section 7.
 persistence: openspec
 created: 2026-06-17
