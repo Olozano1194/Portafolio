@@ -45,7 +45,7 @@ const VideosSection = (): React.ReactElement | null => {
             title={t(`projects.items.${proyectoId}.title`)}
             description={t(`projects.items.${proyectoId}.description`)}
         />
-        <section className='max-w-7xl mx-auto pt-32 pb-24 px-6 md:px-10'>
+        <section className='max-w-7xl mx-auto pt-20 pb-24 px-6 md:px-10'>
             <div className='mb-12'>
                 <button onClick={() => navigate(-1)} className="group gap-2 inline-flex items-center text-primary transition-colors hover:text-primary-container"><FaArrowLeft />{backBtn}</button>
             </div>
@@ -79,15 +79,15 @@ const VideosSection = (): React.ReactElement | null => {
                 </div>
             </section>
             {/* Description footer */}
-            <section className='grid grid-cols-1 gap-12 mt-24 md:grid-cols-12'>
+            <section className='grid grid-cols-1 gap-12 mt-20 md:grid-cols-12'>
                 <div className='md:col-span-8'>
                     <h2 className='font-bold font-headline mb-6 text-3xl text-on-surface-variant'>{theChallenge}</h2>
                     <p className='leading-relaxed mb-8 text-lg text-on-surface-variant'>{projectChallenge}</p>
                     {isProyectoVideo(proyecto) && proyecto.metrics && (
                         <div className='grid grid-cols-2 gap-8 mt-12'>
                             {proyecto.metrics.map((metric, index) => (
-                                <div key={index} className='bg-surface-container p-8 rounded-xl'>
-                                    <p className='font-label font-bold mb-2 text-3xl text-primary'>{metric.value}</p>
+                                <div key={index} className='bg-surface-container p-4 rounded-xl md:p-8'>
+                                    <p className='font-label font-bold mb-2 text-lg md:text-3xl text-primary'>{metric.value}</p>
                                     <span className='font-label text-on-surface-variant text-xs tracking-widest uppercase'>{metric[lang]}</span>
                                 </div>
                             ))}
@@ -95,11 +95,11 @@ const VideosSection = (): React.ReactElement | null => {
                     )}
                 </div>
                 <div className='flex flex-col gap-8 md:col-span-4'>
-                    <div className='bg-surface-container p-8 rounded-xl'>
-                        <h3 className='font-label mb-6 text-xs text-on-surface tracking-widest uppercase'>{techStackLabel}</h3>
+                    <div className='bg-surface-container p-5 rounded-xl md:p-8'>
+                        <h3 className='font-label mb-6 text-xs text-on-surface tracking-widest uppercase md:text-[0.98rem]'>{techStackLabel}</h3>
                         <div className='flex flex-wrap gap-2'>
                             {projectStack.map((tech, index) => (
-                                <span key={index} className='bg-surface border border-on-border/15 px-3 py-1 text-on-surface font-label text-[10px] rounded'>
+                                <span key={index} className='bg-surface border border-on-border/15 px-3 py-1 text-on-surface font-label text-[10px] rounded md:text-sm'>
                                     {tech}
                                 </span>
                             ))}

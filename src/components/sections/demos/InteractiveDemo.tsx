@@ -45,7 +45,7 @@ const InteractiveDemo = ({
                 title={titulo}
                 description={projectDescription}
             />
-            <section className='max-w-7xl mx-auto pt-32 pb-24 px-6 md:px-10'>
+            <section className='max-w-7xl mx-auto pt-24 pb-24 px-6 md:px-10'>
                 <header className='mb-16'>
                     <div className='flex flex-col gap-6 justify-between md:items-end md:flex-row'>
                         <div className='max-w-3xl'>

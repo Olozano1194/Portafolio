@@ -93,7 +93,7 @@ const ImageGalleryDemo = ({
 
     return (
         <>
-            <section className='max-w-7xl mx-auto pt-32 pb-24 px-6 md:px-10'>
+            <section className='max-w-7xl mx-auto pt-20 pb-20 px-6 md:px-10'>
                 <header className='mb-16'>
                     <div className='flex flex-col gap-6 justify-between md:items-end md:flex-row'>
                         <div className='max-w-3xl'>
@@ -197,7 +197,7 @@ const ImageGalleryDemo = ({
                         )}
                     </div>
                 </section>
-                <section className='border-t border-white/5 mt-24 pt-24'>
+                <section className='border-t border-white/5 mt-20 pt-20'>
                     <h2 className='font-bold mb-12 text-3xl text-on-surface-variant tracking-tighter'>{architecturalStackLabel}</h2>
                     <div className='grid grid-cols-1 gap-12 md:grid-cols-3'>
                         {Object.entries(archStack).map(([key, value]) => (
@@ -223,5 +223,4 @@ const ImageGalleryDemo = ({
         </>
     );
 };
-
 export default ImageGalleryDemo;
