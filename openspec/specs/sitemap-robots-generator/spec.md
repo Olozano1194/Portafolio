@@ -10,13 +10,13 @@ The generator MUST derive its route list from one manifest combining static rout
 
 #### Scenario: manifest contains all 7 crawlable URLs
 
-- GIVEN the current `proyectos.js` data
+- GIVEN the current `proyectos.ts` data
 - WHEN the manifest is built
 - THEN it contains exactly the 7 routes listed in Acceptance Criteria 4
 
 #### Scenario: new project extends the sitemap
 
-- GIVEN a project with `videos`/`demo` entries is added to `proyectos.js`
+- GIVEN a project with `videos`/`demo` entries is added to `proyectos.ts`
 - WHEN the generator runs
 - THEN its routes appear in the manifest with no generator code change
 
@@ -87,4 +87,4 @@ All absolute URLs MUST use `VITE_SITE_URL` read at generation time as the single
 ### Non-functional
 
 - `dist/` is gitignored: artifacts are produced by the build, never committed (proposal Risks).
-- No new runtime dependencies; Node built-ins + existing `src/data/proyectos.js` only (proposal Dependencies).
+- No new runtime dependencies; Node built-ins + existing `src/data/proyectos.ts` only (proposal Dependencies).

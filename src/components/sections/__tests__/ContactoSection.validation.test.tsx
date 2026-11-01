@@ -43,17 +43,23 @@ describe('ContactoSection — render, honeypot and validation', () => {
     website: '',
   };
 
+  // The form lives in a lazy chunk, so wait for it before typing.
   const fillForm = async (data: Partial<typeof validFormData> = {}) => {
     const user = userEvent.setup();
     const merged = { ...validFormData, ...data };
-    if (merged.nombre) await user.type(screen.getByLabelText('Name'), merged.nombre);
-    if (merged.email) await user.type(screen.getByLabelText('Email'), merged.email);
-    if (merged.mensaje) await user.type(screen.getByLabelText('Message'), merged.mensaje);
+    const name = await screen.findByLabelText('Name');
+    const email = await screen.findByLabelText('Email');
+    const message = await screen.findByLabelText('Message');
+
+    if (merged.nombre) await user.type(name, merged.nombre);
+    if (merged.email) await user.type(email, merged.email);
+    if (merged.mensaje) await user.type(message, merged.mensaje);
   };
 
-  it('renders form fields and submit button', () => {
+  it('renders form fields and submit button', async () => {
     render(<ContactoSection />);
-    expect(screen.getByLabelText('Name')).toBeInTheDocument();
+
+    expect(await screen.findByLabelText('Name')).toBeInTheDocument();
     expect(screen.getByLabelText('Email')).toBeInTheDocument();
     expect(screen.getByLabelText('Message')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Send Proposal' })).toBeInTheDocument();
@@ -125,6 +131,7 @@ describe('ContactoSection — render, honeypot and validation', () => {
       const { container } = render(<ContactoSection />);
       const user = userEvent.setup();
 
+      await screen.findByLabelText('Name');
       await user.type(container.querySelector('input[name="nombre"]') as HTMLInputElement, 'John Doe');
       await user.type(container.querySelector('input[name="email"]') as HTMLInputElement, 'john@example.com');
 
