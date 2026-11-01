@@ -16,6 +16,8 @@ export interface ProyectoVerProyecto {
     readonly backend: string;
     readonly database: string;
     readonly infrastructure: string;
+    readonly desktop?: string;
+    readonly packaging?: string;
   };
   readonly credenciales?: { readonly user: string; readonly pass: string };
 }
