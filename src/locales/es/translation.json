@@ -267,6 +267,14 @@
         "description": "La página que buscas no existe o ha sido movida.",
         "button": "Volver al inicio"
     },
+    "errorBoundary": {
+        "homeTitle": "No pudimos cargar el inicio",
+        "demoTitle": "No pudimos cargar la demo",
+        "videoTitle": "No pudimos cargar el video",
+        "contactTitle": "No pudimos cargar el formulario",
+        "description": "Algo falló al cargar esta sección. Inténtalo de nuevo.",
+        "retry": "Reintentar"
+    },
     "loading": {
         "label": "Cargando…"
     },
