@@ -62,18 +62,15 @@ describe('App — Routing smoke tests', () => {
     expect(screen.getByText('Construyendo el')).toBeInTheDocument();
   });
 
-  it('renders videos route with VideosSection', async () => {
-    await renderApp('/videos/1');
+  it('renders the lazy videos route after its chunk resolves', async () => {
+    await renderApp('/videos/3');
 
-    // Should render the videos section (or at least not error)
-    // The actual content depends on the demo data
-    expect(screen.queryByText('Página no encontrada')).not.toBeInTheDocument();
+    expect(await screen.findByRole('heading', { level: 1, name: 'TaskMaster' })).toBeInTheDocument();
   });
 
-  it('renders demo route with DemoSection', async () => {
+  it('renders the lazy demo route after its chunk resolves', async () => {
     await renderApp('/demo/1');
 
-    // Should render the demo section (or at least not error)
-    expect(screen.queryByText('Página no encontrada')).not.toBeInTheDocument();
+    expect(await screen.findByRole('heading', { level: 1, name: 'ControlFit' })).toBeInTheDocument();
   });
 });

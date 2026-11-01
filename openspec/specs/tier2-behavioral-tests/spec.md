@@ -54,7 +54,7 @@ Error404 MUST be tested so its "go home" affordance navigates to the root route.
 
 ### Requirement: R4 — App routing smoke tests
 
-App MUST have routing smoke tests: the root route renders landing content; an unknown route renders Error404.
+App MUST have routing smoke tests: the root route renders landing content; an unknown route renders Error404; deep demo/video routes render after their lazy chunk resolves.
 
 #### Scenario: root route renders home
 
@@ -67,6 +67,12 @@ App MUST have routing smoke tests: the root route renders landing content; an un
 - GIVEN MemoryRouter is at `/this-route-does-not-exist`
 - WHEN App renders
 - THEN Error404 renders
+
+#### Scenario: deep route renders after lazy resolution
+
+- GIVEN MemoryRouter is at `/videos/3` or `/demo/1`
+- WHEN App renders
+- THEN the route content appears once the lazy chunk resolves, so assertions use `findBy*`
 
 ### Requirement: R5 — SEO meta tags rendered
 
