@@ -2,11 +2,11 @@
 
 Portafolio profesional desarrollado con **React 19, Vite 8, Tailwind CSS v4** y TypeScript. Sitio web moderno, responsivo y optimizado para SEO que muestra mis proyectos, habilidades y experiencia como Full-Stack Developer.
 
-🔗 **Live:** https://olozano.vercel.app
+**Live:** https://olozano.vercel.app
 
 ---
 
-## ✨ Características
+## Características
 
 - **Diseño responsivo** — mobile-first, adaptado a móvil, tablet y escritorio
 - **Modo claro/oscuro** — toggle persistente con `localStorage` y sin flash (script inline en `index.html`)
@@ -19,7 +19,7 @@ Portafolio profesional desarrollado con **React 19, Vite 8, Tailwind CSS v4** y 
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Categoría | Tecnologías |
 |-----------|-------------|
@@ -34,7 +34,7 @@ Portafolio profesional desarrollado con **React 19, Vite 8, Tailwind CSS v4** y 
 
 ---
 
-## 📦 Instalación y desarrollo
+## Instalación y desarrollo
 
 ```bash
 # Clonar
@@ -76,7 +76,7 @@ VITE_CONTACTFORM_URL=https://...       # endpoint Formspree (opcional)
 
 ---
 
-## 🌐 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 src/
@@ -108,7 +108,7 @@ public/
 
 ---
 
-## 🔍 SEO — Qué está implementado
+## SEO — Qué está implementado
 
 | Capa | Qué incluye |
 |------|-------------|
@@ -122,7 +122,7 @@ public/
 
 ---
 
-## 🚀 Deploy en Vercel
+## Deploy en Vercel
 
 El repo está configurado para deploy automático en Vercel.
 
@@ -143,13 +143,13 @@ vercel deploy --prod
 
 ---
 
-## 📝 Licencia
+## Licencia
 
 Proyecto educativo y de demostración. Código abierto bajo MIT si querés reutilizar partes.
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 **Oscar Eduardo Lozano Bocanegra**  
 Ingeniero de Sistemas · Full-Stack Developer (React, TypeScript, Django)  
