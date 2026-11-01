@@ -1,6 +1,6 @@
 /**
  * Build route manifest for sitemap generation.
- * Reads src/data/proyectos.js and generates routes:
+ * Reads src/data/proyectos.ts and generates routes:
  * - "/" (static)
  * - "/videos/:id" for projects with tipo === "Video"
  * - "/demo/:id" for projects with imgDemo
@@ -12,11 +12,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 /**
- * Load proyectos data from src/data/proyectos.js
+ * Load proyectos data from src/data/proyectos.ts
+ * Node strips the TypeScript types at load time (no build step needed).
  * @returns {Promise<Array>} Array of project objects
  */
 async function loadProyectos() {
-  const proyectosPath = resolve(__dirname, "..", "src", "data", "proyectos.js");
+  const proyectosPath = resolve(__dirname, "..", "src", "data", "proyectos.ts");
   const proyectosUrl = pathToFileURL(proyectosPath).href;
   const { proyectos } = await import(proyectosUrl);
   return proyectos;

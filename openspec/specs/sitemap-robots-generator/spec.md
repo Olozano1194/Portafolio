@@ -6,7 +6,7 @@ Source: proposal.md → Scope §Build-time generation + `public/robots.txt`; App
 
 ### Requirement: R1 — Single route manifest
 
-The generator MUST derive its route list from one manifest combining static routes (`/`, `/videos/2`, `/videos/3`, `/demo/1`, `/demo/4`, `/demo/5`, `/demo/6`) with project-derived routes read from `src/data/proyectos.js`, so new projects appear without editing the generator.
+The generator MUST derive its route list from one manifest combining static routes (`/`, `/videos/2`, `/videos/3`, `/demo/1`, `/demo/4`, `/demo/5`, `/demo/6`) with project-derived routes read from `src/data/proyectos.ts`, so new projects appear without editing the generator.
 
 #### Scenario: manifest contains all 7 crawlable URLs
 

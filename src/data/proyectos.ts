@@ -1,6 +1,12 @@
-export const proyectos = [
+// Project catalogue. Typed in place so the data is checked at compile time.
+// `scripts/sitemap-manifest.mjs` loads this file with plain `node`, which needs
+// real file extensions on relative imports (hence `branded.ts`, not `branded`).
+import { asProyectoId } from '../types/branded.ts';
+import type { Proyecto } from '../types/proyecto.ts';
+
+export const proyectos: readonly Proyecto[] = [
     {
-        id: 1,
+        id: asProyectoId(1),
         "img": "ControlFit",
         "tipo": "Ver proyecto",
         "col": "md:col-span-7",
@@ -28,7 +34,7 @@ export const proyectos = [
         }
     },
     {
-        id: 6,
+        id: asProyectoId(6),
         "img": "FiadoApp",
         "tipo": "Ver proyecto",
         "col": "md:col-span-5",
@@ -54,7 +60,7 @@ export const proyectos = [
         }
     },
     {
-        id: 3,                        
+        id: asProyectoId(3),                        
         "img": "TaskReact",
         "col": "md:col-span-5",
         "tipo": "Video",
@@ -69,7 +75,7 @@ export const proyectos = [
         ]
     },
     {
-        id: 4,
+        id: asProyectoId(4),
         "img": "InstitucionesV2",
         "tipo": "Ver proyecto",
         "col": "md:col-span-7",
@@ -93,7 +99,7 @@ export const proyectos = [
         }
     },
     {
-        id: 5,
+        id: asProyectoId(5),
         "img": "Instituciones",
         "tipo": "Ver proyecto",
         "col": "md:col-span-7",
@@ -121,7 +127,7 @@ export const proyectos = [
         }
     }, 
     {
-        id: 2,                        
+        id: asProyectoId(2),                        
         "img": "HotelAlura",
         "col": "md:col-span-5",
         "tipo": "Video",
