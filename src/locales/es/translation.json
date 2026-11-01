@@ -267,6 +267,9 @@
         "description": "La página que buscas no existe o ha sido movida.",
         "button": "Volver al inicio"
     },
+    "loading": {
+        "label": "Cargando…"
+    },
     "footer": {
         "description": "Ingeniero de Sistemas. Construido con precisión y detalle técnico."
     }
