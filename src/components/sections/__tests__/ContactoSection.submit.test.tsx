@@ -43,12 +43,17 @@ describe('ContactoSection — submit, env guard and loading state', () => {
     website: '',
   };
 
+  // The form lives in a lazy chunk, so wait for it before typing.
   const fillForm = async (data: Partial<typeof validFormData> = {}) => {
     const user = userEvent.setup();
     const merged = { ...validFormData, ...data };
-    if (merged.nombre) await user.type(screen.getByLabelText('Name'), merged.nombre);
-    if (merged.email) await user.type(screen.getByLabelText('Email'), merged.email);
-    if (merged.mensaje) await user.type(screen.getByLabelText('Message'), merged.mensaje);
+    const name = await screen.findByLabelText('Name');
+    const email = await screen.findByLabelText('Email');
+    const message = await screen.findByLabelText('Message');
+
+    if (merged.nombre) await user.type(name, merged.nombre);
+    if (merged.email) await user.type(email, merged.email);
+    if (merged.mensaje) await user.type(message, merged.mensaje);
   };
 
   describe('Env guard (D3)', () => {
