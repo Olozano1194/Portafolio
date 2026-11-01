@@ -262,6 +262,14 @@
             "description": "The page you're looking for doesn't exist. Go back to the portfolio home."
         }
     },
+    "errorBoundary": {
+        "homeTitle": "We couldn't load the home page",
+        "demoTitle": "We couldn't load the demo",
+        "videoTitle": "We couldn't load the video",
+        "contactTitle": "We couldn't load the form",
+        "description": "Something failed while loading this section. Please try again.",
+        "retry": "Try again"
+    },
     "loading": {
         "label": "Loading…"
     },
