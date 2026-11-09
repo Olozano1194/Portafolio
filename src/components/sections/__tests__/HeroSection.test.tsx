@@ -65,4 +65,13 @@ describe('HeroSection', () => {
     await user.click(screen.getByText('View Projects'));
     expect(scrollToSection).toHaveBeenCalledWith('proyectos');
   });
+
+  it('reserves the hero image space and loads it with high priority', () => {
+    render(<HeroSection />);
+    const image = screen.getByRole('img');
+
+    expect(image).toHaveAttribute('width', '512');
+    expect(image).toHaveAttribute('height', '512');
+    expect(image).toHaveAttribute('fetchpriority', 'high');
+  });
 });

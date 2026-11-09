@@ -46,6 +46,8 @@ const ProyectosSection = (): React.ReactElement => {
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     src={`/assets/proyecto-${proyecto.img}.webp`}
                                     alt={t(`projects.items.${proyecto.id}.alt`)}
+                                    loading="lazy"
+                                    decoding="async"
                                 />
 
                                 {/* Overlay */}

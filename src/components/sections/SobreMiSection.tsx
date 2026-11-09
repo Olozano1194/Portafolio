@@ -13,6 +13,8 @@ function SobreMiSection() {
                         <div className='aspect-4/5 overflow-hidden'>
                             <img src={imgPerfil} 
                                 alt="professional portrait of a confident developer in a modern workspace with natural soft lighting and neutral background" className='duration-700 grayscale h-full object-cover rounded-2xl transition-all w-full hover:grayscale-0' 
+                                loading="lazy"
+                                decoding="async"
                             />
                         </div>
                     </div>

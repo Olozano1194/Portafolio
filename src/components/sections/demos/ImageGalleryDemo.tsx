@@ -171,6 +171,8 @@ const ImageGalleryDemo = ({
                                 className='cursor-pointer duration-700 group-hover:scale-105 h-full object-cover transition-transform w-full'
                                 alt={firstImage.alt}
                                 onClick={() => openLightbox(0)}
+                                loading="eager"
+                                decoding="async"
                             />
                             <div onClick={() => openLightbox(0)} className='absolute bg-linear-to-t cursor-pointer flex from-background/60 inset-0 items-end opacity-0 p-8 to-transparent transition-opacity group-hover:opacity-100'>
                                 <p className='font-label text-sm text-on-surface'>{firstImage.titulo}</p>
@@ -184,7 +186,7 @@ const ImageGalleryDemo = ({
                                         className='aspect-square bg-surface-container border border-white/5 cursor-pointer group overflow-hidden rounded-xl'
                                         onClick={() => openLightbox(index + 1)}
                                     >
-                                        <img src={img.src} className='duration-700 group-hover:scale-105 h-full object-cover transition-transform w-full' alt={img.alt} />
+                                        <img src={img.src} className='duration-700 group-hover:scale-105 h-full object-cover transition-transform w-full' alt={img.alt} loading="lazy" decoding="async" />
                                     </div>
                                 ))}
                             </div>

@@ -36,10 +36,10 @@ const HobbiesSection = () => {
                         </div>
                     </div>
                     <picture className="flex-1 grid grid-cols-2 gap-4">
-                        <img className="h-48 object-cover rounded-xl w-full" src={imgFutbol} alt="Un balón de futsal (microfútbol) clásico y zapatillas de juego sobre un suelo de cemento pulido. Representa la disciplina y el trabajo en equipo en la cancha." />
-                        <img className="h-48 mt-8 object-cover rounded-xl w-full" src={imgMusic} alt="Auriculares modernos de diadema sobre un escritorio de madera clara, junto a un smartphone mostrando una interfaz de música. Evoca la concentración y la creatividad." />
-                        <img className="h-48 mt-8 object-cover rounded-xl w-full" src={imgGym} alt="Dos mancuernas hexagonales negras sobre una alfombrilla de goma texturizada, con una botella de agua de acero inoxidable. Simboliza la constancia y el esfuerzo físico." />
-                        <img className="h-48 object-cover rounded-xl w-full" src={imgVideoGame} alt="Un mando de consola moderno (DualSense) en blanco y negro, sobre una alfombrilla de escritorio de fieltro gris, junto a unos auriculares de gaming negros. Esta imagen cierra la colección, evocando la estrategia y la inmersión digital." />                          
+                        <img className="h-48 object-cover rounded-xl w-full" src={imgFutbol} alt="Un balón de futsal (microfútbol) clásico y zapatillas de juego sobre un suelo de cemento pulido. Representa la disciplina y el trabajo en equipo en la cancha." loading="lazy" decoding="async" />
+                        <img className="h-48 mt-8 object-cover rounded-xl w-full" src={imgMusic} alt="Auriculares modernos de diadema sobre un escritorio de madera clara, junto a un smartphone mostrando una interfaz de música. Evoca la concentración y la creatividad." loading="lazy" decoding="async" />
+                        <img className="h-48 mt-8 object-cover rounded-xl w-full" src={imgGym} alt="Dos mancuernas hexagonales negras sobre una alfombrilla de goma texturizada, con una botella de agua de acero inoxidable. Simboliza la constancia y el esfuerzo físico." loading="lazy" decoding="async" />
+                        <img className="h-48 object-cover rounded-xl w-full" src={imgVideoGame} alt="Un mando de consola moderno (DualSense) en blanco y negro, sobre una alfombrilla de escritorio de fieltro gris, junto a unos auriculares de gaming negros. Esta imagen cierra la colección, evocando la estrategia y la inmersión digital." loading="lazy" decoding="async" />
                     </picture>
                 </section>
             </div>

@@ -27,6 +27,8 @@ function FormacionAcademicaSection() {
                   className="w-full h-full object-cover"
                   src={`/assets/formacion-${item.imagen}.webp`}
                   alt={`Logo ${item.imagen}`}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               {/* Título */}
