@@ -1,12 +1,16 @@
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { renderWithProviders } from '../test/i18n';
 import App from '../App';
 
 describe('App — Routing smoke tests', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+  });
+
+  afterEach(() => {
+    vi.unstubAllEnvs();
   });
 
   const renderApp = async (route = '/') => {
@@ -72,5 +76,16 @@ describe('App — Routing smoke tests', () => {
     await renderApp('/demo/1');
 
     expect(await screen.findByRole('heading', { level: 1, name: 'ControlFit' })).toBeInTheDocument();
+  });
+
+  it('shows the localized fallback on a video route when no base URL is configured', async () => {
+    vi.stubEnv('VITE_VIDEO_BASE_URL', '');
+
+    await renderApp('/videos/3');
+
+    expect(
+      await screen.findByText('El video no está disponible en este momento.')
+    ).toBeInTheDocument();
+    expect(document.querySelector('video')).toBeNull();
   });
 });

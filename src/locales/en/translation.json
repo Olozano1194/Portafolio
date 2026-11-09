@@ -139,7 +139,8 @@
         "techStack": "Tech Stack",
         "viewCaseStudy": "View Case Study",
         "category": "Category",
-        "year": "Year"
+        "year": "Year",
+        "videoUnavailable": "This video is not available right now."
     },
     "demoProject": {
         "projectNotFound": "Project not found",

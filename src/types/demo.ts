@@ -20,7 +20,8 @@ export interface BaseDemoProps {
 
 export interface VideoDemoProps extends BaseDemoProps {
   readonly type: 'video';
-  readonly videos: readonly { readonly src: string; readonly titulo: string }[];
+  // `| undefined` is explicit: exactOptionalPropertyTypes rejects a bare undefined value.
+  readonly videos: readonly { readonly src: string; readonly titulo: string; readonly poster?: string | undefined }[];
   readonly verProyecto?: string;
   readonly credenciales?: { readonly user: string; readonly pass: string } | undefined;
 }

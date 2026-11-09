@@ -6,6 +6,7 @@ import { getParamAsNumber } from '../../types/routing';
 import { isVideoDemo, isImageGalleryDemo, isInteractiveDemo } from '../../types/demo';
 import type { DemoProps } from '../../types/demo';
 import { asProyectoId } from '../../types/branded';
+import { getVideoUrl, getVideoPoster } from '../../utils/videoUrl';
 import VideoDemo from './demos/VideoDemo';
 import ImageGalleryDemo from './demos/ImageGalleryDemo';
 import InteractiveDemo from './demos/InteractiveDemo';
@@ -93,6 +94,10 @@ const DemoSection = (): React.ReactElement => {
         }
     } else {
         // tipo === 'Video' - no tiene architecturalStack ni year en el type, usar defaults
+        // Without a configured base URL the list stays empty and VideoDemo
+        // renders the localized fallback instead of a broken player.
+        const videoSrc = getVideoUrl(proyecto.img);
+
         demoProps = {
             type: 'video',
             proyectoId,
@@ -101,7 +106,9 @@ const DemoSection = (): React.ReactElement => {
             stack: proyecto.stack,
             year: proyecto.year,
             architecturalStack: { frontend: '', backend: '', database: '', infrastructure: '' },
-            videos: [{ src: `/videos/videos-${proyecto.img}.mp4`, titulo: projectTitle }],
+            videos: videoSrc
+                ? [{ src: videoSrc, titulo: projectTitle, poster: getVideoPoster(proyecto.img) }]
+                : [],
         };
     }
 

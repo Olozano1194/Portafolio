@@ -139,7 +139,8 @@
         "techStack": "Stack Tecnológico",
         "viewCaseStudy": "Ver Caso de Estudio",
         "category": "Categoría",
-        "year": "Año"
+        "year": "Año",
+        "videoUnavailable": "El video no está disponible en este momento."
     },
     "demoProject": {
         "projectNotFound": "Proyecto no encontrado",

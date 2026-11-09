@@ -28,6 +28,7 @@ const VideoDemo = ({
     const shareLabel = t('demoProject.share');
     const performanceFocus = t('demoProject.performanceFocus');
     const architecturalStackLabel = t('demoProject.architecturalStack');
+    const videoUnavailable = t('videoProject.videoUnavailable');
 
     const demoDesc = t(`demoProject.projectDetails.${proyectoId}.description`);
     const projDesc = t(`projects.items.${proyectoId}.description`);
@@ -134,16 +135,23 @@ const VideoDemo = ({
                     </div>
                     <div className='space-y-6 md:col-span-7'>
                         <div className='aspect-16/10 border border-white/5 bg-surface-container group overflow-hidden relative rounded-xl'>
-                            <video
-                                controls
-                                width="100%"
-                                height="100%"
-                                className="absolute top-0 left-0 w-full h-full object-cover"
-                                preload="metadata"
-                            >
-                                <source src={currentVideo?.src} type="video/mp4" />
-                                Tu navegador no soporta video HTML5.
-                            </video>
+                            {totalVideos === 0 ? (
+                                <p className='flex h-full items-center justify-center px-6 text-center text-on-surface-variant'>
+                                    {videoUnavailable}
+                                </p>
+                            ) : (
+                                <video
+                                    controls
+                                    width="100%"
+                                    height="100%"
+                                    className="absolute top-0 left-0 w-full h-full object-cover"
+                                    preload="metadata"
+                                    poster={currentVideo?.poster}
+                                >
+                                    <source src={currentVideo?.src} type="video/mp4" />
+                                    Tu navegador no soporta video HTML5.
+                                </video>
+                            )}
                         </div>
                         {totalVideos > 1 && (
                             <div className='flex gap-4 justify-center mt-6'>

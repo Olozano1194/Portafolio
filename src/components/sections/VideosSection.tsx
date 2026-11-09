@@ -6,6 +6,7 @@ import SEO from '../ui/SEO';
 import { getParamAsNumber } from '../../types/routing';
 import { asProyectoId } from '../../types/branded';
 import { isProyectoVideo } from '../../types/proyecto';
+import { getVideoUrl, getVideoPoster } from '../../utils/videoUrl';
 import { FaArrowLeft } from "react-icons/fa";
 
 const VideosSection = (): React.ReactElement | null => {
@@ -22,6 +23,7 @@ const VideosSection = (): React.ReactElement | null => {
     const viewCaseStudy = t('videoProject.viewCaseStudy');
     const categoryLabel = t('videoProject.category');
     const yearLabel = t('videoProject.year');
+    const videoUnavailable = t('videoProject.videoUnavailable');
     
     const lang = i18n.language.startsWith('en') ? 'labelEN' : 'labelES';
     
@@ -38,6 +40,11 @@ const VideosSection = (): React.ReactElement | null => {
     }, [proyecto, navigate]);
 
     if (!proyecto) return null;
+
+    // No base URL configured (or an unusable one): show the fallback message
+    // instead of a player that would point at a 404.
+    const videoSrc = getVideoUrl(proyecto.img);
+    const videoPoster = getVideoPoster(proyecto.img);
 
     return (
         <>
@@ -66,16 +73,23 @@ const VideosSection = (): React.ReactElement | null => {
             {/* section video */}
             <section className='group relative'>
                 <div className='aspect-video bg-surface-alt border border-on-border/15 overflow-hidden shadow-2xl relative rounded-xl w-full'>
-                    <video
-                        controls
-                        width="100%"
-                        height="100%"
-                        className="absolute top-0 left-0 w-full h-full object-cover"
-                        preload="metadata"
-                    >
-                        <source src={`/videos/videos-${proyecto.img}.mp4`} type="video/mp4" />
-                        {browserNotSupported}
-                    </video>
+                    {videoSrc ? (
+                        <video
+                            controls
+                            width="100%"
+                            height="100%"
+                            className="absolute top-0 left-0 w-full h-full object-cover"
+                            preload="metadata"
+                            poster={videoPoster}
+                        >
+                            <source src={videoSrc} type="video/mp4" />
+                            {browserNotSupported}
+                        </video>
+                    ) : (
+                        <p className='flex h-full items-center justify-center px-6 text-center text-on-surface-variant'>
+                            {videoUnavailable}
+                        </p>
+                    )}
                 </div>
             </section>
             {/* Description footer */}
