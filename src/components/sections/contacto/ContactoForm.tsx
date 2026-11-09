@@ -31,7 +31,6 @@ const ContactoForm = () => {
       toast.error(t("contact.toast.envMissing"));
       return;
     }
-
     setIsLoading(true);
     try {
       const response = await fetch(contactUrl, {
@@ -42,13 +41,30 @@ const ContactoForm = () => {
         },
         body: JSON.stringify(data),
       });
-      const result = await response.json();
 
-      if (!response.ok) throw new Error(result.message || t("contact.toast.error"));
+      // Formspree (and other backends) may answer 200 with an empty or
+      // non-JSON body; parsing must not turn a successful send into an error.
+      let result: { message?: string; errors?: { message?: string }[] } = {};
+      try {
+        result = await response.json();
+      } catch {
+        // ignore: keep `result` empty and rely on the HTTP status
+      }
+
+      if (!response.ok) {
+        const serverMessage =
+          result.message ||
+          result.errors?.map((e) => e.message).filter(Boolean).join(", ") ||
+          t("contact.toast.error");
+        throw new Error(serverMessage);
+      }
 
       toast.success(t("contact.toast.success"));
       reset();
-    } catch {
+    } catch (error) {
+      // Surface the real reason in the console to aid debugging; the user
+      // only sees the friendly, localized message.
+      console.error("Contact form submission failed:", error);
       toast.error(t("contact.toast.error"));
     } finally {
       setIsLoading(false);
@@ -195,5 +211,4 @@ const ContactoForm = () => {
     </form>
   );
 };
-
 export default ContactoForm;

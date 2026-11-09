@@ -58,7 +58,7 @@ describe('ContactoSection — submit, env guard and loading state', () => {
 
   describe('Env guard (D3)', () => {
     it('shows envMissing toast and does not fetch when VITE_CONTACTFORM_URL is unset', async () => {
-      vi.unstubAllEnvs();
+      vi.stubEnv('VITE_CONTACTFORM_URL', '');
       render(<ContactoSection />);
       await fillForm();
       await userEvent.click(screen.getByRole('button', { name: 'Send Proposal' }));
