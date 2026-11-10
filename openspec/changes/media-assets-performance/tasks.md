@@ -34,9 +34,9 @@ No unit approaches the 250-line cap (R4). WU3 is ~10 authored lines but moves a 
 
 ## Phase 0 — BLOCKING prerequisite (human, no commit)
 
-- [ ] 0.1 Create release `media-v1` on `Olozano1194/Portafolio` with `videos-HotelAlura.mp4` (9.71 MB) and `videos-TaskReact.mp4` (4.05 MB). The agent cannot: `gh` is unauthenticated.
-- [ ] 0.2 Set `VITE_VIDEO_BASE_URL=https://github.com/Olozano1194/Portafolio/releases/download/media-v1` in `.env.local` **and** Vercel (production + preview).
-- [ ] 0.3 Gate: `curl -s -o /dev/null -w "%{http_code}" -r 0-1023 <url>` → `206` on **both** URLs.
+- [x] 0.1 Create release `media-v1` on `Olozano1194/Portafolio` with `videos-HotelAlura.mp4` (9.71 MB) and `videos-TaskReact.mp4` (4.05 MB). Done by the human. The HotelAlura asset returned `504` from GitHub's storage on first upload and was re-uploaded; both assets now serve `206`.
+- [ ] 0.2 Set `VITE_VIDEO_BASE_URL=https://github.com/Olozano1194/Portafolio/releases/download/media-v1` in `.env.local` (**DONE**) **and** Vercel production + preview (**PENDING** — human, outside the repo).
+- [x] 0.3 Gate: `curl -s -o /dev/null -w "%{http_code}" -r 0-1023 <url>` → `206` on **both** URLs (verified 2026-11-09).
 
 **Gate rule:** WU1/WU2/WU4 may be developed and merged degraded (video shows the fallback message). **WU3 must not merge** until 0.3 passes — deleting the mp4s without a live release turns every video into a 404.
 
@@ -70,11 +70,11 @@ Rollback: revert those 6 files — components fall back to the `/videos/videos-*
 
 Files: `public/videos/videos-HotelAlura.mp4` (delete) · `public/videos/videos-TaskReact.mp4` (delete) · `.env.example` (5→10) · `src/vite-env.d.ts` (26→30).
 
-- [ ] 3.1 `git rm public/videos/videos-HotelAlura.mp4 public/videos/videos-TaskReact.mp4` — only after 0.3 passes.
+- [x] 3.1 `git rm public/videos/videos-HotelAlura.mp4 public/videos/videos-TaskReact.mp4` — done after 0.3 passed.
 - [x] 3.2 `.env.example`: document `VITE_VIDEO_BASE_URL` + comment "unset = fallback message". *(moved to WU1 — the helper needs the documented contract)*
 - [x] 3.3 `src/vite-env.d.ts`: `interface ImportMetaEnv { readonly VITE_VIDEO_BASE_URL?: string }`. Keep the file free of top-level `import`/`export` — one would turn it into a module and silently break the `vite/client` merge. *(moved to WU1 — without it the env read is typed `any`, which violates R5)*
-- [ ] 3.4 Verify: `git grep -n "/videos/videos-" -- src scripts` → no output · `npm run typecheck && npm run lint && npm test && npm run check:size && npm run build` · `(Get-ChildItem -Recurse dist | Measure-Object Length -Sum).Sum / 1MB` < 3.
-- [ ] 3.5 Commit: `build(video): sacar los mp4 del build y documentar la URL`
+- [x] 3.4 Verify: `git grep -n "/videos/videos-" -- src scripts` → no output · `npm run typecheck && npm run lint && npm test && npm run check:size && npm run build` · dist = **2.59 MB** (2,713,592 bytes), no `*.mp4` under `dist/`.
+- [x] 3.5 Commit: `build(video): sacar los mp4 del build`
 
 WU3 is now a single-purpose unit: delete the two mp4 files. It stays gated on Phase 0.3.
 
@@ -99,9 +99,9 @@ Never combine `loading="lazy"` with `fetchPriority` (D4). `ImageGalleryLightbox.
 ## Phase 5 — Verification (no commit)
 
 - [x] 5.1 `npm run verify` — 211 tests green (197 baseline + 12 unit + 1 integration + 1 hero).
-- [ ] 5.2 `npm run build`; `dist` < 3 MB (≈2.3 MB expected) and no `videos-*.mp4` under `dist/`.
+- [x] 5.2 `npm run build`; dist = **2.59 MB** (target < 3 MB) and no `videos-*.mp4` under `dist/`.
 - [x] 5.3 `git grep -n "/videos/videos-" -- src scripts` → 0 hits.
-- [ ] 5.4 `curl -r 0-1023` on both production URLs → `206`.
+- [x] 5.4 `curl -r 0-1023` on both production URLs → `206` (verified 2026-11-09).
 - [x] 5.5 Write `openspec/changes/media-assets-performance/specs/media-performance/spec.md` (capability delta is missing today) and tick the proposal success criteria.
 
 Out of scope (recorded, not fixed): hero 394 KB remote PNG; inert `aspect-square md:aspect-3/2` on the hero `<picture>`; captions if the videos are narrated.
