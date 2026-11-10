@@ -3,11 +3,12 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { renderWithProviders } from '../../../test/i18n';
 import App from '../../../App';
 import VideoDemo from '../demos/VideoDemo';
+import type * as VideoDemoModule from '../demos/VideoDemo';
 
 // Wrap the real component so the test can inspect the props DemoSection passes
 // to it while still rendering the actual fallback UI.
 vi.mock('../demos/VideoDemo', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('../demos/VideoDemo')>();
+  const actual = await importOriginal<typeof VideoDemoModule>();
   return { default: vi.fn(actual.default) };
 });
 
