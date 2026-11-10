@@ -35,7 +35,7 @@ No unit approaches the 250-line cap (R4). WU3 is ~10 authored lines but moves a 
 ## Phase 0 — BLOCKING prerequisite (human, no commit)
 
 - [x] 0.1 Create release `media-v1` on `Olozano1194/Portafolio` with `videos-HotelAlura.mp4` (9.71 MB) and `videos-TaskReact.mp4` (4.05 MB). Done by the human. The HotelAlura asset returned `504` from GitHub's storage on first upload and was re-uploaded; both assets now serve `206`.
-- [ ] 0.2 Set `VITE_VIDEO_BASE_URL=https://github.com/Olozano1194/Portafolio/releases/download/media-v1` in `.env.local` (**DONE**) **and** Vercel production + preview (**PENDING** — human, outside the repo).
+- [ ] 0.2 Set `VITE_VIDEO_BASE_URL=https://github.com/Olozano1194/Portafolio/releases/download/media-v1` in `.env.local` (**set locally**) **and** Vercel production + preview (**PENDING** — human, outside the repo). The env var is configured locally but not yet deployed to Vercel.
 - [x] 0.3 Gate: `curl -s -o /dev/null -w "%{http_code}" -r 0-1023 <url>` → `206` on **both** URLs (verified 2026-11-09).
 
 **Gate rule:** WU1/WU2/WU4 may be developed and merged degraded (video shows the fallback message). **WU3 must not merge** until 0.3 passes — deleting the mp4s without a live release turns every video into a 404.
